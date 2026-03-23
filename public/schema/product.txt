@@ -1,0 +1,37 @@
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org/", 
+  "@type": "Product", 
+  "name": "RateMyService | No Code, Customer Feedback 💬 in 3-Min. ⏰",
+  "image": "https://goo.gl/maps/RwQLPvnhh3jpMpaJ8",
+  "description": "Effortlessly collect Customer Feedback 💬 & 5-Star Reviews ⭐ with the new and improved In-Signature Survey tool that will supercharge your business and quickly develop loyal customers.",
+  "brand": {
+    "@type": "Brand",
+    "name": "RateMyService"
+  },
+  "sku": "RateMyService-1",
+  "mpn": "RateMyService-2",
+  "offers": {
+    "@type": "Offer",
+    "url": "https://www.ratemyservice.io/#price-plans",
+    "priceCurrency": "USD",
+    "price": "19",
+    "priceValidUntil": "2099-12-16",
+    "availability": "https://schema.org/OnlineOnly"
+  },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "5",
+    "ratingCount": "13"
+  },
+  "review": {
+    "@type": "Review",
+    "reviewRating": {
+      "@type": "Rating",
+      "ratingValue": "5"
+    },
+    "author": {"@type": "Person", "name": "verified customers"},
+    "publisher": {"@type": "Organization", "name": "Google"}
+  }
+}
+</script>

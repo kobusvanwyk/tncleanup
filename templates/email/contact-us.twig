@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Submission from RateMyService Contact Us</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 600px;
+            margin: 20px auto;
+            background-color: #ffffff;
+            padding: 20px;
+            border: 1px solid #dddddd;
+            border-radius: 5px;
+        }
+        h2 {
+            color: #333333;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        table th, table td {
+            padding: 10px;
+            border: 1px solid #dddddd;
+            text-align: left;
+        }
+        table th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>New email submission from RateMyService Contact Us page</h2>
+    <p>Someone just submitted a form on <a href="https://www.ratemyservice.io">www.ratemyservice.io</a> with the following message:</p>
+
+    <table>
+        <tr>
+            <th>Name</th>
+            <td>{{ sender.name }}</td>
+        </tr>
+        <tr>
+            <th>Company Name</th>
+            <td>{{ sender.companyname }}</td>
+        </tr>
+        <tr>
+            <th>Email</th>
+            <td>{{ sender.email }}</td>
+        </tr>
+        <tr>
+            <th>Company Type</th>
+            <td>{{ sender.companytype }}</td>
+        </tr>
+        <tr>
+            <th>Referral Source</th>
+            <td>{{ sender.referral }}</td>
+        </tr>
+        <tr>
+            <th>Subject</th>
+            <td>{{ sender.subject }}</td>
+        </tr>
+        <tr>
+            <th>Time</th>
+            <td>{{ sender.time }}</td>
+        </tr>
+        <tr>
+            <th>Message</th>
+            <td>{{ sender.message }}</td>
+        </tr>
+    </table>
+</div>
+
+</body>
+</html>

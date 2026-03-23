@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>RateMyService | Agency Owners: Get Lifetime Access to a Powerful Customer Review Platform</title>
+    <link rel="icon" href="https://assets.ratemyservice.io/images/favicon-32.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords"
+          content="customer feedback, customer satisfaction, customer satisfaction survey, CSAT, email signature survey, customer satisfaction email signature">
+    <meta name="description"
+          content="RateMyService is an email signature widget that gets you more 5 star reviews guaranteed">
+    <meta property="og:title" content="Agency Owners: Get Lifetime Access to a Powerful Customer Review Platform"/>
+    <meta property="og:description" content="Boost your clients' online reviews and increase their sales today"/>
+    <meta prefix="og: https://ratemyservice.io/cookies" property="og:type" content="website"/>
+    <meta property="og:url" content="https://ratemyservice.io/marketing-agency-ltd"/>
+    <meta property="og:image" content="https://ratemyservice.io/images/og-image-banner.webp"/>
+    <meta property="og:locale" content="en_GB"/>
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/jquery.validate.js"></script>
+    <script src="/js/popper.min.js"></script>
+    <script src="/js/bootstrap_5.3-bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="/css/bootstrap_5.3-bootstrap.min.css">
+    <link rel="stylesheet" href="/css/default.css?ver=1.0.21" type="text/css">
+    <link rel="stylesheet" href="/css/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/css/tiny-slider-2_9_4.css">
+    <script src="/js/tina4helper.js"></script>
+    <script src="https://js.stripe.com/v3/"></script>
+    <script id="stripeHelper" src="/js/stripeHelper.js" data-api-key="{{ stripePublicKey }}"></script>
+    <script src="/js/paymentHelper.js"></script>
+    <!--[if (lt IE 9)]>
+    <link rel="stylesheet" href="/css/tiny-slider-2_9_4_IE.css"><![endif]-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script>
+    <script type="application/ld+json" src="/schema/local-business.txt"></script>
+    <script type="application/ld+json" src="/schema/website.txt"></script>
+
+    {# Tracking Scripts #}
+    {# Meta #}
+    {% include "code-snippets/meta-tracking-pixel.twig" %}
+
+    {# Google #}
+    {% include "code-snippets/google-tracking-script.twig" %}
+
+    {# PostHog #}
+    {% include "code-snippets/posthog-tracking-script.twig" %}
+
+    <style>
+        .popular-tag.popular-tag--agency {
+            display: none;
+        }
+
+        .agency-pricing-card.agency-pricing-card--popular .popular-tag.popular-tag--agency {
+            display: block;
+        }
+    </style>
+</head>
+<body class="rms-agency">
+<header class="rms-landing-header">
+    {% set pageName = 'MarketingAgency-ltd' %}
+    {% include "components/header.twig" %}
+</header>
+<section class="rms-agency-hero rms-agency-hero--ltd overflow-hidden"
+         style="background-image: url(https://assets.ratemyservice.io/images/rms-landing-background-gradient.webp);">
+    <div class="container position-relative z-1">
+        <div class="rms-agency-hero__content">
+            <div class="rms-agency-hero__text">
+                <h1 class="text-white"><strong>Customer Review Management Software</strong></h1>
+                <h2 class="text-white"><strong>
+                        Boost your clients' online reviews with RateMyService</strong></h2>
+                <h3 class="text-white">
+                    <strong>White-Label or CNAME review software for <span class="highlight highlight--agency"
+                                                                               style="background-image: url(https://assets.ratemyservice.io/images/rms-agency-bundles-highlight.svg);">Agencies</span></strong>
+                </h3>
+                <div class="rms-agency-hero__cta-buttons">
+                    <a class="btn buy-bundle-btn buy-bundle-btn--pink d-block"
+                       href="#intro-pic">
+                        How it works
+                    </a>
+                </div>
+            </div>
+            <div class="rms-agency-ltd-image__container">
+                <img class="rms-agency-ltd-image"
+                     src="/images/rms-agency-ltd-image.webp"
+                     alt="An illustration of characters holding stars">
+            </div>
+        </div>
+    </div>
+    <img class="section-split section-split--wave"
+         src="/images/rms-section-split-wave.svg"
+         alt="A wave pattern that splits two sections">
+
+</section>
+
+<section class="section section--gray overflow-hidden" style="padding-top: 0;">
+    <div id="rms-slider" style="max-width: 788px; margin: auto auto 80px auto;">
+        <div class="slider-container">
+            <ul class="control" id="custom-control">
+                <li class="prev">
+                    <i class="fa fa-angle-left fa-2x"></i>
+                </li>
+                <li class="next">
+                    <i class="fa fa-angle-right fa-2x"></i>
+                </li>
+            </ul>
+            <div class="rms-slider" style="display: flex;">
+                <img src="https://assets.ratemyservice.io/images/review-logo-trustpilot.svg"
+                     alt="Trustpilot Reviews Logo">
+                <img src="https://assets.ratemyservice.io/images/review-logo-yelp.svg"
+                     alt="Yelp Reviews Logo">
+                <img src="https://assets.ratemyservice.io/images/review-logo-tripadvisor.svg"
+                     alt="Tripadvisor Reviews Logo">
+                <img src="https://assets.ratemyservice.io/images/review-logo-facebook.svg"
+                     alt="Facebook Reviews Logo">
+                <img src="https://assets.ratemyservice.io/images/review-logo-google.svg"
+                     alt="Google Reviews Logo">
+            </div>
+        </div>
+    </div>
+    <h2 id="pricingHeading" class="text-center mb-5">Explore our <strong><span
+                    class="yellow-highlight message">flexible pricing plans</span></strong>
+        tailored to your needs</h2>
+    <div class="container" style="max-width: 880px;">
+        {# AGENCY BUNDLES #}
+        <h1 class="text-center my-5 fw-bold text-uppercase">White-Label or CNAME review software for <span
+                    class="highlight highlight--agency text-white"
+                    style="background-image: url(https://assets.ratemyservice.io/images/rms-agency-bundles-highlight.svg); padding-left: 12px; padding-right: 12px; overflow: hidden; border-radius: 8px;">Agencies</span>
+        </h1>
+
+        <div id="form" class="payment__form"></div>
+        <div id="message"></div>
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <div class="agency-pricing-card card text-center mb-4">
+                    <ul class="list-group">
+                        <li class="list-group-item"><p class="agency-bundle-name agency-bundle-name--free"><strong
+                                        style="font-size: 24px">14 Day Free Trial</strong></p>
+                            <h2 class="actual-price actual-price--free">
+                                <strong>$0</strong>
+                            </h2>
+                            <p><strong>No Credit Card Needed</strong></p>
+                            <a class="pricing-button-2 pricing-button-2-aligned mx-auto d-block" id="pink-btn" href="https://app.ratemyservice.io/signup" style=" background-color: #fe0056;">Start My Free Trial</a>
+                        </li>
+                        <li class="list-group-item p-0">
+                            <section style="background-color: rgba(35, 49, 76, 0.05); padding: 20px 0;">
+                                <div class="container">
+                                    <p class="mb-2"><strong>After your 14-day Free Trial</strong></p>
+                                    <img class="mw-100" src="/images/30-day-money-back-gaurantee.png">
+                                </div>
+                            </section>
+                        </li>
+                        <li class="list-group-item">
+                            <h4 class="small-text">Test x1 Subscription for
+                            </h4>
+                            <p class="staff-member-account" style="color: #FE0056;"><strong>14 Days</strong></p></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div id="pricingCard"
+                     class="agency-pricing-card card text-center mb-4"
+                     style="position: relative; overflow: hidden;">
+
+                    <ul class="list-group">
+                        <li class="list-group-item"><p class="agency-bundle-name" style="font-size: 24px">
+                                {% for couponBundle in couponBundles %}
+                            <p id="bundle_name_{{ couponBundle.couponBundleId }}" class="agency-bundle-name" style="font-size: 24px; display: none;">
+                                <strong><span>{{ couponBundle.couponBundleName }}</span></strong>
+                            </p>
+                            <h2 id="bundle_price_{{ couponBundle.couponBundleId }}" class="actual-price" style="display: none;">
+                                <strong>${{ couponBundle.priceIncl|number_format(2) }}</strong>
+                            </h2>
+                            {% endfor %}
+
+                            <select id="codeSelect" class="form-select mt-2 mb-3 code-select-dropdown"
+                                    aria-label="Agency Unlimited Code Options">
+                                {% for couponBundle in couponBundles %}
+                                    <option value="{{ couponBundle.couponBundleId }}"
+                                            data-price="{{ couponBundle.priceIncl|number_format }}"
+                                            data-name="{{ couponBundle.couponBundleName }}"
+                                            data-campaign="{{ couponBundle.campaignId }}"
+                                            {% if loop.first %} selected {% endif %}>
+                                        {{ couponBundle.couponBundleName }}
+                                    </option>
+                                {% endfor %}
+                            </select>
+                            <p><strong>One time payment |</strong> No monthly fees</p>
+                            <button id="couponBundlesButton"
+                                    onclick="showForm('create', '/purchase/coupon-bundle/form?bundleId=' + $('#codeSelect').val() +'&formToken={{ formToken ("/purchase/coupon-bundle") }}&pageUrl={{ '/agency'|url_encode }}&campaignId=' + $('#codeSelect option:selected').attr('data-campaign'));"
+                                    class="pricing-button-2 pricing-button-2-aligned mx-auto">
+                                <span>Buy Now</span>
+                            </button>
+                        </li>
+                        <li class="list-group-item p-0">
+                            <section style="background-color: rgba(35, 49, 76, 0.05); padding: 20px 0;">
+                                <div class="container">
+                                    <img class="mw-100" src="/images/30-day-money-back-gaurantee-badge.png">
+                                </div>
+                            </section>
+                        </li>
+                        <li class="list-group-item">
+                            <h4 class="small-text">Additional White-Labeled ENTERPRISE Account Available to
+                                <a tabindex="0"
+                                   class="agency-fine-print text-dark"
+                                   role="button"
+                                   data-bs-toggle="popover"
+                                   data-bs-trigger="focus"
+                                   data-bs-content="** Each WHITE-LABELED ENTERPRISE Account includes it's own CNAME and the ability to create an UNLIMITED number of Staff Member accounts.">Resell</a>:
+                            </h4>
+                            <div id="accountCounts">
+                                <p class="staff-member-account staff-member-account--counts" id="additionalInfoStartupA" style="color: #FE0056; display: none;">
+                                    <strong><span>1</span></strong></p>
+                                <p class="staff-member-account staff-member-account--counts" id="additionalInfoStartupB" style="color: #FE0056; display: none;">
+                                    <strong><span>5</span></strong></p>
+                                <p class="staff-member-account staff-member-account--counts" id="additionalInfoStartupC" style="color: #FE0056; display: none;">
+                                    <strong><span>10</span></strong></p>
+                                <p class="staff-member-account staff-member-account--counts" id="additionalInfoStartupD" style="color: #FE0056; display: none;">
+                                    <strong><span>30</span></strong></p>
+                                <p class="staff-member-account staff-member-account--counts" id="additionalInfoStartupE" style="color: #FE0056; display: none;">
+                                    <strong><span>50</span></strong></p>
+                                <p class="staff-member-account staff-member-account--counts" id="additionalInfoStartupF" style="color: #FE0056; display: none;">
+                                    <strong><span>UNLIMITED</span></strong></p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="row justify-content-center">
+            <div class="col-12 col-md-12">
+                <div class="card mb-5 inclusive">
+                    <p class="agency-bundle-details-heading"><strong style="font-size: 16px">Also included in
+                            Agency/White-labeled bundles:</strong></p>
+                    <ul class="starter-bundles mb-0">
+                        <li><img src="/images/check-icon.svg" alt="alt"
+                                 class="feature-check-icon float-start me-2">Entire Agency Ecosystem is WHITE-LABELED
+                        </li>
+                        <li><img src="/images/check-icon.svg" alt="alt"
+                                 class="feature-check-icon float-start me-2">Unique BRANDING AREA for each PRIMARY
+                            AGENCY Account
+                        </li>
+                        <li><img src="/images/check-icon.svg" alt="alt"
+                                 class="feature-check-icon float-start me-2">SUPER ADMIN DROPDOWN, with the ability to
+                            quickly SWITCH between your Client-Accounts
+                        </li>
+                    </ul>
+                    <p class="agency-bundle-details-heading"><strong style="font-size: 16px">Money Back Gaurantee:</strong></p>
+                    <ul class="starter-bundles mb-0">
+                        <li><img src="/images/check-icon.svg" alt="alt"
+                                 class="feature-check-icon float-start me-2">60 DAY Money-Back Satisfaction GUARANTEE
+                        </li>
+                        <li><img src="/images/check-icon.svg" alt="alt"
+                                 class="feature-check-icon float-start me-2">LIFE-TIME access to RateMyService
+                        </li>
+                        <li><img src="/images/check-icon.svg" alt="alt"
+                                 class="feature-check-icon float-start me-2">Includes all FUTURE ENTERPRISE & AGENCY
+                            PLAN UPDATES
+                        </li>
+                    </ul>
+
+                    <p class="agency-bundle-details-heading"><strong style="font-size: 16px">Additional Benefits:</strong></p>
+                    <ul class="starter-bundles mb-0">
+                        <li><img src="/images/check-icon.svg" alt="alt"
+                                 class="feature-check-icon float-start me-2"><span class="d-inline-block" tabindex="0"
+                                                                                   data-bs-toggle="tooltip"
+                                                                                   data-bs-title=" Administrators help manage the account and oversee the reviews they have received. Administrators have full access to each single account. Administrators are not to be confused with Staff Members. Administrators of the Master Account will have all the privileges of the primary Administrator of the Master Account.">
+
+  <span>UNLIMITED Administrators for Each Account Included <img
+              src="https://assets.ratemyservice.io/images/rms-info-icon.svg"
+              class="tooltip-info"></span>
+                        </span></li>
+
+
+                        <li><img src="/images/check-icon.svg" alt="alt"
+                                 class="feature-check-icon float-start me-2">Each Staff Member Account can receive
+                            UNLIMITED Reviews / Responses
+                        </li>
+                        <li><img src="/images/check-icon.svg" alt="alt"
+                                 class="feature-check-icon float-start me-2">UNLIMITED
+                            Email Alerts from Submitted Reviews / Responses
+                        </li>
+                        <li><img src="/images/check-icon.svg" alt="alt"
+                                 class="feature-check-icon float-start me-2">Customizable
+                            & Animated Email Signature Widgets, & Call-to-Actions (CTA)
+                        </li>
+                        <li><img src="/images/check-icon.svg" alt="alt"
+                                 class="feature-check-icon float-start me-2">Mobile Friendly Survey Forms
+                        </li>
+                        <li><img src="/images/check-icon.svg" alt="alt"
+                                 class="feature-check-icon float-start me-2"><span class="d-inline-block" tabindex="0"
+                                                                                   data-bs-toggle="tooltip"
+                                                                                   data-bs-title=" Display your Customer Touchpoints (i.e. Call-to-Action, Survey Forms, & Review Filter) in the Language of your choosing. Feel free to request your Language if it's missing!">
+  <span style="white-space: nowrap;">20+ Languages <img
+              src="https://assets.ratemyservice.io/images/rms-info-icon.svg"
+              class="tooltip-info"></span>
+</span></li>
+                    </ul>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <section style="background-color:#ffffff; position: relative; padding: 80px 0">
+        <div class="rms-section-split rms-section-split--absolute" id="split-svg">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 99.06 33.25">
+                <path d="M0 0h99.06C77.33-.02 57.75 13.13 49.53 33.25 41.3 13.14 21.73 0 0 0" style="stroke-width: 0; fill: #f5f6f8;"></path>
+            </svg>
+        </div>
+        <div class="container">
+            {% include "components/trustpilot-reviews-widget.twig" %}
+        </div>
+    </section>
+
+    <div id="intro-pic"
+         style="background-image: url(https://assets.ratemyservice.io/images/rms-landing-background-gradient.webp);">
+        <div class="rms-section-split rms-section-split--absolute" id="split-svg">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 99.06 33.25">
+                <path d="M0 0h99.06C77.33-.02 57.75 13.13 49.53 33.25 41.3 13.14 21.73 0 0 0"
+                      style="stroke-width: 0; fill: #fff;"></path>
+            </svg>
+        </div>
+        <div class="the-pic">
+            <div class="centered">Steps to get more 5-Star Reviews</div>
+            <div class="copy-&-paste">
+                <p>Only 3-minute setup. Just copy & paste!</p>
+            </div>
+            <div class="container z-1 position-relative " id="3-steps">
+                <div class="steps-container">
+                    <div class="">
+                        <img src="https://assets.ratemyservice.io/images/rms-step-1-icon.svg"
+                             alt="An icon of a 1">
+                        <p class="step-1-text">Your customer clicks on the positive icon in your email signature.</p>
+                        <img src="https://assets.ratemyservice.io/images/rms-tablet-email.webp"
+                             class="steps-mockup"
+                             alt="A mockup of a tablet with a email signature on the screen. An arrow pointing towards rating buttons">
+                    </div>
+                    <div class="">
+                        <img src="https://assets.ratemyservice.io/images/rms-step-2-icon.svg"
+                             alt="An icon of a 2">
+                        <p class="step-2-text">RateMyService re-directs your customers' clicks to your Review Profile
+                            form.</p>
+                        <img src="https://assets.ratemyservice.io/images/rms-phone-google.png"
+                             class="steps-mockup" style="max-width: 280px;"
+                             alt="A mockup of a phone containing a Google Review">
+                    </div>
+                    <div class="">
+                        <img src="https://assets.ratemyservice.io/images/rms-step-3-icon.svg"
+                             alt="An icon of a 3">
+                        <p class="step-3-text">Your Profile has a new 5-Star Review</p>
+                        <img src="https://assets.ratemyservice.io/images/rms-chocolates.png"
+                             class="steps-mockup" alt="A mockup of a tablet with a Google Business page on the screen">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <img src="https://assets.ratemyservice.io/images/rms-section-split-wave.svg"
+             alt="A wave pattern that splits two sections"
+             class="section-split section-split--wave" id="rms-bottom-fold-wave">
+    </div>
+</section>
+
+<div class="rms-section-split">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 99.06 33.25">
+        <path d="M0 0h99.06C77.33-.02 57.75 13.13 49.53 33.25 41.3 13.14 21.73 0 0 0"
+              style="stroke-width:0; fill: #F5F6F8;"/>
+    </svg>
+</div>
+<section class="section section--white section--white-label overflow-hidden">
+    <div class="container">
+        <div class="rms-white-label__content">
+            <div>
+                <h2 class="rms-white-label-heading mb-4"><strong>With this bundle, you'll get lifetime access to our
+                        powerful
+                        customer review platform, which includes a variety
+                        of features to help you collect, manage, and display reviews, including:</strong></h2>
+                <ul class="rms-bullet-list">
+                    <li>A white-label / CNAME platform that you can <strong>brand with your own logo and
+                            colours</strong></li>
+                    <li>Agency <strong>branding settings</strong></li>
+                    <li>A super admin dropdown for <strong>quick account switching</strong></li>
+                </ul>
+                <div class="rms-profits-addition mt-4">
+                    <img src="https://assets.ratemyservice.io/images/rms-icon-up-arrows.svg"
+                         alt="An icon with three colorful arrows pointing upwards">
+                    Plus, you'll get to set your own client pricing, so you can maximize your profits.
+                </div>
+            </div>
+            <div class="rms-agency-mockup--laptop position-relative">
+                <img class="rms-agency-mockup__image--laptop rms-agency-mockup__image--laptop"
+                     src="https://assets.ratemyservice.io/images/rms-agency-laptop-mockup.webp"
+                     alt="A mockup of a laptop with a screen showing white-label options">
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section section--gradient overflow-hidden position-relative overflow-hidden"
+         style="background-image: url(https://assets.ratemyservice.io/images/rms-landing-background-gradient.webp);">
+    <div class="rms-section-split rms-section-split--absolute">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 99.06 33.25">
+            <path d="M0 0h99.06C77.33-.02 57.75 13.13 49.53 33.25 41.3 13.14 21.73 0 0 0"
+                  style="stroke-width: 0; fill: #FFF;"/>
+        </svg>
+    </div>
+    <div class="container text-center">
+        <h2 class="text-white mb-5"><strong>Buy a Bundle with at least x3 Codes (Enterprise) and Get Your Lifetime
+                Access Today</strong></h2>
+        <h3 class="text-white mb-5"><strong>With our white-label solution, your clients will never see our brand or
+                receive emails from us. Instead,
+                they'll see your branding and receive emails from your domain.</strong></h3>
+    </div>
+    <div class="rms-section-split--solid rms-section-split--absolute">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2568 55">
+            <path d="M2568 0v55H0V0h1238.2c20.09 0 38.2 13.14 45.8 33.25C1291.6 13.14 1309.69 0 1329.78 0H2568Z"
+                  style="stroke-width: 0; fill: #F5F6F8"/>
+        </svg>
+    </div>
+</section>
+
+<section class="section section--gray">
+    <div class="container">
+        <h2 class="text-center mb-5"><strong>How it works:</strong></h2>
+        <div class="rms-agency-how-it-works">
+            <div class="rms-step-column">
+                <div class="rms-icon-container">
+                    <img src="https://assets.ratemyservice.io/images/rms-icon-lifetime.svg"
+                         alt="An icon of a pink heart with a clock inside">
+                </div>
+                <h3>Purchase a <strong>lifetime code</strong>
+                    bundle.</h3>
+            </div>
+            <div class="rms-step-column">
+                <div class="rms-icon-container">
+                    <img src="https://assets.ratemyservice.io/images/rms-icon-label.svg"
+                         alt="An icon of a blue label">
+                </div>
+                <h3><strong>Apply</strong> for <strong>the White-label
+                        / CNAME Module</strong>.</h3>
+                <a class="btn apply-btn apply-btn--center mt-4"
+                   href="/contact-us">Apply Here!<img
+                            src="https://assets.ratemyservice.io/images/blue-arrow.svg"
+                            alt="A blue arrow pointing to a button"></a>
+            </div>
+            <div class="rms-step-column">
+                <div class="rms-icon-container">
+                    <img src="https://assets.ratemyservice.io/images/rms-icon-customize.svg"
+                         alt="An icon of a yellow gear">
+                </div>
+                <h3><strong>Customize</strong> your ecosystem
+                    with your <strong>own branding
+                        and settings</strong>.</h3>
+            </div>
+            <div class="rms-step-column">
+                <div class="rms-icon-container">
+                    <img src="https://assets.ratemyservice.io/images/rms-icon-brand.svg"
+                         alt="An icon of a green coin">
+                </div>
+                <h3>Start selling our software to your clients under <strong>your own brand!</strong></h3>
+            </div>
+        </div>
+    </div>
+</section>
+<div class="rms-section-split">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 99.06 33.25">
+        <path d="M0 0h99.06C77.33-.02 57.75 13.13 49.53 33.25 41.3 13.14 21.73 0 0 0"
+              style="stroke-width:0; fill: #F5F6F8;"/>
+    </svg>
+</div>
+<section class="section section--white overflow-hidden">
+    <div class="container" style="max-width: 1060px;">
+        <h2 class="rms-pricing-table-heading mb-4"><strong>Benefits of Using Our White Label Software:</strong></h2>
+        <ul class="rms-bullet-list">
+            <li class="mb-3"><strong>Seamless integration:</strong> Clients signing up with your domain URL will
+                automatically be part of your
+                ecosystem and have your branding. All system emails will be sent from your own domain.
+            </li>
+            <li class="mb-3"><strong>Comprehensive support:</strong> We provide email support to you and your clients
+                with a generic email address.
+            </li>
+            <li class="mb-3"><strong>Flexible pricing:</strong> Unused codes <strong>don't expire</strong>, and you can
+                transfer codes from cancelled accounts to new accounts <strong>with no time limits</strong> or
+                restrictions.
+            </li>
+            <li class="mb-3"><strong>Granular subscription control:</strong> You as the Agency Owner can quickly & easly
+                increase/decrease the subscription levels of your clients in order to restrict the number of staff
+                members and features they have access to.
+            </li>
+            <li class="mb-3"><strong>Easy account management:</strong> As the agency owner, you can easily switch
+                between different clients' accounts
+                using the Super Admin dropdown. You can also add yourself to clients' accounts to receive notifications.
+            </li>
+            <li class="mb-3"><strong>Training Videos:</strong> Non-branded training videos are provided in the
+                Dashboard.
+            </li>
+        </ul>
+    </div>
+</section>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const selectElement = document.getElementById('codeSelect');
+        const accountCounts = document.querySelectorAll('.staff-member-account--counts');
+
+        // Function to show/hide elements based on selection
+        function updateDisplay(selectedValue) {
+            // Hide all <p> and <h2> elements
+
+            document.querySelectorAll('.agency-bundle-name').forEach(function(p) {
+                p.style.display = 'none';
+            });
+            document.querySelectorAll('.actual-price').forEach(function(h2) {
+                h2.style.display = 'none';
+            });
+            document.querySelectorAll('.agency-bundle-name--free').forEach(function(p) {
+                p.style.display = 'block';
+            });
+            document.querySelectorAll('.actual-price--free').forEach(function(p) {
+                p.style.display = 'block';
+            });
+
+            // Hide all account counts
+            accountCounts.forEach(function(p) {
+                p.style.display = 'none';
+            });
+
+            // Show the corresponding <p> and <h2> based on the selected option
+            const selectedP = document.getElementById('bundle_name_' + selectedValue);
+            const selectedH2 = document.getElementById('bundle_price_' + selectedValue);
+            if (selectedP && selectedH2) {
+                selectedP.style.display = 'block';
+                selectedH2.style.display = 'block';
+            }
+
+            // Show the corresponding account count based on the index of the selected option
+            const selectedIndex = selectElement.selectedIndex;
+            if (accountCounts[selectedIndex]) {
+                accountCounts[selectedIndex].style.display = 'inline-block';
+            }
+        }
+
+        // Listen to change event on select element
+        selectElement.addEventListener('change', function() {
+            updateDisplay(this.value);
+        });
+
+        // Trigger change event on page load for the first selected option
+        updateDisplay(selectElement.value);
+
+
+        // Initialize the slider (assuming you are using a slider library like 'tiny-slider')
+        var slider = tns({
+            container: '.rms-slider',
+            controlsPosition: 'bottom',
+            navPosition: 'bottom',
+            mouseDrag: true,
+            autoplay: true,
+            autoplayButtonOutput: false,
+            controlsContainer: '#custom-control',
+            items: 1,
+            responsive: {
+                600: {
+                    gutter: 20,
+                    items: 2
+                },
+                700: {
+                    items: 3,
+                    gutter: 30
+                },
+                900: {
+                    items: 5,
+                    gutter: 40
+                }
+            }
+        });
+
+        // Bootstrap popover initialization
+        const popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]');
+        popoverTriggerList.forEach(popoverTriggerEl => new bootstrap.Popover(popoverTriggerEl));
+
+        // Bootstrap popover for dismissable popover
+        const popoverDismissList = document.querySelectorAll('.popover-dismiss');
+        popoverDismissList.forEach(popoverDismissEl => new bootstrap.Popover(popoverDismissEl, {
+            trigger: 'focus'
+        }));
+
+        // Bootstrap tooltip initialization
+        const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]');
+        tooltipTriggerList.forEach(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl));
+    });
+</script>
+{% include"components/marketing-agency-hover-strip.twig" %}
+<footer>
+    {% include "components/footer.twig" %}
+</footer>

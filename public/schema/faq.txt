@@ -1,0 +1,191 @@
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "@id": "https://www.ratemyservice.io/#faq",
+  "name": "Frequently Asked Questions",
+  "url": "https://www.ratemyservice.io/faq",
+  "mainEntity": [{
+    "@type": "Question",
+    "name": "How do I get a customer to rate my service?",
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Following are the 5 main methods of collecting customer feedback:
+<li>Use an In-signature survey tool like www.RateMyService.io</li>
+<li>Reaching out directly.</li>
+<li>Provide customer feedback forms on your website.</li>
+<li>Monitor reviews on Google, Facebook, Yelp etc.</li>
+<li>Monitor social media channels.</li>"
+    }
+  },{
+    "@type": "Question",
+    "name": "How do I get more customer feedback?",
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "When you ask customers for feedback, “meet” them where they are. Offer them multiple methods of leaving feedback so that they can choose the method that works best for them at the time when it’s most convenient:
+<li>Surveys (E.g. www.RateMyService.io)</li>
+<li>Emails</li>
+<li>Focus Groups</li>
+<li>User Testing</li>
+<li>Digital Channels</li>"
+    }
+  },{
+    "@type": "Question",
+    "name": "How do I get more customer feedback?",
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Good customer service means consistently meeting customers' expectations. Great customer service is quick, easy, personalized, and empathetic. Companies that deliver excellent customer service take the time needed to understand the needs of their unique customer base. You can use a tool like www.RateMyService.io to help improve your customer service.
+Essentially, the 3 important qualities of customer service center around three “p”s:
+<li>Surveys (E.g. www.RateMyService.io)</li>
+<li>Professionalism</li>
+<li>Patience</li>
+<li>\"People-first\" attitude</li>
+Although customer service varies from customer to customer, as long as you're following these guidelines, you're on the right track!"
+    }
+  },{
+    "@type": "Question",
+    "name": "How do I add a link to a survey in my email signature?",
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Following are the steps:
+<li>Signup at www.RateMyService.io</li>
+<li>Customize your In-signature Survey (Step 1)</li>
+<li>Import all your Agents (Step 2)</li>
+<li>Click on \"Copy Code to Clipboard\" (Step 3)</li>
+<li>Open Outlook/Gmail/CRM</li>
+<li>In Settings, find your Signature</li>
+<li>Paste your In-signature Survey</li>"
+    }
+  },{
+    "@type": "Question",
+    "name": "How do I add a survey to my email signature?",
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Use a tool, such as www.RateMyService.io, to Create and Link a poll, using a call-to-action (CTA).
+CTAs are a series of clickable icons, buttons, and banners that direct recipients to take the next step in their customer journey. For example, you might have a CTA that reads: “Are you happy with my service?”.
+When they’re designed well, there’s no way recipients will overlook the CTAs on your email signature. And that’s why they’re helpful for surveys and polls.
+Make sure the phrasing of the CTA is simple. The last thing you want is for recipients to lose interest because the content of your CTA isn’t clear."
+    }
+  },{
+    "@type": "Question",
+    "name": "How do I add a Customer Satisfaction (CSAT) survey to my email signature?",
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "A customer satisfaction survey is the most common method to gain customer feedback. And the most common way to survey your customers is via email, or embedded in the email signature.
+A survey can be embedded in the email signature within in 3-minutes using a a tool such as www.RateMyService.io
+Guests can then share their feedback by filling out the embedded survey."
+    }
+  },{
+    "@type": "Question",
+    "name": "How to add a poll or survey to your email signature?",
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "In 3-minutes, by adding a survey to your email signature you set the doors wide open for a higher response rate, with hardly any additional effort. All you have to do is reply to the emails that are coming into your inbox anyway.
+Here are the steps how to add poll or survey to your email signature:
+<li>Signup at www.RateMyService.io</li>
+<li>Customize your In-signature Survey (Step 1)</li>
+<li>Import all your Agents (Step 2)</li>
+<li>Click on \"Copy Code to Clipboard\" (Step 3)</li>
+<li>Open Outlook/Gmail/CRM</li>
+<li>In Settings, find your Signature</li>
+<li>Paste your In-signature Survey</li>"
+    }
+  },{
+    "@type": "Question",
+    "name": "How do I put a survey in my email signature?",
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "In 3-minutes, here's the basic process for creating a survey:
+<li>Signup at www.RateMyService.io</li>
+<li>Customize your In-signature Survey (Step 1)</li>
+<li>Import all your Agents (Step 2)</li>
+<li>Click on \"Copy Code to Clipboard\" (Step 3)</li>
+<li>Open Outlook/Gmail/CRM</li>
+<li>In Settings, find your Signature</li>
+<li>Paste your In-signature Survey</li>"
+    }
+  },{
+    "@type": "Question",
+    "name": "How do I create a survey in my Gmail signature?",
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "<li>Signup at www.RateMyService.io</li>
+<li>Customize your In-signature Survey (Step 1)</li>
+<li>Import all your Agents (Step 2)</li>
+<li>Click on \"Copy Code to Clipboard\" (Step 3)</li>
+<li>Open Gmail</li>
+<li>In Settings, find your Signature</li>
+<li>Paste your In-signature Survey</li>"
+    }
+  },{
+    "@type": "Question",
+    "name": "Can you add a survey to my Gmail signature?",
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Yes, I can add a survey to my Gmail signature.
+<li>Signup at www.RateMyService.io</li>
+<li>Customize your In-signature Survey (Step 1)</li>
+<li>Import all your Agents (Step 2)</li>
+<li>Click on \"Copy Code to Clipboard\" (Step 3)</li>
+<li>Open Gmail</li>
+<li>In Settings, find your Signature</li>
+<li>Paste your In-signature Survey</li>"
+    }
+  },{
+    "@type": "Question",
+    "name": "Can you embed a survey in Gmail signature?",
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "You can make the survey unique to your brand with customizations for question types, colors, and call-to-action. Then simply paste the survey into your Gmail or Outlook email signature
+<li>Signup at www.RateMyService.io</li>
+<li>Customize your In-signature Survey (Step 1)</li>
+<li>Import all your Agents (Step 2)</li>
+<li>Click on \"Copy Code to Clipboard\" (Step 3)</li>
+<li>Open Gmail</li>
+<li>In Settings, find your Signature</li>
+<li>Paste your In-signature Survey</li>"
+    }
+  },{
+    "@type": "Question",
+    "name": "How do I create a survey in Outlook signature?",
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "<li>Signup at www.RateMyService.io</li>
+<li>Customize your In-signature Survey (Step 1)</li>
+<li>Import all your Agents (Step 2)</li>
+<li>Click on \"Copy Code to Clipboard\" (Step 3)</li>
+<li>Open Gmail</li>
+<li>In Settings, find your Signature</li>
+<li>Paste your In-signature Survey</li>"
+    }
+  },{
+    "@type": "Question",
+    "name": "Can you add a survey to Outlook signature?",
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Yes, you can add a survey to Outlook signature. Head over to your Outlook account, and open a new email message. On the Message menu, select Signature > Signatures. On the email signature tab, click on New and type the name of your signature. Under the Edit signature, add the www.RateMyService.io In-Signatures survey and click on OK."
+    }
+  },{
+    "@type": "Question",
+    "name": "Can you embed a survey in Outlook signature?",
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Yes, there are many types of employee surveys that you can embed straight into your Outlook email. The key is to use an Outlook-compatible internal communications tool. The www.RateMyService.io In-Signatures survey is one such compatible tool."
+    }
+  },{
+    "@type": "Question",
+    "name": "How do I create a survey in Office 365 signature?",
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "With www.RateMyService.io In-Signatures surveys, you can quickly and automatically add one-click surveys to your email signatures. Instead of discouraging your customers with long surveys, you provide a way to rate their experience with a single click. Customers are happy their opinion counts, while you get real-time reports and alerts. Setting up one-click surveys is easy and can be done in 3-minutes:
+<li>Signup at www.RateMyService.io</li>
+<li>Customize your In-signature Survey (Step 1)</li>
+<li>Import all your Agents (Step 2)</li>
+<li>Click on \"Copy Code to Clipboard\" (Step 3)</li>
+<li>Open Gmail</li>
+<li>In Settings, find your Signature</li>
+<li>Paste your In-signature Survey</li>"
+    }
+  }]
+}
+</script>

@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="153.354" height="153.354" viewBox="0 0 153.354 153.354">
+  <defs>
+    <filter id="Path_3926" x="0" y="0" width="153.354" height="153.354" filterUnits="userSpaceOnUse">
+      <feOffset dy="7" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="5.5" result="blur"/>
+      <feFlood flood-opacity="0.051"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="icon-happy" transform="translate(16.5 13.5)">
+    <g id="Group_6849" data-name="Group 6849" transform="translate(0 -4)">
+      <g transform="matrix(1, 0, 0, 1, -16.5, -9.5)" filter="url(#Path_3926)">
+        <path id="Path_3926-2" data-name="Path 3926" d="M60.172,120.354a60.177,60.177,0,1,1,60.182-60.178,60.177,60.177,0,0,1-60.182,60.178" transform="translate(16.5 9.5)" fill="#fff"/>
+      </g>
+      <g id="Group_6954" data-name="Group 6954" transform="translate(-2131.245 -2822.843)">
+        <path id="Path_4100" data-name="Path 4100" d="M67.949,40.126A28.127,28.127,0,0,1,22.194,62.043l0,0L8.169,65.9l6.616-12.95A28.128,28.128,0,1,1,67.949,40.126" transform="translate(2153 2843)" fill="#fff"/>
+        <path id="Path_4101" data-name="Path 4101" d="M67.949,73.42A28.127,28.127,0,0,1,22.194,95.337l0,0L8.169,99.193l6.616-12.95A28.128,28.128,0,1,1,67.949,73.42" transform="translate(2153 2813.936)" fill="#1bccdc"/>
+        <path id="Path_4102" data-name="Path 4102" d="M71.78,40.126A28.127,28.127,0,0,1,26.025,62.043l0,0L12,65.9l6.616-12.95A28.128,28.128,0,1,1,71.78,40.126Z" transform="translate(2149.541 2843)" fill="none" stroke="#23314c" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.763"/>
+        <path id="Path_4103" data-name="Path 4103" d="M207.235,212.295a5.474,5.474,0,0,1,10.948,0" transform="translate(1973.248 2667.081)" fill="none" stroke="#23314c" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.763"/>
+        <path id="Path_4104" data-name="Path 4104" d="M452.407,212.295a5.474,5.474,0,0,1,10.948,0" transform="translate(1751.863 2667.081)" fill="none" stroke="#23314c" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.763"/>
+        <path id="Path_4105" data-name="Path 4105" d="M287.44,363.467a13.212,13.212,0,0,1-23.787.028" transform="translate(1922.304 2525.633)" fill="none" stroke="#23314c" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.763"/>
+      </g>
+    </g>
+  </g>
+</svg>

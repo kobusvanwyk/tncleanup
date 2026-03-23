@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Customer feedback from every email | Rate My Service</title>
+    <link rel="icon" href="https://assets.ratemyservice.io/images/favicon-32.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords"
+          content="customer feedback, customer satisfaction, customer satisfaction survey, CSAT, email signature survey, customer satisfaction email signature">
+    <meta name="description"
+          content="RateMyService is an email signature widget that gets you more 5 star reviews guaranteed">
+    <meta property="og:title" content="Rate My Service"/>
+    <meta property="og:description"
+          content="RateMyService is an email signature widget that gets you more 5 star reviews guaranteed"/>
+    <meta prefix="og: https://ratemyservice.io/cookies" property="og:type" content="website"/>
+    <meta property="og:url" content="https://ratemyservice.io/cookies"/>
+    <meta property="og:image" content="https://ratemyservice.io/images/og-image-banner.webp"/>
+    <meta property="og:locale" content="en_GB"/>
+    <link rel="canonical" href="https://ratemyservice.io/cookies"/>
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/bootstrap_5.3-bootstrap.bundle.min.js"></script>
+    <script src="/js/jquery.validate.js"></script>
+    <script src="/js/custom.js"></script>
+    <link rel="stylesheet" href="/css/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/css/bootstrap_5.3-bootstrap.min.css">
+    <link rel="stylesheet" href="/css/default.css?ver=1.0.21" type="text/css">
+    <script type="application/ld+json" src="/schema/local-business.txt"></script>
+    <script type="application/ld+json" src="/schema/website.txt"></script>
+    <script src="https://www.google.com/recaptcha/api.js?render={{ recaptchaSiteKey }}"></script>
+
+    {# Tracking Scripts #}
+    {# Meta #}
+    {% include "code-snippets/meta-tracking-pixel.twig" %}
+
+    {# Google #}
+    {% include "code-snippets/google-tracking-script.twig" %}
+
+    {# PostHog #}
+    {% include "code-snippets/posthog-tracking-script.twig" %}
+
+    <style>
+        #contact-us label {
+            line-height: 1;
+            font-size: 16px;
+        }
+
+        #contact-us label.error {
+            font-size: 14px;
+            display: block;
+            margin-top: 5px;
+        }
+
+        #contact-us label:empty {
+            display: none;
+        }
+
+        .radio-group .form-check-input {
+            top: 3px;
+            position: relative;
+        }
+    </style>
+</head>
+<body>
+<header>
+    {% set pageName = 'Contact Us' %}
+    {% include "components/header.twig" %}
+</header>
+<div id="contact-us" style="padding-top: 50px; background-color: #F5F6F8; margin-bottom: 0;">
+    <div class="container contact-us-container">
+        <div class="row d-flex">
+            <div class="col-lg-6 col-md-12 mb-4 mb-md-0 contact-section">
+                <h3>
+                    Contact RateMyService
+                </h3>
+                <div class="row mb-3">
+                    <div class="col-2">
+                        <img src="/images/rms-email-icon.svg" alt="Email Icon"
+                             style="width: 100px; position: relative; top: -10px; max-width: fit-content;">
+                    </div>
+                    <div class="col-10">
+                        <p>Email</p>
+                        <a href="mailto:support@ratemyservice.io" target="_blank">support@ratemyservice.io</a>
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <div class="col-2">
+                        <img src="/images/rms-address-icon.svg" alt="Address Icon"
+                             style="width: 100px; position: relative; top: -10px; max-width: fit-content;">
+                    </div>
+                    <div class="col-10">
+                        <p>Address</p>
+                        <a href="https://maps.app.goo.gl/5asnD4GMDK6S5HFZA" target="_blank">First Floor, Willowbridge
+                            Mall,<br> Carl Cronje Dr, Bellville Park,<br> Cape Town, 7551</a>
+                    </div>
+                </div>
+                <div class="row mb-5">
+                    <div class="col-2">
+                        <img src="/images/rms-megaphone-icon.svg" alt="Megaphone Icon"
+                             style="width: 100px; position: relative; top: -10px; max-width: fit-content;">
+                    </div>
+                    <div class="col-10">
+                        <p>See what our clients have to<br> say on Trustpilot!</p>
+                        <a class="btn apply-btn apply-btn--center mt-2"
+                           href="https://www.trustpilot.com/review/ratemyservice.io" target="_blank">
+                            Click here
+                            <img src="https://assets.ratemyservice.io/images/blue-arrow.svg"
+                                 alt="A blue arrow pointing to a button">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-12">
+                <div class="card mb-5 inclusive p-4">
+                    {% if request is defined and request.success is defined %}
+                        {% if (request.success == 'false') %}
+                            <div class="alert alert-danger"><strong>Your message was not sent.</strong> Please refresh
+                                and try again!
+                            </div>
+                        {% else %}
+                            <div class="alert alert-success"><strong>Thank you.</strong> Your email has been sent
+                            </div>
+                        {% endif %}
+                    {% endif %}
+                    {% if (request.captcha) %}
+                        <div class="alert alert-danger"><strong>Google reCaptcha failed.</strong> Please refresh and try
+                            again!
+                        </div>
+                    {% endif %}
+                    <form method="post" action="/api/contact-us/send-email" id="contactUsForm" enctype="multipart/form-data" xmlns="http://www.w3.org/1999/html">
+                        <div class="mb-3">
+                            <label for="name" class="form-label fw-bold">Full Name *</label>
+                            <input name="name" id="name" type="text" placeholder="Your Name" class="form-control"
+                                   required>
+                            <label id="name-error" class="error text-danger" for="name"></label>
+                        </div>
+                        <div class="mb-3">
+                            <label for="company" class="form-label fw-bold">Company Name *</label>
+                            <input name="companyname" id="companyname" type="text" placeholder="Company Name"
+                                   class="form-control"
+                                   required>
+                            <label id="companyname-error" class="error text-danger" for="companyname"></label>
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label fw-bold">Email Address *</label>
+                            <input name="email" id="email" type="text" placeholder="Email Address" class="form-control"
+                                   required>
+                            <label id="email-error" class="error text-danger" for="email"></label>
+                        </div>
+                        <div class="mb-3 mt-4">
+                            <div class="card card-body" style="background: #FAFAFA; border: 1px solid #CBCBCB;">
+                                <label for="companytype" class="form-label fw-bold">Are you an Agency or
+                                    Business?
+                                    *</label>
+                                <div class="row">
+                                    <div class="col-12 radio-group d-flex align-items-center">
+                                        <div class="form-check marketing-agency">
+                                            <input class="form-check-input" type="radio" name="companytype"
+                                                   value="Agency"
+                                                   id="agency" required>
+                                            <label class="form-check-label" for="agency">Agency</label>
+                                        </div>
+                                        <div class="form-check ">
+                                            <input class="form-check-input" type="radio" name="companytype"
+                                                   value="Business"
+                                                   id="business" required>
+                                            <label class="form-check-label" for="business">Business</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <label id="companytype-error" class="error text-danger" for="companytype"></label>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="referral" class="form-label fw-bold">Where did you hear about us? *</label>
+                            <div class="row">
+                                <div class="col-12 radio-group">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="referral" value="Referral"
+                                               id="referral" required>
+                                        <label class="form-check-label" for="referral">Referral</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="referral" value="Google"
+                                               id="google" required>
+                                        <label class="form-check-label" for="google">Google</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="referral" value="Facebook"
+                                               id="facebook" required>
+                                        <label class="form-check-label" for="facebook">Facebook</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="referral" value="Instagram"
+                                               id="instagram" required>
+                                        <label class="form-check-label" for="instagram">Instagram</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="referral" value="LinkedIn"
+                                               id="linkedIn" required>
+                                        <label class="form-check-label" for="linkedIn">LinkedIn</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="referral"
+                                               value="email-campaign" id="email-campaign" required>
+                                        <label class="form-check-label" for="email-campaign">Email Campaign</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="referral" value="Other"
+                                               id="other" required>
+                                        <label class="form-check-label" for="other">Other</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <label id="referral-error" class="error text-danger" for="referral"></label>
+                        </div>
+                        <div class="mb-3">
+                            <label for="subject" class="form-label fw-bold">Subject *</label>
+                            <input name="subject" id="subject" type="text" placeholder="Subject" class="form-control"
+                                   required>
+                            <label id="subject-error" class="error text-danger" for="subject"></label>
+                        </div>
+                        <div class="mb-3">
+                            <label for="message" class="form-label fw-bold">Message *</label>
+                            <textarea name="message" id="message" class="form-control" rows="10"
+                                      placeholder="Your message"></textarea>
+                            <label id="message-error" class="error text-danger" for="message"></label>
+                        </div>
+                        {{ "contactUsForm" | formToken | raw }}
+                        <div>
+                            <input name="sendEmail" type="submit" value="Send"
+                                   class="form-control contact-us-but">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<section style="background-color:#ffffff; position: relative; padding: 80px 0">
+    <div class="rms-section-split rms-section-split--absolute" id="split-svg">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 99.06 33.25">
+            <path d="M0 0h99.06C77.33-.02 57.75 13.13 49.53 33.25 41.3 13.14 21.73 0 0 0" style="stroke-width: 0; fill: #f5f6f8;"></path>
+        </svg>
+    </div>
+    <div class="container">
+        {% include "components/trustpilot-reviews-widget.twig" %}
+    </div>
+</section>
+
+<script>
+    $('#contactUsForm').submit(function (event) {
+        event.preventDefault();
+        if ($("#contactUsForm").valid()) {
+            grecaptcha.ready(function () {
+                grecaptcha.execute('{{ recaptchaSiteKey }}', {action: 'contact_us_email'}).then(function (token) {
+                    $('#contactUsForm').prepend('<input type="hidden" name="token" value="' + token + '">');
+                    $('#contactUsForm').prepend('<input type="hidden" name="action" value="contact_us_email">');
+                    $('#contactUsForm').unbind('submit').submit();
+                });
+            });
+        }
+    });
+</script>
+<footer>
+    {% include "components/footer.twig" %}
+</footer>
+</body>
+</html>
+

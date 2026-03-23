@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="93" height="93" viewBox="0 0 93 93">
+  <defs>
+    <filter id="Path_4095" x="0" y="0" width="93" height="93" filterUnits="userSpaceOnUse">
+      <feOffset dy="7" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="5.5" result="blur"/>
+      <feFlood flood-opacity="0.051"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="Group_7004" data-name="Group 7004" transform="translate(-369.5 -892.5)">
+    <g transform="matrix(1, 0, 0, 1, 369.5, 892.5)" filter="url(#Path_4095)">
+      <path id="Path_4095-2" data-name="Path 4095" d="M30.5,60.5a30,30,0,1,1,30-30,30.034,30.034,0,0,1-30,30" transform="translate(16 9)" fill="#fff"/>
+    </g>
+    <g id="Group_6975" data-name="Group 6975" transform="translate(409.565 919)">
+      <path id="Path_4111" data-name="Path 4111" d="M15.55,69.72H12v-5.7h9.934V90.2H15.55Z" transform="translate(-12 -61.265)" fill="#f8c102"/>
+      <path id="Path_4112" data-name="Path 4112" d="M15.55,33.84H12v-5.7h9.934V54.317H15.55Z" transform="translate(-12 -28.138)" fill="none" stroke="#23314c" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"/>
+    </g>
+  </g>
+</svg>

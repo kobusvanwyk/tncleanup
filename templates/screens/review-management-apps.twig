@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>RateMyService | Agency Owners: Get Lifetime Access to a Powerful Customer Review Platform</title>
+    <link rel="icon" href="https://assets.ratemyservice.io/images/favicon-32.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords"
+          content="customer feedback, customer satisfaction, customer satisfaction survey, CSAT, email signature survey, customer satisfaction email signature">
+    <meta name="description"
+          content="RateMyService is an email signature widget that gets you more 5 star reviews guaranteed">
+    <meta property="og:title" content="Agency Owners: Get Lifetime Access to a Powerful Customer Review Platform"/>
+    <meta property="og:description" content="Boost your clients' online reviews and increase their sales today"/>
+    <meta prefix="og: https://ratemyservice.io/cookies" property="og:type" content="website"/>
+    <meta property="og:url" content="https://ratemyservice.io/marketing-agency-ltd"/>
+    <meta property="og:image" content="https://ratemyservice.io/images/og-image-banner.webp"/>
+    <meta property="og:locale" content="en_GB"/>
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/jquery.validate.js"></script>
+    <script src="/js/popper.min.js"></script>
+    <script src="/js/bootstrap_5.3-bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="/css/bootstrap_5.3-bootstrap.min.css">
+    <link rel="stylesheet" href="/css/default.css?ver=1.0.21" type="text/css">
+    <link rel="stylesheet" href="/css/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/css/tiny-slider-2_9_4.css">
+    <script src="/js/tina4helper.js"></script>
+    <script src="https://js.stripe.com/v3/"></script>
+    <script id="stripeHelper" src="/js/stripeHelper.js" data-api-key="{{ stripePublicKey }}"></script>
+    <script src="/js/paymentHelper.js"></script>
+    <!--[if (lt IE 9)]>
+    <link rel="stylesheet" href="/css/tiny-slider-2_9_4_IE.css"><![endif]-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script>
+    <script type="application/ld+json" src="/schema/local-business.txt"></script>
+    <script type="application/ld+json" src="/schema/website.txt"></script>
+
+    {# Tracking Scripts #}
+    {# Meta #}
+    {% include "code-snippets/meta-tracking-pixel.twig" %}
+
+    {# Google #}
+    {% include "code-snippets/google-tracking-script.twig" %}
+
+    {# PostHog #}
+    {% include "code-snippets/posthog-tracking-script.twig" %}
+
+    <style>
+        .popular-tag.popular-tag--agency {
+            display: none;
+        }
+
+        .agency-pricing-card.agency-pricing-card--popular .popular-tag.popular-tag--agency {
+            display: block;
+        }
+    </style>
+
+</head>
+<body class="rms-agency">
+<header class="rms-landing-header">
+    {% set pageName = 'business' %}
+    {% include "components/header.twig" %}
+</header>
+
+{# Banner #}
+<section class="rms-agency-hero rms-agency-hero--ltd overflow-hidden pb-lg-0 pb-sm-0 pb-5"
+         style="background-image: url(https://assets.ratemyservice.io/images/rms-landing-background-gradient.webp);">
+    <div class="container position-relative z-1 px-lg-0 px-sm-5 px-4 mb-lg-0 mb-sm-5 mb-5">
+        <div class="rms-agency-hero__content business justify-content-center align-items-center pe-lg-4 pe-sm-0 pe-0">
+            <div class="rms-app-hero__text">
+                <h1 class="rms-agency-hero__text text-white lh-base"><strong>
+                        Everything Your Clients Need <br><span class="highlight highlight--agency"
+                                                               style="background-image: url(https://assets.ratemyservice.io/images/rms-agency-bundles-highlight.svg); padding: 0px 18px;">to Build Trust and Credibility</span>
+                    </strong></h1>
+                <h2 class="text-white pe-lg-5 pe-sm-0 pe-0 fs-3"><strong>Email Signature Widget | QR Code App | Social
+                        Media Automation</strong></h2>
+                <p class="apps-text text-white fw-bold">RateMyService provides a complete 3-in-1 Review Management
+                    Software that helps businesses generate more reviews, monitor feedback, and promote positive
+                    customer experiences.
+
+                    <br><br>All features are available within your white-label environment.</p>
+                <div class="rms-agency-hero__cta-buttons mt-4">
+                    <a class="btn buy-bundle-btn buy-bundle-btn--pink d-block"
+                       href="/agency#pricing-plans">
+                        View White-Label Packages
+                    </a>
+                </div>
+            </div>
+            <div class="rms-agency-ltd-image__container">
+                <img class="rms-apps-image business mt-lg-0 mt-sm-5 mt-4"
+                     src="/images/rms-business-owner-graphic.svg"
+                     alt="An illustration of characters shaking hands">
+            </div>
+        </div>
+    </div>
+    <img class="section-split section-split--wave"
+         src="/images/rms-section-split-wave-white.svg"
+         alt="A wave pattern that splits two sections">
+
+</section>
+
+{# Email Signature Review Widget #}
+<section id="email-signature-widget" style="background-color:#FFFFFF;">
+    <div class="container">
+        <div class="row d-flex justify-content-center">
+            <div class="col-lg-6 col-sm-12 px-4 d-flex flex-column align-items-start justify-content-center">
+                <h4 class="yellow-highlight-sub-heading">Email Signature Review Widget</h4>
+                <h2 class="section-heading my-3">Turn Every Email Into a Review Opportunity</h2>
+                <div class="d-lg-flex d-sm-flex d-block my-3">
+                    <div class="me-3">
+                        <img src="/images/email-sig-review-widget-icon.svg"
+                             alt="">
+                    </div>
+                    <div class="mt-lg-0 mt-sm-0 mt-3">
+                        <p class="mb-0">The Email Signature Review Widget automatically prompts customers to leave
+                            reviews through everyday email communication. This passive approach drives consistent review
+                            growth without manual follow-ups.</p>
+                    </div>
+                </div>
+
+                <div class="rms-idea-for-box-grey mt-2">
+                    <img src="/images/rms-thumbs-up-five-stars-icon.svg"
+                         alt="">
+                    <ul class="rms-bullet-list mt-lg-0 mt-sm-0 mt-3 mb-0">
+                        <li>Your Client gets more 5-star reviews</li>
+                        <li>Your Client Recovers Dropped Balls</li>
+                        <li>Your Client can track team performances</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col-lg-6 col-sm-12 px-4 d-flex flex-column align-items-center justify-content-center">
+                <img src="/images/email-sig-review-widget.svg"
+                     alt="RMS email signature review widget graphic" class="w-100 mt-lg-0 mt-sm-5 mt-4">
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+{#    QR Code Review App #}
+<div class="rms-section-split">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 99.06 33.25" style="top: 21px; position: relative;">
+        <path d="M0 0h99.06C77.33-.02 57.75 13.13 49.53 33.25 41.3 13.14 21.73 0 0 0"
+              style="stroke-width:0; fill: #ffffff;"/>
+    </svg>
+</div>
+
+<section id="qr-code-app">
+    <div class="container">
+        <div class="row flex-lg-row flex-column-reverse d-flex justify-content-center">
+            <div class="col-lg-7 col-sm-12 px-4 d-flex flex-column align-items-center justify-content-center">
+                <img src="/images/qr-code-review-app-graphic.svg"
+                     alt="RMS email signature review widget graphic" class="w-100 mt-lg-0 mt-sm-5 mt-4">
+            </div>
+
+            <div class="col-lg-5 col-sm-12 px-4 d-flex flex-column align-items-start justify-content-center">
+                <h4 class="text-white fw-bold"><span class="red-highlight-sub-heading">QR Code Review App</span></h4>
+                <h2 class="qr-main-section-heading my-3">Instant Reviews at the Point of Service</h2>
+                <div class="d-flex my-3">
+                    <div class="me-3">
+                        <img src="/images/rms-qr-code-app-icon.svg"
+                             alt="">
+                    </div>
+                    <div>
+                        <p class="qr-text">The QR Code Review App makes it easy for customers to leave reviews on the
+                            spot — in-store, on invoices, or at events.</p>
+                    </div>
+                </div>
+
+                <div class="rms-more-info">
+                    <p class="fw-bold mb-1">
+                        This feature is especially effective for:
+                    </p>
+                    <ul class="rms-bullet-list mb-0">
+                        <li>Hospitality</li>
+                        <li>Restaurants</li>
+                        <li>Coffee shops & café’s</li>
+                        <li>Retail</li>
+                        <li>Trades and service professionals</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<div id="intro-pic" style="background-color: #F5F6F8; max-height: 200px; padding-bottom: 100px;">
+    <img src="https://assets.ratemyservice.io/images/rms-section-split-wave-white.svg"
+         alt="A wave pattern that splits two sections"
+         class="section-split section-split--wave" id="rms-bottom-fold-wave">
+</div>
+
+{# Social Media Automation #}
+<section id="social-media-automation" style="background-color:#FFFFFF;" class="overflow-hidden">
+    <div class="container px-4">
+        <div class="rms-white-label__content">
+            <div>
+                <div class="d-flex flex-column align-items-start">
+                    <h4 class="yellow-highlight-sub-heading" style="width: auto">Social Media Automation</h4>
+                </div>
+                <h2 class="section-heading my-3">Leverage Social Proof Where Clients Already Engage</h2>
+                <div class="d-lg-flex d-sm-flex d-block mt-4">
+                    <div class="me-3">
+                        <img src="/images/rms-social-media-auto-icon.svg"
+                             alt="">
+                    </div>
+                    <div>
+                        <p class="mt-lg-0 mt-sm-0 mt-3 mb-0 pe-lg-5 pe-sm-5 pe-0">Automatically repost reviews to
+                            Facebook to reinforce credibility and keep business pages active with authentic customer
+                            feedback.
+
+                            <br><br>This helps businesses maintain visibility while building trust across social
+                            platforms.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="rms-agency-mockup--laptop position-relative">
+                <img class="rms-agency-mockup__image--laptop rms-agency-mockup__image--laptop"
+                     src="/images/rms-social-media-auto-mockup.svg"
+                     alt="A mockup of a laptop with a screen showing white-label options" style="max-width:750px;">
+            </div>
+
+        </div>
+    </div>
+</section>
+
+{# Intro to RMS #}
+<section id="intro-video"
+         style="background-image: url(https://assets.ratemyservice.io/images/rms-landing-background-gradient.webp);"
+         class="py-5">
+    <div class="rms-section-split rms-section-split--absolute" id="split-svg">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 99.06 33.25">
+            <path d="M0 0h99.06C77.33-.02 57.75 13.13 49.53 33.25 41.3 13.14 21.73 0 0 0"
+                  style="stroke-width: 0; fill: #ffffff;"></path>
+        </svg>
+    </div>
+    <div class="the-video text-center">
+        <img src="/images/rms-play-button-icon.svg"
+             alt="Play button that plays a quick intro video to RateMyService" data-bs-toggle="modal"
+             data-bs-target="#videoModal" data-bs-src="https://assets.ratemyservice.io/videos/rms-quick-intro-video.mp4"
+             style="cursor: pointer;">
+        <h2 class="section-heading text-white lh-sm my-3">A quick intro to <br><span class="fs-1">RateMyService</span>
+        </h2>
+    </div>
+    <img src="https://assets.ratemyservice.io/images/rms-section-split-wave-white.svg"
+         alt="A wave pattern that splits two sections"
+         class="section-split section-split--wave" id="rms-bottom-fold-wave">
+</section>
+
+<!-- Video Modal -->
+<div class="modal fade" id="videoModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-xl modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-body">
+                <!-- Responsive wrapper -->
+                <div class="ratio ratio-16x9">
+                    <video controls="" preload="none" width="100%" style="cursor: pointer;"
+                           poster="https://assets.ratemyservice.io/images/rms-video-thumbnail.webp"
+                           onclick="this.paused ? this.play() : this.pause(); arguments[0].preventDefault();">
+                        <source src="https://assets.ratemyservice.io/videos/rms-quick-intro-video.webm"
+                                type="video/webm">
+                        <source src="https://assets.ratemyservice.io/videos/rms-quick-intro-video.mp4" type="video/mp4">
+                        Your browser does not support this video file.
+                    </video>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{# CTA #}
+<section style="background-color:#FFFFFF; position: relative;">
+    <div class="container pt-lg-5 pt-sm-0 pt-0">
+        {% include "components/cta-white-label.twig" with {
+            subheading: "Pricing Options",
+            heading: "Choose a Package and Start Reselling",
+            content: "Pricing is structured for agency profitability, with room to set your own margins and client pricing.",
+            button_text: "View White-Label Packages",
+            button_url: "/agency#pricing-plans"
+        } %}
+    </div>
+</section>
+
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        // Initialize the slider (assuming you are using a slider library like 'tiny-slider')
+        var slider = tns({
+            container: '.rms-slider',
+            controlsPosition: 'bottom',
+            navPosition: 'bottom',
+            mouseDrag: true,
+            autoplay: true,
+            autoplayButtonOutput: false,
+            controlsContainer: '#custom-control',
+            items: 1,
+            responsive: {
+                600: {
+                    gutter: 20,
+                    items: 2
+                },
+                700: {
+                    items: 3,
+                    gutter: 30
+                },
+                900: {
+                    items: 5,
+                    gutter: 40
+                }
+            }
+        });
+
+        // Bootstrap popover initialization
+        const popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]');
+        popoverTriggerList.forEach(popoverTriggerEl => new bootstrap.Popover(popoverTriggerEl));
+
+        // Bootstrap popover for dismissable popover
+        const popoverDismissList = document.querySelectorAll('.popover-dismiss');
+        popoverDismissList.forEach(popoverDismissEl => new bootstrap.Popover(popoverDismissEl, {
+            trigger: 'focus'
+        }));
+
+        // Bootstrap tooltip initialization
+        const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]');
+        tooltipTriggerList.forEach(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl));
+    });
+
+    // Pure JavaScript solution
+    document.addEventListener('DOMContentLoaded', () => {
+        var videoModal = document.getElementById('videoModal');
+        var videoSrc;
+
+        videoModal.addEventListener('show.bs.modal', function (event) {
+            // Button that triggered the modal
+            var button = event.relatedTarget;
+            // Extract info from data-bs-* attributes
+            videoSrc = button.getAttribute('data-bs-src');
+            // If YouTube, add autoplay to the URL
+            videoSrc += "?autoplay=1&modestbranding=1&showinfo=0";
+            // Update the modal's video source
+            videoModal.querySelector('#video').src = videoSrc;
+        });
+
+        videoModal.addEventListener('hide.bs.modal', function (event) {
+            // Reset the video source to stop playback
+            videoModal.querySelector('#video').src = '';
+        });
+    });
+</script>
+
+<footer>
+    {% include "components/footer.twig" with { footerSvgFill: 'white' } %}
+</footer>
+</body>
+</html>

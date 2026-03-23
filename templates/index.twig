@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>RateMyService - Get more 5 star Reviews</title>
+    <link rel="icon" href="https://assets.ratemyservice.io/images/favicon-32.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords"
+          content="customer feedback, customer satisfaction, customer satisfaction survey, CSAT, email signature survey, customer satisfaction email signature">
+    <meta name="description"
+          content="RateMyService is an email signature widget that gets you more 5 star reviews guaranteed">
+    <meta property="og:title" content="Rate My Service"/>
+    <meta property="og:description"
+          content="RateMyService is an email signature widget that gets you more 5 star reviews guaranteed"/>
+    <meta prefix="og: https://ratemyservice.io/" property="og:type" content="website"/>
+    <meta property="og:url" content="https://ratemyservice.io/"/>
+    <meta property="og:image" content="https://ratemyservice.io/images/og-image-banner.webp"/>
+    <meta property="og:locale" content="en_GB"/>
+    <link rel="canonical" href="https://ratemyservice.io/"/>
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/bootstrap_5.3-bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="/css/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/css/bootstrap_5.3-bootstrap.min.css">
+    <link rel="stylesheet" href="/css/default.css?ver=1.0.21" type="text/css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+    <link rel="stylesheet" href="/css/tiny-slider-2_9_4.css">
+    <!--[if (lt IE 9)]>
+    <link rel="stylesheet" href="/css/tiny-slider-2_9_4_IE.css"><![endif]-->
+    <script type="application/ld+json" src="/schema/local-business.txt"></script>
+    <script type="application/ld+json" src="/schema/website.txt"></script>
+    <script type="application/ld+json" src="/schema/product.txt"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script>
+    <!-- NOTE: prior to v2.2.1 tiny-slider.js need to be in <body> -->
+    <!-- Start cookieyes banner -->
+    <script id="cookieyes" type="text/javascript"
+            src="https://cdn-cookieyes.com/client_data/068433cc84e8fbf15116f01b/script.js"></script>
+
+    <!-- End cookieyes banner -->
+    {# Tracking Scripts #}
+    {# Meta #}
+    {% include "code-snippets/meta-tracking-pixel.twig" %}
+
+    {# Google #}
+    {% include "code-snippets/google-tracking-script.twig" %}
+
+    {# PostHog #}
+    {% include "code-snippets/posthog-tracking-script.twig" %}
+</head>
+<body>
+<header>
+    {% include "components/header.twig" %}
+</header>
+
+{# Home Banner #}
+<div class="container" id="welcome-message">
+    <div class="row">
+        <div class="px-0">
+            <h1 class="welcome-message">
+                White-Label 3-in-1
+                <span class="yellow-highlight message"><br>Review Management Software</span>
+            </h1>
+            <h2 class="welcome-message-sub small mt-lg-5 mt-sm-4 mt-4">
+                Resell Under Your Brand Our
+                <strong>3-in-1 Review Management Software</strong>
+                <br>to Your Clients
+            </h2>
+        </div>
+    </div>
+    <div class="row mt-2">
+        <div>
+            <a class="free-trial-btn w-auto p-3 my-lg-3 my-sm-2 mt-2" href="/agency#pricing-plans">
+                View White-Label Packages
+            </a>
+        </div>
+
+        <div id="rms-slider">
+            <div class="slider-container">
+                <ul class="control" id="custom-control">
+                    <li class="prev">
+                        <i class="fa fa-angle-left fa-2x"></i>
+                    </li>
+                    <li class="next">
+                        <i class="fa fa-angle-right fa-2x"></i>
+                    </li>
+                </ul>
+                <div class="rms-slider" style="display: flex;">
+                    <img src="https://assets.ratemyservice.io/images/review-logo-trustpilot.svg"
+                         alt="Trustpilot Reviews Logo">
+                    <img src="https://assets.ratemyservice.io/images/review-logo-yelp.svg"
+                         alt="Yelp Reviews Logo">
+                    <img src="https://assets.ratemyservice.io/images/review-logo-tripadvisor.svg"
+                         alt="Tripadvisor Reviews Logo">
+                    <img src="https://assets.ratemyservice.io/images/review-logo-google.svg"
+                         alt="Google Reviews Logo">
+                    <img src="/images/review-logo-booking.com.svg"
+                         alt="Booking.com Reviews Logo">
+                </div>
+            </div>
+        </div>
+
+        <script>
+            var slider = tns({
+                container: '.rms-slider',
+                controlsPosition: 'bottom',
+                navPosition: 'bottom',
+                mouseDrag: true,
+                autoplay: true,
+                autoplayButtonOutput: false,
+                controlsContainer: '#custom-control',
+                items: 1,
+                responsive: {
+                    600: {
+                        gutter: 20,
+                        items: 2
+                    },
+                    700: {
+                        items: 3,
+                        gutter: 30
+                    },
+                    900: {
+                        items: 5,
+                        gutter: 40
+                    }
+                }
+            });
+        </script>
+    </div>
+</div>
+<img src="https://assets.ratemyservice.io/images/rms-section-split-wave.svg"
+     alt="A wave pattern that splits two sections"
+     class="section-split section-split--wave" id="rms-bottom-fold-wave" style="position: relative">
+
+{# Who Is This For #}
+<section id="home-who-is-this-for" style="background-color:#F5F6F8;">
+    <div class="container">
+        <div class="row d-flex justify-content-center">
+            <div class="col-lg-6 col-sm-12 px-4 d-flex flex-column align-items-start">
+                <h4 class="yellow-highlight-sub-heading">Who Is This For</h4>
+                <h2 class="section-heading my-3">Built for Agencies That Want Scalable, Recurring Revenues</h2>
+                <p class="mt-1">
+                    RateMyService is purpose-built for agencies that manage online reputation, local SEO, and
+                    performance-driven lead generation for their clients.
+
+                    <br><br>Whether you serve a small portfolio of local businesses or manage hundreds of client
+                    reviews, RateMyService enables you to offer a fully branded review management solution under your
+                    own brand, without the cost, complexity, or risk of building and maintaining software internally.
+
+                    <br><br>Our 3-in-1 Review Management Software allows you to increase client lifetime value,
+                    strengthen retention, and introduce a high-margin recurring revenue stream, while we handle the
+                    technology, infrastructure, and ongoing platform updates.
+                </p>
+
+                <div class="rms-idea-for-box mt-3">
+                    <img src="/images/rms-ideal-for-icon.svg"
+                         alt="">
+                    <p class="mb-0 mt-lg-0 mt-sm-0 mt-3">
+                        <strong>Ideal for:</strong>
+                        <br><span style="color:#FE0056">•</span> Digital Marketing Agencies
+                        <br><span style="color:#FE0056">•</span> Technology and Software Agencies
+                        <br><span style="color:#FE0056">•</span> Lead Generation and Performance Marketing Agencies
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-lg-6 col-sm-12 px-4 d-flex flex-column align-items-center justify-content-center">
+                <img src="/images/rms-marketing-agency-graphic.svg"
+                     alt="RMS marketing agency graphic" class="rms-who-is-this-for-graphic mt-lg-0 mt-sm-5 mt-4">
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+{# How Agencies Make Money #}
+<section id="intro-pic"
+         style="background-image: url(https://assets.ratemyservice.io/images/rms-landing-background-gradient.webp);">
+    <div class="container">
+        <div class="rms-section-split rms-section-split--absolute" id="split-svg">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 99.06 33.25">
+                <path d="M0 0h99.06C77.33-.02 57.75 13.13 49.53 33.25 41.3 13.14 21.73 0 0 0"
+                      style="stroke-width: 0; fill: #F5F6F8;"></path>
+            </svg>
+        </div>
+
+            <div class="row flex-lg-row flex-column-reverse d-flex justify-content-center">
+                <div class="col-lg-6 col-sm-12 px-4 d-flex flex-column align-items-center justify-content-center">         <img src="/images/rms-business-owner-graphic.svg"
+                         alt="RMS marketing agency graphic" class="rms-how-agencies-make-money-graphic mt-lg-0 mt-sm-5 mt-4">
+                </div>
+
+                <div class="col-lg-6 col-sm-12 px-4 d-flex flex-column align-items-start justify-content-center">
+                    <h4 class="red-highlight-sub-heading text-white">How Agencies Make Money</h4>
+                    <h2 class="section-heading text-white my-3">Turn Reputation Management Into Predictable Monthly
+                        Revenue</h2>
+                    <p class="text-white mb-0 mt-1">
+                        With RateMyService, agencies resell review management software under their own branding at their
+                        own price to their client base. You control the commercial model while we power the platform.
+                        <br><br><strong>Agencies typically:</strong>
+                        <br>• Bundle review management into SEO or website retainers
+                        <br>• Sell it as a standalone monthly subscription
+                        <br>• Use it as a value-add to improve client retention
+
+                        <br><br><strong>Key Outcome:</strong>
+                        <br>High-margin, recurring revenue with minimal operational overhead.
+
+                    </p>
+                </div>
+
+            </div>
+            <img src="https://assets.ratemyservice.io/images/rms-section-split-wave-white.svg"
+             alt="A wave pattern that splits two sections"
+             class="section-split section-split--wave" id="rms-bottom-fold-wave">
+    </div>
+</section>
+
+{# What’s Included in White-Label #}
+<section id="rms-white-label" style="background-color:#FFFFFF; overflow: hidden;">
+    <div class="container px-4">
+        <div class="rms-white-label__content">
+            <div>
+                <div class="d-flex flex-column align-items-start">
+                    <h4 class="yellow-highlight-sub-heading" style="width: auto">What’s Included in White-Label</h4>
+                </div>
+                <h2 class="section-heading my-3">Everything You Need to Sell Under Your Own Brand</h2>
+                <p class="mt-1">
+                    With this bundle, you'll get lifetime access to our powerful customer review platform , which
+                    includes a variety of features to help you collect, manage, and display reviews, including:
+                </p>
+
+                <ul class="rms-bullet-list">
+                    <li>A White-label / CNAME platform that you can <strong>brand with your own logo and
+                            colours</strong></li>
+                    <li>Agency <strong>branding settings</strong></li>
+                    <li>A super admin dropdown for <strong>quick account switching</strong></li>
+                    <li><strong>Stripe Integration</strong> for our <strong>White-Label clients</strong>, allowing you
+                        to <strong>charge your clients on a monthly
+                            subscription</strong> basis.
+                    </li>
+                </ul>
+
+                <div class="rms-profits-addition mt-4" style="background: rgba(209, 209, 209, .35);">
+                    <img src="https://assets.ratemyservice.io/images/rms-icon-up-arrows.svg"
+                         alt="An icon with three colorful arrows pointing upwards">
+                    <p class="mb-0">Plus, you'll get to set your own client pricing, so you can maximize your profits.</p>
+                </div>
+            </div>
+
+            <div class="rms-agency-mockup--laptop position-relative">
+                <img class="rms-agency-mockup__image--laptop rms-agency-mockup__image--laptop"
+                     src="https://assets.ratemyservice.io/images/rms-agency-laptop-mockup.webp"
+                     alt="A mockup of a laptop with a screen showing white-label options">
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+{# Trustpilot Reviews #}
+<section id="trustpilot-reviews" style="background-color:#F5F6F8;">
+    <div class="rms-section-split rms-section-split--absolute" id="split-svg">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 99.06 33.25">
+            <path d="M0 0h99.06C77.33-.02 57.75 13.13 49.53 33.25 41.3 13.14 21.73 0 0 0"
+                  style="stroke-width: 0; fill: #FFFFFF;"></path>
+        </svg>
+    </div>
+    <div class="container">
+        <div class="text-center">
+            <div class="d-flex flex-column align-items-center">
+                <h4 class="red-highlight-sub-heading text-white">What People Say About Us</h4>
+            </div>
+            <h2 class="section-heading my-3">Trusted by Agencies and Service <br>Businesses Worldwide</h2>
+        </div>
+        <div class="pt-4">
+            {% include "components/trustpilot-reviews-widget.twig" %}
+        </div>
+    </div>
+    <img src="https://assets.ratemyservice.io/images/rms-section-split-wave-white.svg"
+         alt="A wave pattern that splits two sections"
+         class="section-split section-split--wave" id="rms-bottom-fold-wave">
+</section>
+
+{# CTA #}
+<div class="mx-lg-5 mx-sm-5 mx-4">
+    {% include "components/cta-white-label.twig" with {
+        subheading: "White-Label Deals",
+        heading: "Start Selling Review Management Under Your Own Brand",
+        content: "Launch your own white-label review platform in days — not months. Choose a reseller package that fits your agency size and scale as your client base grows.",
+        button_text: "View White-Label Packages",
+        button_url: "/agency#pricing-plans"
+    } %}
+</div>
+
+<footer>
+    {% include "components/footer.twig" with { footerSvgFill: 'white' } %}
+</footer>
+
+</body>
+</html>
+

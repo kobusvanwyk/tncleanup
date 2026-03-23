@@ -1,0 +1,14 @@
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org/",
+  "@type": "WebSite",
+  "@id": "https://www.ratemyservice.io/#website",
+  "name": "RateMyService",
+  "url": "https://www.ratemyservice.io/",
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": "https://www.ratemyservice.io/search?q={search_term_string}",
+    "query-input": "required name=search_term_string"
+  }
+}
+</script>

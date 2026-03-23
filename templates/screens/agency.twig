@@ -1,0 +1,844 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>RateMyService | Agency Owners: Get Lifetime Access to a Powerful Customer Review Platform</title>
+    <link rel="icon" href="https://assets.ratemyservice.io/images/favicon-32.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords"
+          content="customer feedback, customer satisfaction, customer satisfaction survey, CSAT, email signature survey, customer satisfaction email signature">
+    <meta name="description"
+          content="RateMyService is an email signature widget that gets you more 5 star reviews guaranteed">
+    <meta property="og:title" content="Agency Owners: Get Lifetime Access to a Powerful Customer Review Platform"/>
+    <meta property="og:description" content="Boost your clients' online reviews and increase their sales today"/>
+    <meta prefix="og: https://ratemyservice.io/cookies" property="og:type" content="website"/>
+    <meta property="og:url" content="https://ratemyservice.io/agency"/>
+    <meta property="og:image" content="https://ratemyservice.io/images/og-image-banner.webp"/>
+    <meta property="og:locale" content="en_GB"/>
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/jquery.validate.js"></script>
+    <script src="/js/popper.min.js"></script>
+    <script src="/js/bootstrap_5.3-bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="/css/bootstrap_5.3-bootstrap.min.css">
+    <link rel="stylesheet" href="/css/default.css?ver=1.0.21" type="text/css">
+    <link rel="stylesheet" href="/css/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/css/tiny-slider-2_9_4.css">
+    <script src="/js/tina4helper.js"></script>
+    <script src="https://js.stripe.com/v3/"></script>
+    <script id="stripeHelper" src="/js/stripeHelper.js" data-api-key="{{ stripePublicKey }}"></script>
+    <script src="/js/paymentHelper.js"></script>
+    <!--[if (lt IE 9)]>
+    <link rel="stylesheet" href="/css/tiny-slider-2_9_4_IE.css"><![endif]-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script>
+    <script type="application/ld+json" src="/schema/local-business.txt"></script>
+    <script type="application/ld+json" src="/schema/website.txt"></script>
+
+    {# Tracking Scripts #}
+    {# Meta #}
+    {% include "code-snippets/meta-tracking-pixel.twig" %}
+
+    {# Google #}
+    {% include "code-snippets/google-tracking-script.twig" %}
+
+    {# PostHog #}
+    {% include "code-snippets/posthog-tracking-script.twig" %}
+</head>
+
+<body class="rms-agency">
+<header class="rms-landing-header">
+    {% set pageName = 'MarketingAgency-ltd' %}
+    {#    {% include "components/countdown-timer.twig" %} #}
+    {% include "components/header.twig" %}
+</header>
+
+{# Banner #}
+<section class="rms-appsumo-hero overflow-hidden"
+         style="background-image: url(/images/rms-landing-background-gradient-alternative.webp);">
+    <div class="container position-relative px-lg-4 pg-sm-0 px-4 z-1">
+        <div class="rms-appsumo-hero__content mb-lg-0 mb-sm-5 mb-5">
+            <div class="rms-agency-hero__text">
+                <h1 class="agency-main-heading fw-bold text-white pe-lg-0 pe-sm-4 pe-0">White-Label Packages for Agencies</h1>
+                <h2 class="text-white mt-4">
+                    <strong>White-Label 3-in-1 <br><span
+                                class="red-highlight-sub-heading">Review Management Software</span></strong>
+                </h2>
+                <h3 class="text-white fw-bold">Resell Under Your Brand Our 3-in-1 <br>Review Management Software to <br>Your
+                    Clients</h3>
+                <div class="rms-agency-hero__cta-buttons mt-4">
+                    <a class="btn buy-bundle-btn buy-bundle-btn--pink d-block"
+                       href="/agency#pricing-plans">
+                        View White-Label Packages
+                    </a>
+                </div>
+            </div>
+            <div class="rms-appsumo-mockup--phone">
+                <a href="https://appsumo.com/products/ratemyservice-app/" target="_blank">
+                    <img class="rms-appsumo-mockup__image--phone rms-appsumo-mockup__image--phone--dp"
+                         src="images/rms-appsumo-landing-phone-mockup.webp"
+                         alt="A mockup of a phone with a screen showing the Appsumo bundle">
+
+                    <img class="rms-appsumo-mockup__image--phone rms-appsumo-mockup__image--phone--mb"
+                         src="images/rms-appsumo-landing-phone-mockup.webp"
+                         alt="A mockup of a phone with a screen showing the Appsumo bundle">
+                </a>
+            </div>
+        </div>
+    </div>
+    <img class="section-split section-split--wave" src="/images/rms-section-split-wave-white.svg"
+         alt="A wave pattern that splits two sections">
+</section>
+
+{# Logos #}
+<section class="section section--white overflow-hidden pb-5" style="padding-top: 0;">
+    <div id="rms-slider" style="max-width: 788px; margin: auto auto 80px auto;">
+        <div class="slider-container">
+            <ul class="control" id="custom-control">
+                <li class="prev">
+                    <i class="fa fa-angle-left fa-2x"></i>
+                </li>
+                <li class="next">
+                    <i class="fa fa-angle-right fa-2x"></i>
+                </li>
+            </ul>
+            <div class="rms-slider" style="display: flex;">
+                <img src="https://assets.ratemyservice.io/images/review-logo-trustpilot.svg"
+                     alt="Trustpilot Reviews Logo">
+                <img src="https://assets.ratemyservice.io/images/review-logo-yelp.svg"
+                     alt="Yelp Reviews Logo">
+                <img src="https://assets.ratemyservice.io/images/review-logo-tripadvisor.svg"
+                     alt="Tripadvisor Reviews Logo">
+                <img src="https://assets.ratemyservice.io/images/review-logo-google.svg"
+                     alt="Google Reviews Logo">
+                <img src="/images/review-logo-booking.com.svg"
+                     alt="Booking.com Reviews Logo">
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <h3 class="text-center lh-sm" style="max-width: 1000px; margin: 0 auto;">
+            <strong>RateMyService provides a complete review and reputation toolkit that helps businesses generate more
+                reviews, monitor feedback, and promote positive customer experiences.
+                <br><br>All features are available within your white-label environment.</strong>
+        </h3>
+    </div>
+</section>
+
+{#    Pricing Plans #}
+<div class="rms-section-split">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 99.06 33.25" style="top: 21px; position: relative;">
+        <path d="M0 0h99.06C77.33-.02 57.75 13.13 49.53 33.25 41.3 13.14 21.73 0 0 0"
+              style="stroke-width:0; fill: #ffffff;"/>
+    </svg>
+</div>
+<section class="section section--gray overflow-hidden pb-0" id="pricing-plans">
+    <h3 id="pricingHeading" class="text-center mx-3" style="font-size:30px;"><strong>Explore our <span
+                    class="yellow-highlight message">flexible pricing plans</span>
+            tailored to your needs</strong></h3>
+    <div id="marketing-pricing" class="container" style="max-width: 1060px;">
+        {# AGENCY BUNDLES #}
+        <h2 class="text-center mt-4 mb-5 fw-bold">View Our White-Label Packages for Agencies</h2>
+        <div id="form" class="payment__form"></div>
+        <div id="message"></div>
+
+        <div class="container">
+            <div class="accordion rms-mobile-pricing-accordion" id="accordionExample">
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingOne">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            <span><strong>1 Code</strong></span> <span>Bundle Cost <strong
+                                        class="rms-bundle-price-bigger">$69</strong></span>
+                        </button>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+                         data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <div class="rms-bundle-info">
+                                <strong>Bundle</strong> <span>Start-Up</span>
+                            </div>
+                            <div class="rms-bundle-info">
+                                <strong>Bundle Inclusions</strong> <span>1 - 10 Staff</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingTwo">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            <span><strong>2 Codes</strong></span> <span>Bundle Cost <strong
+                                        class="rms-bundle-price-bigger">$138</strong></span>
+                        </button>
+                    </h2>
+                    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                         data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <div class="rms-bundle-info">
+                                <strong>Bundle</strong> <span>Corporate</span>
+                            </div>
+                            <div class="rms-bundle-info">
+                                <strong>Bundle Inclusions</strong> <span>11 - 50 Staff</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingThree">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                            <span><strong>3 Codes</strong></span> <span>Bundle Cost <strong
+                                        class="rms-bundle-price-bigger">$207</strong></span>
+                        </button>
+                    </h2>
+                    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                         data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <div class="rms-bundle-info">
+                                <strong>Bundle</strong> <span>×1 Agency / White Label</span>
+                            </div>
+                            <div class="rms-bundle-info">
+                                <strong>Bundle Inclusions</strong> <span>Unlimited Staff &amp; resell to 1 client</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingFour">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                            <span><strong>4 Codes</strong></span> <span>Bundle Cost <strong
+                                        class="rms-bundle-price-bigger">$276</strong></span>
+                        </button>
+                    </h2>
+                    <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
+                         data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <div class="rms-bundle-info">
+                                <strong>Bundle</strong> <span>×5 Agency / White Label</span>
+                            </div>
+                            <div class="rms-bundle-info">
+                                <strong>Bundle Inclusions</strong> <span>Resell to 5 Client</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingFive">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                            <span><strong>5 Codes</strong></span> <span>Bundle Cost <strong
+                                        class="rms-bundle-price-bigger">$345</strong></span>
+                        </button>
+                    </h2>
+                    <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive"
+                         data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <div class="rms-bundle-info">
+                                <strong>Bundle</strong> <span>×10 Agency / White Label</span>
+                            </div>
+                            <div class="rms-bundle-info">
+                                <strong>Bundle Inclusions</strong> <span>Resell to 10 Client</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingSix">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                            <span><strong>6 Codes</strong></span> <span>Bundle Cost <strong
+                                        class="rms-bundle-price-bigger">$414</strong></span>
+                        </button>
+                    </h2>
+                    <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix"
+                         data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <div class="rms-bundle-info">
+                                <strong>Bundle</strong> <span>×30 Agency / White Label</span>
+                            </div>
+                            <div class="rms-bundle-info">
+                                <strong>Bundle Inclusions</strong> <span>Resell to 30 Client</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingSeven">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+                            <span><strong>7 Codes</strong></span> <span>Bundle Cost <strong
+                                        class="rms-bundle-price-bigger">$483</strong></span>
+                        </button>
+                    </h2>
+                    <div id="collapseSeven" class="accordion-collapse collapse" aria-labelledby="headingSeven"
+                         data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <div class="rms-bundle-info">
+                                <strong>Bundle</strong> <span>×50 Agency / White Label</span>
+                            </div>
+                            <div class="rms-bundle-info">
+                                <strong>Bundle Inclusions</strong> <span>Resell to 50 Client</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingEight">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
+                            <span><strong>8 Codes</strong></span> <span>Bundle Cost <strong
+                                        class="rms-bundle-price-bigger">$552</strong></span>
+                        </button>
+                    </h2>
+                    <div id="collapseEight" class="accordion-collapse collapse" aria-labelledby="headingEight"
+                         data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <div class="rms-bundle-info">
+                                <strong>Bundle</strong> <span>Unlimited × Agency / White Label</span>
+                            </div>
+                            <div class="rms-bundle-info">
+                                <strong>Bundle Inclusions</strong> <span>Resell to Unlimited Clients</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="rms-pricing-table">
+                <div class="rms-pricing-table-body">
+                    <div class="rms-pricing-table-row">
+                        <div class="rms-pricing-table-cell rms-pricing-table-cell--top-left table-header text-center">
+                            Codes
+                        </div>
+                        <div class="rms-pricing-table-cell table-header text-center">Bundle / Plan</div>
+                        <div class="rms-pricing-table-cell table-header">Bundle Cost</div>
+                        <div class="rms-pricing-table-cell rms-pricing-table-cell--top-right table-header text-center">
+                            Bundle Inclusions
+                        </div>
+                    </div>
+                    <div class="rms-pricing-table-row">
+                        <div class="rms-pricing-table-cell text-center">1</div>
+                        <div class="rms-pricing-table-cell">Start-Up</div>
+                        <div class="rms-pricing-table-cell table-price">$69</div>
+                        <div class="rms-pricing-table-cell">1 - 10 Staff</div>
+                    </div>
+                    <div class="rms-pricing-table-row">
+                        <div class="rms-pricing-table-cell text-center">2</div>
+                        <div class="rms-pricing-table-cell">Corporate</div>
+                        <div class="rms-pricing-table-cell table-price">$138</div>
+                        <div class="rms-pricing-table-cell">11 - 50 Staff</div>
+                    </div>
+                    <div class="rms-pricing-table-row">
+                        <div class="rms-pricing-table-cell text-center">3</div>
+                        <div class="rms-pricing-table-cell">&times;1 Agency / White Label</div>
+                        <div class="rms-pricing-table-cell table-price">$207</div>
+                        <div class="rms-pricing-table-cell ">Unlimited Staff &amp; resell to 1 client</div>
+                    </div>
+                    <div class="rms-pricing-table-row">
+                        <div class="rms-pricing-table-cell text-center">4</div>
+                        <div class="rms-pricing-table-cell">&times;5 Agency / White Label</div>
+                        <div class="rms-pricing-table-cell table-price">$276</div>
+                        <div class="rms-pricing-table-cell ">Resell to 5 Client</div>
+                    </div>
+                    <div class="rms-pricing-table-row">
+                        <div class="rms-pricing-table-cell text-center">5</div>
+                        <div class="rms-pricing-table-cell">&times;10 Agency / White Label</div>
+                        <div class="rms-pricing-table-cell table-price">$345</div>
+                        <div class="rms-pricing-table-cell ">Resell to 10 Client</div>
+                    </div>
+                    <div class="rms-pricing-table-row">
+                        <div class="rms-pricing-table-cell text-center rms-pricing-table-cell--bottom-left">6</div>
+                        <div class="rms-pricing-table-cell">&times;30 Agency / White Label</div>
+                        <div class="rms-pricing-table-cell table-price">$414</div>
+                        <div class="rms-pricing-table-cell">Resell to 30 Client</div>
+                    </div>
+                    <div class="rms-pricing-table-row">
+                        <div class="rms-pricing-table-cell text-center rms-pricing-table-cell--bottom-left">7</div>
+                        <div class="rms-pricing-table-cell">&times;50 Agency / White Label</div>
+                        <div class="rms-pricing-table-cell table-price">$483</div>
+                        <div class="rms-pricing-table-cell ">Resell to 50 Client</div>
+                    </div>
+                    <div class="rms-pricing-table-row">
+                        <div class="rms-pricing-table-cell text-center rms-pricing-table-cell--bottom-left">8</div>
+                        <div class="rms-pricing-table-cell">Unlimited x Agency / White Label</div>
+                        <div class="rms-pricing-table-cell table-price">$552</div>
+                        <div class="rms-pricing-table-cell ">Resell to Unlimited Clients</div>
+                    </div>
+                </div>
+            </div>
+            <a class="btn buy-bundle-btn buy-bundle-btn--center mt-4"
+               href="https://appsumo.com/products/ratemyservice-app/#pricePlans"
+               target="_blank">Buy AppSumo Bundle</a>
+        </div>
+
+
+        <div class="row justify-content-center mt-5">
+            <div class="col-12 col-md-12">
+                <div class="card inclusive">
+                    <p class="agency-bundle-details-heading"><strong style="font-size: 16px">Also included in
+                            Agency/White-labeled bundles:</strong></p>
+                    <ul class="starter-bundles mb-0">
+                        <li><img src="/images/check-icon.svg" alt="Check Icon"
+                                 class="feature-check-icon float-start me-2">Entire Agency Ecosystem is WHITE-LABELED
+                        </li>
+                        <li><img src="/images/check-icon.svg" alt="Check Icon"
+                                 class="feature-check-icon float-start me-2">Unique BRANDING AREA for each PRIMARY
+                            AGENCY Account
+                        </li>
+                        <li><img src="/images/check-icon.svg" alt="Check Icon"
+                                 class="feature-check-icon float-start me-2">SUPER ADMIN DROPDOWN, with the ability to
+                            quickly SWITCH between your Client-Accounts
+                        </li>
+                        <li><img src="/images/check-icon.svg" alt="Check Icon"
+                                 class="feature-check-icon float-start me-2">Stripe Integration for our White-Label
+                            clients, allowing you to charge your clients on a monthly subscription basis.
+                        </li>
+                    </ul>
+                    <p class="agency-bundle-details-heading"><strong style="font-size: 16px">Money Back
+                            Gaurantee:</strong></p>
+                    <ul class="starter-bundles mb-0">
+                        <li><img src="/images/check-icon.svg" alt="Check Icon"
+                                 class="feature-check-icon float-start me-2">60 DAY Money-Back Satisfaction GUARANTEE
+                        </li>
+                        <li><img src="/images/check-icon.svg" alt="Check Icon"
+                                 class="feature-check-icon float-start me-2">LIFE-TIME access to RateMyService
+                        </li>
+                        <li><img src="/images/check-icon.svg" alt="Check Icon"
+                                 class="feature-check-icon float-start me-2">Includes all FUTURE ENTERPRISE & AGENCY
+                            PLAN UPDATES
+                        </li>
+                    </ul>
+
+                    <p class="agency-bundle-details-heading"><strong style="font-size: 16px">Additional
+                            Benefits:</strong></p>
+                    <ul class="starter-bundles mb-0">
+                        <li><img src="/images/check-icon.svg" alt="Check Icon"
+                                 class="feature-check-icon float-start me-2"><span class="d-inline-block" tabindex="0"
+                                                                                   data-bs-toggle="tooltip"
+                                                                                   data-bs-title=" Administrators help manage the account and oversee the reviews they have received. Administrators have full access to each single account. Administrators are not to be confused with Staff Members. Administrators of the Master Account will have all the privileges of the primary Administrator of the Master Account.">
+
+  <span>UNLIMITED Administrators for Each Account Included <img
+              src="https://assets.ratemyservice.io/images/rms-info-icon.svg"
+              class="tooltip-info"
+              alt="Info Icon"></span>
+                        </span></li>
+
+
+                        <li><img src="/images/check-icon.svg" alt="Check Icon"
+                                 class="feature-check-icon float-start me-2">Each Staff Member Account can receive
+                            UNLIMITED Reviews / Responses
+                        </li>
+                        <li><img src="/images/check-icon.svg" alt="Check Icon"
+                                 class="feature-check-icon float-start me-2">UNLIMITED
+                            Email Alerts from Submitted Reviews / Responses
+                        </li>
+                        <li><img src="/images/check-icon.svg" alt="Check Icon"
+                                 class="feature-check-icon float-start me-2">Customizable
+                            & Animated Email Signature Widgets, & Call-to-Actions (CTA)
+                        </li>
+                        <li><img src="/images/check-icon.svg" alt="Check Icon"
+                                 class="feature-check-icon float-start me-2">Mobile Friendly Survey Forms
+                        </li>
+                        <li><img src="/images/check-icon.svg" alt="Check Icon"
+                                 class="feature-check-icon float-start me-2"><span class="d-inline-block" tabindex="0"
+                                                                                   data-bs-toggle="tooltip"
+                                                                                   data-bs-title=" Display your Customer Touchpoints (i.e. Call-to-Action, Survey Forms, & Review Filter) in the Language of your choosing. Feel free to request your Language if it's missing!">
+  <span style="white-space: nowrap;">20+ Languages <img
+              src="https://assets.ratemyservice.io/images/rms-info-icon.svg"
+              class="tooltip-info"
+              alt="Info Icon"></span>
+</span></li>
+                    </ul>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div id="intro-pic" style="background-color: #F5F6F8; max-height: 200px;">
+    <img src="https://assets.ratemyservice.io/images/rms-section-split-wave-white.svg"
+         alt="A wave pattern that splits two sections"
+         class="section-split section-split--wave" id="rms-bottom-fold-wave">
+</div>
+
+{# What’s Included in White-Label #}
+<section id="rms-white-label" style="background-color:#FFFFFF;" class="overflow-hidden">
+    <div class="container">
+        <div class="rms-white-label__content">
+            <div>
+                <div class="d-flex flex-column align-items-start">
+                    <h4 class="yellow-highlight-sub-heading" style="width: auto">What’s Included in White-Label</h4>
+                </div>
+                <h2 class="section-heading my-3">Everything You Need to Sell Under Your Own Brand</h2>
+                <p class="mt-1">
+                    With this bundle, you'll get lifetime access to our powerful customer review platform , which
+                    includes a variety of features to help you collect, manage, and display reviews, including:
+                </p>
+
+                <ul class="rms-bullet-list">
+                    <li>A White-label / CNAME platform that you can <strong>brand with your own logo and
+                            colours</strong></li>
+                    <li>Agency <strong>branding settings</strong></li>
+                    <li>A super admin dropdown for <strong>quick account switching</strong></li>
+                    <li><strong>Stripe Integration</strong> for our <strong>White-Label clients</strong>, allowing you
+                        to <strong>charge your clients on a monthly
+                            subscription</strong> basis.
+                    </li>
+                </ul>
+
+                <div class="rms-profits-addition mt-4" style="background: rgba(209, 209, 209, .35);">
+                    <img src="https://assets.ratemyservice.io/images/rms-icon-up-arrows.svg"
+                         alt="An icon with three colorful arrows pointing upwards">
+                    <p class="mb-0">Plus, you'll get to set your own client pricing, so you can maximize your
+                        profits.</p>
+                </div>
+            </div>
+
+            <div class="rms-agency-mockup--laptop position-relative">
+                <img class="rms-agency-mockup__image--laptop rms-agency-mockup__image--laptop"
+                     src="/images/rms-home-laptop-mockup.svg"
+                     alt="A mockup of a laptop with a screen showing white-label options">
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+{# Benefits of Using Our White Label Software #}
+<div id="intro-pic" class="justify-content-center align-items-center"
+     style="background-image: url(https://assets.ratemyservice.io/images/rms-landing-background-gradient.webp); height: 500px;">
+    <div class="rms-section-split rms-section-split--absolute" id="split-svg">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 99.06 33.25">
+            <path d="M0 0h99.06C77.33-.02 57.75 13.13 49.53 33.25 41.3 13.14 21.73 0 0 0"
+                  style="stroke-width: 0; fill: #FFFFFF;"></path>
+        </svg>
+    </div>
+
+    <section class="section mx-4 p-0">
+        <div class="container pad-container shadow-lg bg-white position-relative p-4 p-md-5 z-2"
+             style="max-width:1000px; border-radius: 8px;">
+            <h4 class="rms-pricing-table-heading mb-4"><strong>Benefits of Using Our White-Label Software:</strong></h4>
+            <ul class="rms-bullet-list">
+                <li class="mb-3"><strong>Seamless integration:</strong> Clients signing up with your domain URL will
+                    automatically be part of your
+                    ecosystem and have your branding. All system emails will be sent from your own domain.
+                </li>
+                <li class="mb-3"><strong>Comprehensive support:</strong> We provide email support to you and your
+                    clients
+                    with a generic email address.
+                </li>
+                <li class="mb-3"><strong>Flexible pricing:</strong> Unused codes <strong>don't expire</strong>, and you
+                    can
+                    transfer codes from cancelled accounts to new accounts <strong>with no time limits</strong> or
+                    restrictions.
+                </li>
+                <li class="mb-3"><strong>Easy account management:</strong> As the agency owner, you can easily switch
+                    between different clients' accounts
+                    using the Super Admin dropdown. You can also add yourself to clients' accounts to receive
+                    notifications.
+                </li>
+                <li class="mb-0"><strong>Training Videos:</strong> Non-branded training videos are provided in the
+                    Dashboard.
+                </li>
+            </ul>
+        </div>
+        <img src="https://assets.ratemyservice.io/images/rms-section-split-wave.svg"
+             alt="A wave pattern that splits two sections"
+             class="section-split section-split--wave" id="rms-bottom-fold-wave">
+    </section>
+
+    <section class="section section--gray overflow-hidden p-0">
+        <div class="container" id="pricing-tiers" style="max-width: 1271px;">
+            {# AGENCY BUNDLES #}
+            <h3 class="text-center mt-5 mb-lg-5 mb-sm-5 mb-4 fw-bold" style="font-size: 30px;">Suggested Pricing Tiers
+                for Your White-Label
+                Clients</h3>
+            <div id="form" class="payment__form"></div>
+
+            <div class="row justify-content-center">
+                <div class="col-lg-3 col-md-6 col-sm-12">
+                    <div class="agency-pricing-card card text-center mb-4">
+                        <ul class="list-group">
+                            <li class="list-group-item pb-2 border-0">
+                                <p class="agency-bundle-name"><strong style="font-size: 24px">Self Employed</strong></p>
+                                <h4 class="small-text">Staff Member:</h4>
+                                <p class="staff-member-account" style="color: #FE0056;"><strong>1</strong></p>
+                            </li>
+                            <li class="list-group-item pt-0 pb-4 border-0">
+                                <h2 class="actual-price"><strong>$9</strong></h2>
+                                <h4 class="small-text">per month</h4>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-12">
+                    <div class="agency-pricing-card card text-center mb-4">
+                        <ul class="list-group">
+                            <li class="list-group-item pb-2 border-0">
+                                <p class="agency-bundle-details-heading"><strong
+                                            style="font-size: 24px">Start-Up</strong></p>
+                                <h4 class="small-text">Staff Members:</h4>
+                                <p class="staff-member-account" style="color: #FE0056;"><strong>2-10</strong></p>
+                            </li>
+                            <li class="list-group-item pt-0 pb-4 border-0">
+                                <h2 class="actual-price"><strong>$29</strong></h2>
+                                <h4 class="small-text">per month</h4>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-12">
+                    <div class="agency-pricing-card card text-center mb-4">
+                        <ul class="list-group">
+                            <li class="list-group-item pb-2 border-0">
+                                <p class="agency-bundle-details-heading"><strong
+                                            style="font-size: 24px">Corporate</strong></p>
+                                <h4 class="small-text">Staff Members:</h4>
+                                <p class="staff-member-account" style="color: #FE0056;"><strong>10-50</strong></p>
+                            </li>
+                            <li class="list-group-item pt-0 pb-4 border-0">
+                                <h2 class="actual-price"><strong>$99</strong></h2>
+                                <h4 class="small-text">per month</h4>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-12">
+                    <div class="agency-pricing-card card text-center mb-4">
+                        <ul class="list-group">
+                            <li class="list-group-item pb-2 border-0">
+                                <p class="agency-bundle-details-heading"><strong
+                                            style="font-size: 24px">Enterprise</strong></p>
+                                <h4 class="small-text">Staff Members:</h4>
+                                <p class="staff-member-account" style="color: #FE0056;"><strong>Unlimited</strong></p>
+                            </li>
+                            <li class="list-group-item pt-0 pb-4 border-0">
+                                <h2 class="actual-price"><strong>$249</strong></h2>
+                                <h4 class="small-text">per month</h4>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container" style="max-width: 670px;">
+            <div class="row justify-content-center">
+                <div class="col">
+                    <div class="card mb-5 inclusive p-4">
+                        <p class="agency-bundle-name"><strong style="font-size: 18px;">Included Benefits:</strong></p>
+                        <div class="row">
+                            <div class="col-lg-6 col-sm-12">
+                                <ul class="starter-bundles mb-0">
+                                    <li><img src="/images/check-icon.svg" alt="Check Icon"
+                                             class="feature-check-icon float-start me-2"><span class="d-inline-block"
+                                                                                               tabindex="0"
+                                                                                               data-bs-toggle="tooltip"
+                                                                                               data-bs-title="When an End-User fills out an Internal Survey Form then these are considered a 'Response'. There is no limit.">
+  Unlimited Responses <img src="https://assets.ratemyservice.io/images/rms-info-icon.svg"
+                           alt="Info Icon"
+                           class="tooltip-info">
+</span>
+                                    </li>
+                                    <li><img src="/images/check-icon.svg" alt="Check Icon"
+                                             class="feature-check-icon float-start me-2"><span class="d-inline-block"
+                                                                                               tabindex="0"
+                                                                                               data-bs-toggle="tooltip"
+                                                                                               data-bs-title=" We have dozens of widgets (or icons) templates that can be displayed as either 2, 3 or 5. You increase/decrease the size, and distance between the widgets.">
+  Customizable Widget <img src="https://assets.ratemyservice.io/images/rms-info-icon.svg"
+                           alt="Info Icon"
+                           class="tooltip-info">
+</span>
+                                    </li>
+                                    <li><img src="/images/check-icon.svg" alt="Check Icon"
+                                             class="feature-check-icon float-start me-2"><span class="d-inline-block"
+                                                                                               tabindex="0"
+                                                                                               data-bs-toggle="tooltip"
+                                                                                               data-bs-title=" Display your Customer Touchpoints (i.e. Call-to-Action, Survey Forms, & Review Filter) in the Language of your choosing. Feel free to request your Language if it's missing! ">
+  18 Languages <img src="https://assets.ratemyservice.io/images/rms-info-icon.svg"
+                    alt="Info Icon"
+                    class="tooltip-info">
+</span>
+                                    </li>
+                                    <li><img src="/images/check-icon.svg" alt="Check Icon"
+                                             class="feature-check-icon float-start me-2">Reports & Dashboards
+                                    </li>
+                                    <li><img src="/images/check-icon.svg" alt="Check Icon"
+                                             class="feature-check-icon float-start me-2"><span class="d-inline-block"
+                                                                                               tabindex="0"
+                                                                                               data-bs-toggle="tooltip"
+                                                                                               data-bs-title=" These are the End-Users. They are the customers who fill out the Internal Survey Form, or External Review Form (GMB, TrustPilot, YELP, TripAdvisor, Facebook)">
+  Unlimited Users <img src="https://assets.ratemyservice.io/images/rms-info-icon.svg"
+                       class="tooltip-info">
+</span>
+                                    </li>
+                                    <li><img src="/images/check-icon.svg" alt="Check Icon"
+                                             class="feature-check-icon float-start me-2">Customer Support
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="col-lg-6 col-sm-12">
+                                <ul class="starter-bundles mb-0">
+                                    <li><img src="/images/check-icon.svg" alt="Check Icon"
+                                             class="feature-check-icon float-start me-2"><span class="d-inline-block"
+                                                                                               tabindex="0"
+                                                                                               data-bs-toggle="tooltip"
+                                                                                               data-bs-title=" External Reviews are reviews from GoogleMyBusiness, TrustPilot, YELP, TripAdvisor, Facebook etc. There is no limit.">
+  <span style="white-space: nowrap;">Unlimited External Reviews <img
+              src="https://assets.ratemyservice.io/images/rms-info-icon.svg"
+              alt="Info Icon"
+              class="tooltip-info"></span>
+</span>
+                                    </li>
+                                    <li><img src="/images/check-icon.svg" alt="Check Icon"
+                                             class="feature-check-icon float-start me-2"><span class="d-inline-block"
+                                                                                               tabindex="0"
+                                                                                               data-bs-toggle="tooltip"
+                                                                                               data-bs-title=" Our email signature widget can also be in GIF format, which makes the icons appear animated when viewed by the User.">
+Animated Widget <img src="/images/rms-info-icon.svg"
+                     alt="Info Icon"
+                     class="tooltip-info">
+</span>
+                                    </li>
+                                    <li><img src="/images/check-icon.svg" alt="Check Icon"
+                                             class="feature-check-icon float-start me-2"><span class="d-inline-block"
+                                                                                               tabindex="0"
+                                                                                               data-bs-toggle="tooltip"
+                                                                                               data-bs-title=" Customize the Call-To-Action at the end of your email - ‘’How would you rate my service?’’ -  Change the wording, font size, colour and more! ">
+Customizable CTA <img src="/images/rms-info-icon.svg"
+                      alt="Info Icon"
+                      class="tooltip-info">
+</span>
+                                    </li>
+                                    <li><img src="/images/check-icon.svg" alt="Check Icon"
+                                             class="feature-check-icon float-start me-2"><span class="d-inline-block"
+                                                                                               tabindex="0"
+                                                                                               data-bs-toggle="tooltip"
+                                                                                               data-bs-title=" Administrators will have full access to the software and are responsible for the customization, staff setup, configurations, will receive notifications, and will have access to all the reporting and customer feedback. ">
+Unlimited Administrators <img src="/images/rms-info-icon.svg"
+                              alt="Info Icon"
+                              class="tooltip-info">
+</span>
+                                    </li>
+                                    <li><img src="/images/check-icon.svg" alt="Check Icon"
+                                             class="feature-check-icon float-start me-2"><span class="d-inline-block"
+                                                                                               tabindex="0"
+                                                                                               data-bs-toggle="tooltip"
+                                                                                               data-bs-title=" This is Customer Feedback emailed when someone rates the service positively or negatively. Email Alerts are sent to both the Administrator, and the Staff Member who the Customer Feedback is related to.">
+Unlimited Email Alerts <img src="/images/rms-info-icon.svg"
+                            alt="Info Icon"
+                            class="tooltip-info">
+</span>
+                                    </li>
+                                    <li><img src="/images/check-icon.svg" alt="Check Icon"
+                                             class="feature-check-icon float-start me-2"><span class="d-inline-block"
+                                                                                               tabindex="0"
+                                                                                               data-bs-toggle="tooltip"
+                                                                                               data-bs-title=" There will be no limit on the information stored regarding the analytical performance of your customer service.">
+Unlimited Data Storage <img src="/images/rms-info-icon.svg"
+                            alt="Info Icon"
+                            class="tooltip-info">
+</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div id="intro-pic" class="pt-0" style="background-color: #F5F6F8; height: 200px;">
+        <img src="https://assets.ratemyservice.io/images/rms-section-split-wave-white.svg"
+             alt="A wave pattern that splits two sections"
+             class="section-split section-split--wave" id="rms-bottom-fold-wave">
+    </div>
+
+    {# Trustpilot Reviews #}
+    <section style="background-color:#FFFFFF; position: relative;">
+        <div class="container">
+            <div class="text-center">
+                <div class="d-flex flex-column align-items-center">
+                    <h4 class="red-highlight-sub-heading text-white">What People Say About Us</h4>
+                </div>
+                <h2 class="section-heading my-3">Trusted by Agencies and Service <br>Businesses Worldwide</h2>
+            </div>
+            <div class="py-4">
+                {% include "components/trustpilot-reviews-widget.twig" %}
+            </div>
+        </div>
+    </section>
+
+    {# CTA #}
+    <section style="background-color:#FFFFFF; position: relative;">
+        <div class="container">
+            {% include "components/cta-white-label.twig" with {
+                subheading: "White-Label Deals",
+                heading: "Start Selling Review Management Under Your Own Brand",
+                content: "Launch your own white-label review platform in days — not months. Choose a reseller package that fits your agency size and scale as your client base grows.",
+                button_text: "View White-Label Packages",
+                button_url: "/agency#pricing-plans"
+            } %}
+        </div>
+    </section>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Initialize the slider (assuming you are using a slider library like 'tiny-slider')
+            var slider = tns({
+                container: '.rms-slider',
+                controlsPosition: 'bottom',
+                navPosition: 'bottom',
+                mouseDrag: true,
+                autoplay: true,
+                autoplayButtonOutput: false,
+                controlsContainer: '#custom-control',
+                items: 1,
+                responsive: {
+                    600: {
+                        gutter: 20,
+                        items: 2
+                    },
+                    700: {
+                        items: 3,
+                        gutter: 30
+                    },
+                    900: {
+                        items: 5,
+                        gutter: 40
+                    }
+                }
+            });
+
+            // Bootstrap popover initialization
+            const popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]');
+            popoverTriggerList.forEach(popoverTriggerEl => new bootstrap.Popover(popoverTriggerEl));
+
+            // Bootstrap popover for dismissable popover
+            const popoverDismissList = document.querySelectorAll('.popover-dismiss');
+            popoverDismissList.forEach(popoverDismissEl => new bootstrap.Popover(popoverDismissEl, {
+                trigger: 'focus'
+            }));
+
+            // Bootstrap tooltip initialization
+            const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]');
+            tooltipTriggerList.forEach(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl));
+        });
+    </script>
+    <footer>
+        {% include "components/footer.twig" with { footerSvgFill: 'white' } %}
+    </footer>
+</div>
+</body>
+</html>

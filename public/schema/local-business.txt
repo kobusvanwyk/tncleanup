@@ -1,0 +1,48 @@
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "@id": "https://www.ratemyservice.io/#localbusiness",
+  "identifier": [
+    "https://www.google.com/search?q=RateMyService&kponly&kgmid=/g/11p6wt2bl1",
+    "https://search.google.com/local/reviews?placeid=ChIJw6MirYpfzB0RPKNTeYaBf5I"
+    ],
+  "additionalType": "Software as a Service (SAAS)",
+  "name": "RateMyService",
+  "image": "https://assets.ratemyservice.io/images/rms_banner_design_new.webp",
+  "url": "https://www.ratemyservice.io/",
+  "telephone": "+27 84 44 55 664",
+  "priceRange": "$",
+  "email": "sales@ratemyservice.io",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Unit 25, First Floor, Palm Grove Centre, Main St",
+    "addressLocality": "Durbanville, Cape Town",
+    "postalCode": "7551",
+    "addressCountry": "ZA"
+  },
+  "hasMap": "https://maps.google.com/?cid=10556298466140857148",
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": -33.8334014,
+    "longitude": 18.6448917
+  },
+  "openingHoursSpecification": {
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": [
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday"
+    ],
+    "opens": "09:00",
+    "closes": "17:00"
+  },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "5.0",
+    "reviewCount": "13"
+    }
+}
+</script>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>404 Error - {{ server.REQUEST_URI }}</title>
+    <link rel="icon" href="https://assets.ratemyservice.io/images/favicon-32.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords"
+          content="customer feedback, customer satisfaction, customer satisfaction survey, CSAT, email signature survey, customer satisfaction email signature">
+    <meta name="description"
+          content="RateMyService is an email signature widget that gets you more 5 star reviews guaranteed">
+    <meta property="og:title" content="Rate My Service"/>
+    <meta property="og:description"
+          content="RateMyService is an email signature widget that gets you more 5 star reviews guaranteed"/>
+    <meta prefix="og: https://ratemyservice.io/" property="og:type" content="website"/>
+    <meta property="og:url" content="https://ratemyservice.io/"/>
+    <meta property="og:image" content="https://ratemyservice.io/images/og-image-banner.webp"/>
+    <meta property="og:locale" content="en_GB"/>
+    <link rel="canonical" href="https://ratemyservice.io/"/>
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/bootstrap_5.3-bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="/css/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/css/bootstrap_5.3-bootstrap.min.css">
+    <link rel="stylesheet" href="/css/default.css?ver=1.0.21" type="text/css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+    <link rel="stylesheet" href="/css/tiny-slider-2_9_4.css">
+    <script type="application/ld+json" src="/schema/local-business.txt"></script>
+    <script type="application/ld+json" src="/schema/website.txt"></script>
+    <script type="application/ld+json" src="/schema/product.txt"></script>
+
+    <!-- Start cookieyes banner -->
+    <script id="cookieyes" type="text/javascript"
+            src="https://cdn-cookieyes.com/client_data/068433cc84e8fbf15116f01b/script.js"></script>
+
+</head>
+<body style="text-align: center">
+    <header>
+        {% include "components/header.twig" %}
+    </header>
+    <div class="error-page">
+        <div class="error-box m-3">
+            <h1 class="error-code">404</h1>
+            <img src="images/5-stars.svg">
+            <h2 class="pt-4"><b>Oops! Page Not Found</b></h2>
+            <p class="error-text px-4 pt-2">We couldn't find the page you're looking for. It might have been moved, deleted, or the URL may be incorrect.</p>
+            <div class="error-reason my-4">
+                <p class="mb-0"><b>Requested:</b> {{ server.REQUEST_URI }}</p>
+            </div>
+            <p class="error-text px-4">Don't let this stop your streak! Return to our homepage and keep those 5-star reviews rolling in.</p>
+            <a class="back-home-btn my-4" href="/index"><img src="images/home-icon-btn.svg" class="me-2">Back to Homepage</a>
+        </div>
+    </div>
+</body>
+</html>

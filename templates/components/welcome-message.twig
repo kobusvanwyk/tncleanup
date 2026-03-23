@@ -1,0 +1,74 @@
+<div class="container" id="welcome-message">
+    <div class="row">
+        <div>
+            <h1 class="welcome-message">
+                Get More <span class="yellow-highlight message">5-Star Reviews</span>
+            </h1>
+            <h2 class="welcome-message-sub small">Our <strong>email signature widget</strong> gets you more 5-star
+                reviews <strong>guaranteed.</strong>
+            </h2>
+        </div>
+    </div>
+    <div class="row">
+        <div>
+            <a class="free-trial-btn w-auto p-3 my-3" href="https://app.ratemyservice.io/signup">
+                Get more 5-star reviews
+            </a>
+        </div>
+        <div>
+            <span class="cancel-message">Cancel Any Time • No Credit Card Required</span>
+        </div>
+        <div id="rms-slider" style="max-width: 788px; margin: 45px auto 0;">
+            <div class="slider-container">
+                <ul class="control" id="custom-control">
+                    <li class="prev">
+                        <i class="fa fa-angle-left fa-2x"></i>
+                    </li>
+                    <li class="next">
+                        <i class="fa fa-angle-right fa-2x"></i>
+                    </li>
+                </ul>
+                <div class="rms-slider" style="display: flex;">
+                    <img src="https://assets.ratemyservice.io/images/review-logo-trustpilot.svg"
+                         alt="Trustpilot Reviews Logo">
+                    <img src="https://assets.ratemyservice.io/images/review-logo-yelp.svg"
+                         alt="Yelp Reviews Logo">
+                    <img src="https://assets.ratemyservice.io/images/review-logo-tripadvisor.svg"
+                         alt="Tripadvisor Reviews Logo">
+                    <img src="https://assets.ratemyservice.io/images/review-logo-facebook.svg"
+                         alt="Facebook Reviews Logo">
+                    <img src="https://assets.ratemyservice.io/images/review-logo-google.svg"
+                         alt="Google Reviews Logo">
+                </div>
+            </div>
+        </div>
+
+        <script>
+            var slider = tns({
+                container: '.rms-slider',
+                controlsPosition: 'bottom',
+                navPosition: 'bottom',
+                mouseDrag: true,
+                autoplay: true,
+                autoplayButtonOutput: false,
+                controlsContainer: '#custom-control',
+                items: 1,
+                responsive: {
+                    600: {
+                        gutter: 20,
+                        items: 2
+                    },
+                    700: {
+                        items: 3,
+                        gutter: 30
+                    },
+                    900: {
+                        items: 5,
+                        gutter: 40
+                    }
+                }
+            });
+        </script>
+    </div>
+</div>
+

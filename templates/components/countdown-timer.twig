@@ -1,0 +1,159 @@
+<style>
+    .countdown {
+        background-color: #FE0056;
+    }
+
+    .countdown h2 {
+        font-size: 21px;
+        text-align: center;
+        color: #FFFFFF;
+        font-weight: 700;
+    }
+
+    .countdown .number {
+        font-size: 35px;
+        font-family: "Martian Mono", monospace;
+        font-weight: 700;
+    }
+
+    .countdown .text {
+        font-size: 17px;
+        opacity: .6;
+        margin-right: 20px;
+    }
+</style>
+
+<div class="countdown">
+    <div id="countup-section">
+        <h2>
+            <span>Offer starts in</span>
+            <span>
+                <span id="up-days"><span class="number">00</span> <span class="text">days</span></span>
+                <span id="up-hours"><span class="number">00</span> <span class="text">hours</span></span>
+                <span id="up-minutes"><span class="number">00</span> <span class="text">min</span></span>
+                <span id="up-seconds"><span class="number">00</span> <span class="text">sec</span></span>
+                </span>
+        </h2>
+    </div>
+    <div id="countdown-section" style="display: none;">
+        <h2>
+            <span>Offer ends in</span>
+            <span>
+                <span id="days"><span class="number">00</span> <span class="text">days</span></span>
+                <span id="hours"><span class="number">00</span> <span class="text">hours</span></span>
+                <span id="minutes"><span class="number">00</span> <span class="text">min</span></span>
+                <span id="seconds"><span class="number">00</span> <span class="text">sec</span></span>
+                </span>
+        </h2>
+    </div>
+    <div id="ended-section" style="display: none;">
+        <h2>Offer has ended! Thank you everyone! ❤️</h2>
+    </div>
+</div>
+<script>
+    // ====== CONFIGURATION - EDIT THESE VALUES ======
+    const startTime = '2025-11-25T00:00';
+    const endTime = '2025-12-02T12:00';
+    const timezone = '-06:00';
+    // ===============================================
+
+    let countdownInterval;
+
+    function updateCountdown() {
+        // Clear any existing interval
+        if (countdownInterval) {
+            clearInterval(countdownInterval);
+        }
+
+        // Define the start and end times
+        const startOfEvent = new Date(startTime + timezone);
+        const endOfEvent = new Date(endTime + timezone);
+
+        // Get section elements
+        const countupSection = document.getElementById('countup-section');
+        const countdownSection = document.getElementById('countdown-section');
+        const endedSection = document.getElementById('ended-section');
+
+        // Update the countdown every 1 second
+        countdownInterval = setInterval(function() {
+            // Get the current date and time
+            const now = new Date();
+
+            // Handle before the event starts - show count up to start
+            if (now < startOfEvent) {
+                countupSection.style.display = 'block';
+                countdownSection.style.display = 'none';
+                endedSection.style.display = 'none';
+
+                // Calculate the time until start
+                const timeUntilStart = startOfEvent - now.getTime();
+                const upDays = Math.floor(timeUntilStart / (1000 * 60 * 60 * 24));
+                const upHours = Math.floor((timeUntilStart % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const upMinutes = Math.floor((timeUntilStart % (1000 * 60 * 60)) / (1000 * 60));
+                const upSeconds = Math.floor((timeUntilStart % (1000 * 60)) / 1000);
+
+                // Format numbers with leading zeros
+                const upDaysFormatted = upDays < 10 ? "0" + upDays : upDays;
+                const upHoursFormatted = upHours < 10 ? "0" + upHours : upHours;
+                const upMinutesFormatted = upMinutes < 10 ? "0" + upMinutes : upMinutes;
+                const upSecondsFormatted = upSeconds < 10 ? "0" + upSeconds : upSeconds;
+
+                // Handle singular and plural forms
+                const upDaysText = `<span class="number">${upDaysFormatted}</span> <span class="text">${upDays === 1 ? 'Day' : 'Days'}</span>`;
+                const upHoursText = `<span class="number">${upHoursFormatted}</span> <span class="text">${upHours === 1 ? 'Hour' : 'Hours'}</span>`;
+                const upMinutesText = `<span class="number">${upMinutesFormatted}</span> <span class="text">${upMinutes === 1 ? 'Min' : 'Mins'}</span>`;
+                const upSecondsText = `<span class="number">${upSecondsFormatted}</span> <span class="text">${upSeconds === 1 ? 'Sec' : 'Secs'}</span>`;
+
+                // Display count up results
+                document.getElementById("up-days").innerHTML = upDaysText;
+                document.getElementById("up-hours").innerHTML = upHoursText;
+                document.getElementById("up-minutes").innerHTML = upMinutesText;
+                document.getElementById("up-seconds").innerHTML = upSecondsText;
+
+                return;
+            }
+
+            // Handle after the event ends
+            if (now > endOfEvent) {
+                countupSection.style.display = 'none';
+                countdownSection.style.display = 'none';
+                endedSection.style.display = 'block';
+                return;
+            }
+
+            // Event is active - show countdown to end
+            countupSection.style.display = 'none';
+            countdownSection.style.display = 'block';
+            endedSection.style.display = 'none';
+
+            // Calculate the time left until the end of the event
+            const timeLeft = endOfEvent - now.getTime();
+            const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+
+            // Format numbers with leading zeros
+            const daysFormatted = days < 10 ? "0" + days : days;
+            const hoursFormatted = hours < 10 ? "0" + hours : hours;
+            const minutesFormatted = minutes < 10 ? "0" + minutes : minutes;
+            const secondsFormatted = seconds < 10 ? "0" + seconds : seconds;
+
+            // Handle singular and plural forms
+            const daysText = `<span class="number">${daysFormatted}</span> <span class="text">${days === 1 ? 'Day' : 'Days'}</span>`;
+            const hoursText = `<span class="number">${hoursFormatted}</span> <span class="text">${hours === 1 ? 'Hour' : 'Hours'}</span>`;
+            const minutesText = `<span class="number">${minutesFormatted}</span> <span class="text">${minutes === 1 ? 'Min' : 'Mins'}</span>`;
+            const secondsText = `<span class="number">${secondsFormatted}</span> <span class="text">${seconds === 1 ? 'Sec' : 'Secs'}</span>`;
+
+            // Display countdown results
+            document.getElementById("days").innerHTML = daysText;
+            document.getElementById("hours").innerHTML = hoursText;
+            document.getElementById("minutes").innerHTML = minutesText;
+            document.getElementById("seconds").innerHTML = secondsText;
+
+        }, 1000);
+    }
+
+    // Start the countdown
+    updateCountdown();
+</script>

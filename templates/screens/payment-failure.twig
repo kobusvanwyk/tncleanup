@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Payment Failed | Rate My Service</title>
+    <link rel="icon" href="https://assets.ratemyservice.io/images/favicon-32.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords"
+          content="payment failure, transaction failed, payment error, order not completed">
+    <meta name="description"
+          content="Your payment was not successful. Please try again or contact support for assistance.">
+    <meta property="og:title" content="Payment Failed | Rate My Service"/>
+    <meta property="og:description"
+          content="Your payment was not successful. Please try again or contact support for assistance."/>
+    <meta prefix="og: https://ratemyservice.io/cookies" property="og:type" content="website"/>
+    <meta property="og:url" content="https://ratemyservice.io/payment-failure"/>
+    <meta property="og:image" content="https://ratemyservice.io/images/og-image-banner.webp"/>
+    <meta property="og:locale" content="en_GB"/>
+    <link rel="canonical" href="https://ratemyservice.io/payment-failure"/>
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/bootstrap_5.3-bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="/css/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/css/bootstrap_5.3-bootstrap.min.css">
+    <link rel="stylesheet" href="/css/default.css?ver=1.0.21" type="text/css">
+    <script type="application/ld+json" src="/schema/local-business.txt"></script>
+    <script type="application/ld+json" src="/schema/website.txt"></script>
+    <script type="application/ld+json" src="/schema/faq.txt"></script>
+    {# Tracking Scripts #}
+    {# Meta #}
+    {% include "code-snippets/meta-tracking-pixel.twig" %}
+
+    {# Google #}
+    {% include "code-snippets/google-tracking-script.twig" %}
+
+    {# PostHog #}
+    {% include "code-snippets/posthog-tracking-script.twig" %}
+
+    <style>
+        .footer {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+<header>
+    {% set pageName = 'Payment Success' %}
+    {% include "components/header.twig" %}
+</header>
+<section class="rms-agency-hero rms-agency-hero--payment-feedback overflow-hidden d-flex justify-content-center align-items-center"
+         style="background-image: url(https://assets.ratemyservice.io/images/rms-landing-background-gradient-alternative.webp);">
+    <div class="payment__feedback px-3">
+        <img class="mb-4" src="/images/payment-failure-icon.svg" alt="Success Icon">
+        <div class="text-center">
+            <h1>Your payment was not successful.</h1>
+            <h2>Please try again or contact support for assistance.</h2>
+        </div>
+
+        <div class="payment__feedback-cta card card-body border-0">
+            <h3>Need assistance?</h3>
+            <a href="/contact-us" class="free-trial-btn w-auto p-3 my-3 mx-3" style="max-width: unset; min-width: 160px;">Contact Us</a>
+        </div>
+    </div>
+    <img class="section-split section-split--wave"
+         src="/images/rms-section-split-wave-white.svg"
+         alt="A wave pattern that splits two sections">
+</section>
+
+<footer>
+    {% include "components/footer.twig" %}
+</footer>
+</body>
+</html>
+

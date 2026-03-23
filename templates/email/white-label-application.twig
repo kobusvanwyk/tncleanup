@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Submission from RateMyService White-Label Setup Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 600px;
+            margin: 20px auto;
+            background-color: #ffffff;
+            padding: 20px;
+            border: 1px solid #dddddd;
+            border-radius: 5px;
+        }
+        h2 {
+            color: #333333;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        table th, table td {
+            padding: 10px;
+            border: 1px solid #dddddd;
+            text-align: left;
+        }
+        table th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>New email submission from RateMyService White-Label Setup</h2>
+    <p>Someone just submitted a White-Label application form on <a href="https://ratemyservice.io/white-label-application">https://ratemyservice.io/white-label-application</a> with the following message:</p>
+
+    <table>
+        <tr>
+            <th>RateMyService Dashboard URL</th>
+            <td>{{ sender.dashboardUrl }}</td>
+        </tr>
+        <tr>
+            <th>Company Name</th>
+            <td>{{ sender.companyName }}</td>
+        </tr>
+        <tr>
+            <th>Email Address</th>
+            <td>{{ sender.email }}</td>
+        </tr>
+        <tr>
+            <th>Purchased Codes</th>
+            <td>{{ sender.codes }}</td>
+        </tr>
+        <tr>
+            <th>Domain Name</th>
+            <td>{{ sender.domainName }}</td>
+        </tr>
+        <tr>
+            <th>Sub-Domain for White-Label</th>
+            <td>{{ sender.subdomain }}</td>
+        </tr>
+        <tr>
+            <th>FROM and REPLY-TO Email Address</th>
+            <td>{{ sender.fromEmail }}</td>
+        </tr>
+    </table>
+</div>
+
+</body>
+</html>

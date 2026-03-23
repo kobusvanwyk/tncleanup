@@ -1,0 +1,21 @@
+<div class="modal fade" id="formModal" tabindex="-1">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">{{ title }}</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div id="stripeContainer"></div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal" id="paymentClose">Cancel</button>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    initialiseStripeModal('{{ clientSecret }}');
+    var myModal = new bootstrap.Modal(document.getElementById('formModal'));
+    myModal.show();
+</script>
