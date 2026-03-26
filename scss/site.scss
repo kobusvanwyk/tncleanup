@@ -1612,11 +1612,16 @@ header ul.navbar-nav li.nav-item a:hover {
   }
 }
 
-.intro-pic {
+// Shared utility for sections with a background-image set inline
+.bg-cover-hero {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   position: relative;
+}
+
+.intro-pic,
+.intro-video {
   padding-top: 75px;
   padding-bottom: 250px;
 
@@ -1691,10 +1696,7 @@ header ul.navbar-nav li.nav-item a:hover {
 
 
 .tn-agency-hero {
-  background-repeat: no-repeat;
-  background-position: bottom center;
-  background-size: cover;
-  position: relative;
+  background-position: bottom center; // override shared .bg-cover-hero center default
   padding-top: 50px;
 
   @media(max-width: 1024px) {
@@ -1934,10 +1936,6 @@ header ul.navbar-nav li.nav-item a:hover {
 }
 
 .tn-appsumo-hero {
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  position: relative;
   padding-top: 100px;
 
   @media(max-width: 767px) {
