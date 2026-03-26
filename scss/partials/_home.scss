@@ -62,6 +62,20 @@
   .yellow-highlight {
     background-image: url("/images/tn-yellow-bg.svg");
   }
+
+  @media (max-width: 767px) {
+    font-size: 30px;
+
+    p {
+      font-size: 27px !important;
+    }
+  }
+
+  @media (min-width: 768px) {
+    span.message.bigger {
+      font-size: 56px !important;
+    }
+  }
 }
 
 .welcome-message-sub {
@@ -110,6 +124,26 @@
 .section-2 {
   padding: 4% 20px;
   padding-top: 0;
+
+  .item-2 > img {
+    @media only screen and (max-width: 767px) {
+      width: 100%;
+    }
+  }
+
+  .inner-row {
+    @media only screen and (min-width: 481px) and (max-width: 767px) {
+      .item-2 {
+        margin-left: 15%;
+        margin-right: 15%;
+      }
+    }
+
+    @media only screen and (max-width: 480px) {
+      max-width: 440px;
+      margin: 0 auto;
+    }
+  }
 }
 
 .ratings, .clients-voice {
@@ -170,6 +204,73 @@
 
   .ratings-item {
     margin-bottom: 20px;
+  }
+
+  @media only screen and (max-width: 767px) {
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+  }
+
+  @media only screen and (min-width: 768px) and (max-width: 991px) {
+    .rating-wrapper:nth-child(1) {
+      .rating-body:last-child {
+        .ratings-item:last-child {
+          margin-bottom: 134px !important;
+        }
+      }
+    }
+
+    .rating-wrapper:last-child {
+      .rating-body:last-child {
+        .ratings-item:last-child {
+          margin-bottom: 220px !important;
+        }
+      }
+    }
+  }
+
+  @media only screen and (min-width: 992px) and (max-width: 1199px) {
+    .container {
+      padding: 4% 20px;
+    }
+
+    .rating-wrapper:nth-child(1) {
+      .rating-body:last-child {
+        .ratings-item:last-child {
+          margin-bottom: 76px !important;
+        }
+      }
+    }
+
+    .rating-wrapper:last-child {
+      .rating-body:last-child {
+        .ratings-item:last-child {
+          margin-bottom: 191px !important;
+        }
+      }
+    }
+  }
+
+  @media only screen and (min-width: 1200px) {
+    .container {
+      padding: 4% 20px;
+    }
+
+    .rating-wrapper:nth-child(1) {
+      .rating-body:last-child {
+        .ratings-item:last-child {
+          margin-bottom: 77px !important;
+        }
+      }
+    }
+
+    .rating-wrapper:last-child {
+      .rating-body:last-child {
+        .ratings-item:last-child {
+          margin-bottom: 106px !important;
+        }
+      }
+    }
   }
 }
 
@@ -287,6 +388,12 @@
   .container > .row:nth-child(1) {
     margin-bottom: 45px;
   }
+
+  @media only screen and (max-width: 767px) {
+    .col-md-4:nth-child(1), .col-md-4:nth-child(2) {
+      margin: 0 0 45px;
+    }
+  }
 }
 
 .svg-item-2 > svg {
@@ -382,6 +489,20 @@
   img {
     box-shadow: 0 5px 50px rgba(0, 0, 0, .12), 0 5px 20px rgba(0, 0, 0, .1);
   }
+
+  @media only screen and (max-width: 767px) {
+    .row:nth-child(1) h1 {
+      font-size: 32px;
+    }
+
+    div div h3 {
+      font-size: 28px;
+    }
+
+    .tn-images-2, .tn-images-4, .tn-images-6 {
+      margin: 0 0 45px;
+    }
+  }
 }
 
 .tn-images {
@@ -398,6 +519,10 @@
 
   img {
     width: 100%;
+
+    @media only screen and (min-width: 992px) and (max-width: 1199px) {
+      width: 100%;
+    }
   }
 }
 
@@ -435,5 +560,23 @@ img.steps-mockup {
   @media only screen and (min-width: 768px) {
     grid-template-columns: 4fr 2fr 4fr;
     grid-auto-rows: 1fr;
+  }
+}
+
+p.small {
+  @media only screen and (max-width: 767px) {
+    width: 100% !important;
+
+    span {
+      display: inline !important;
+    }
+  }
+}
+
+// Multi-component responsive override — kept here as it spans both using-tn and clients-voice
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .my-tn-item > .container, .clients-voice .container {
+    padding-left: 45px !important;
+    padding-right: 45px !important;
   }
 }

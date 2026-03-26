@@ -53,6 +53,35 @@ footer {
   .footer-wrap > .container > .row > div > h2 {
     font-size: 40px;
   }
+
+  @media only screen and (max-width: 767px) {
+    .container > .parag {
+      width: 100%;
+    }
+
+    .row.hoverable {
+      display: flex;
+      flex-direction: column;
+      align-content: center;
+      text-align: center;
+    }
+
+    .GDPR-compliant-badge {
+      display: flex;
+      justify-content: center;
+    }
+
+    .footer-wrap .container {
+      padding-left: 10px !important;
+      padding-right: 10px !important;
+    }
+
+    .footer-2 {
+      h1 {
+        font-size: 32px !important;
+      }
+    }
+  }
 }
 
 .tn-footer__cta {

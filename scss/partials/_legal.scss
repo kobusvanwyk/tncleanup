@@ -167,3 +167,10 @@ label.error:empty {
 .contact-section .btn img {
   margin-left: 10px;
 }
+
+.contact-us-container {
+  @media only screen and (min-width: 768px) {
+    max-width: 80%;
+    font-size: 18px;
+  }
+}
