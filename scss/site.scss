@@ -164,7 +164,7 @@ ul {
   list-style-type: none;
 }
 
-.using-rms {
+.using-tn {
   padding-bottom: 0 !important;
   background-color: $def-back-col;
 
@@ -273,11 +273,11 @@ ul {
   z-index: 1;
 }
 
-.using-rms .my-tn-item:nth-child(2) > .svg-item > svg > polygon, .my-tn-item:nth-child(4) > .svg-item > svg > polygon, .my-tn-item:nth-child(6) > .svg-item > svg > polygon, .my-tn-item:nth-child(8) > .svg-item > svg > polygon, .my-tn-item:nth-child(10) > .svg-item > svg > polygon {
+.using-tn .my-tn-item:nth-child(2) > .svg-item > svg > polygon, .my-tn-item:nth-child(4) > .svg-item > svg > polygon, .my-tn-item:nth-child(6) > .svg-item > svg > polygon, .my-tn-item:nth-child(8) > .svg-item > svg > polygon, .my-tn-item:nth-child(10) > .svg-item > svg > polygon {
   fill: #ffffff;
 }
 
-.using-rms .my-tn-item:nth-child(3) > .svg-item > svg > polygon, .my-tn-item:nth-child(5) > .svg-item > svg > polygon, .my-tn-item:nth-child(7) > .svg-item > svg > polygon, .my-tn-item:nth-child(9) > .svg-item > svg > polygon {
+.using-tn .my-tn-item:nth-child(3) > .svg-item > svg > polygon, .my-tn-item:nth-child(5) > .svg-item > svg > polygon, .my-tn-item:nth-child(7) > .svg-item > svg > polygon, .my-tn-item:nth-child(9) > .svg-item > svg > polygon {
   fill: $def-back-col;
 }
 
@@ -483,7 +483,7 @@ footer {
     width: 100%;
   }
 
-  .using-rms {
+  .using-tn {
     .row:nth-child(1) h1 {
       font-size: 32px;
     }
