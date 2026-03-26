@@ -3,9 +3,9 @@
 $font-stack: 'Poppins', sans-serif;
 $primary-color: rgb(35, 49, 76);
 $def-back-col: #f5f6f8;
-$rms-pink: #FE0056;
-$rms-teal: #1BCCDC;
-$button-border: 1px solid $rms-pink;
+$tn-pink: #FE0056;
+$tn-teal: #1BCCDC;
+$button-border: 1px solid $tn-pink;
 $button-border-radius: 5px;
 
 body {
@@ -83,7 +83,7 @@ body {
   }
 }
 
-.rms-slider {
+.tn-slider {
   position: relative;
   max-width: 788px;
   margin: 45px auto 45px;
@@ -168,7 +168,7 @@ ul {
   padding-bottom: 0 !important;
   background-color: $def-back-col;
 
-  .my-rms-item {
+  .my-tn-item {
     padding: 21% 0;
 
     @media (min-width: 600px) {
@@ -176,11 +176,11 @@ ul {
     }
   }
 
-  .my-rms-item > .container:nth-child(1) {
+  .my-tn-item > .container:nth-child(1) {
     margin-top: 0;
   }
 
-  .my-rms-item:nth-child(3), .my-rms-item:nth-child(5), .my-rms-item:nth-child(7), .my-rms-item:nth-child(9) {
+  .my-tn-item:nth-child(3), .my-tn-item:nth-child(5), .my-tn-item:nth-child(7), .my-tn-item:nth-child(9) {
     background: #FFFFFF;
   }
 
@@ -211,8 +211,8 @@ ul {
   }
 
   div div button {
-    background-color: $rms-pink;
-    border: 1px solid $rms-pink;
+    background-color: $tn-pink;
+    border: 1px solid $tn-pink;
     border-radius: 3px;
     color: white;
     width: 170px;
@@ -223,7 +223,7 @@ ul {
 
   button:hover {
     background-color: transparent;
-    color: $rms-pink;
+    color: $tn-pink;
   }
 
   div div p, ul, button {
@@ -239,7 +239,7 @@ ul {
   }
 }
 
-.rms-images {
+.tn-images {
   position: relative;
   box-sizing: border-box;
   display: flex;
@@ -247,7 +247,7 @@ ul {
   align-items: flex-start;
 }
 
-.rms-images-4 {
+.tn-images-4 {
   display: flex;
   justify-content: center;
 
@@ -256,7 +256,7 @@ ul {
   }
 }
 
-.rms-images-1, .rms-images-2, .rms-images-3, .rms-images-5, .rms-images-6 {
+.tn-images-1, .tn-images-2, .tn-images-3, .tn-images-5, .tn-images-6 {
   img {
     width: 100%;
     height: 100%;
@@ -273,11 +273,11 @@ ul {
   z-index: 1;
 }
 
-.using-rms .my-rms-item:nth-child(2) > .svg-item > svg > polygon, .my-rms-item:nth-child(4) > .svg-item > svg > polygon, .my-rms-item:nth-child(6) > .svg-item > svg > polygon, .my-rms-item:nth-child(8) > .svg-item > svg > polygon, .my-rms-item:nth-child(10) > .svg-item > svg > polygon {
+.using-rms .my-tn-item:nth-child(2) > .svg-item > svg > polygon, .my-tn-item:nth-child(4) > .svg-item > svg > polygon, .my-tn-item:nth-child(6) > .svg-item > svg > polygon, .my-tn-item:nth-child(8) > .svg-item > svg > polygon, .my-tn-item:nth-child(10) > .svg-item > svg > polygon {
   fill: #ffffff;
 }
 
-.using-rms .my-rms-item:nth-child(3) > .svg-item > svg > polygon, .my-rms-item:nth-child(5) > .svg-item > svg > polygon, .my-rms-item:nth-child(7) > .svg-item > svg > polygon, .my-rms-item:nth-child(9) > .svg-item > svg > polygon {
+.using-rms .my-tn-item:nth-child(3) > .svg-item > svg > polygon, .my-tn-item:nth-child(5) > .svg-item > svg > polygon, .my-tn-item:nth-child(7) > .svg-item > svg > polygon, .my-tn-item:nth-child(9) > .svg-item > svg > polygon {
   fill: $def-back-col;
 }
 
@@ -353,7 +353,7 @@ body > header {
   }
 }
 
-.rms-app-hero__text {
+.tn-app-hero__text {
   padding-right:120px;
 
   @media (max-width: 1024px) {
@@ -377,7 +377,7 @@ p.apps-text {
   }
 }
 
-img.rms-apps-image.business {
+img.tn-apps-image.business {
   width: 100%;
 
   @media (max-width: 1024px) {
@@ -389,7 +389,7 @@ img.rms-apps-image.business {
   }
 }
 
-.rms-benefits {
+.tn-benefits {
   @media (max-width: 1000px) {
     img {
       width: 100%;
@@ -431,7 +431,7 @@ footer {
   }
 
   a:hover {
-    color: $rms-pink;
+    color: $tn-pink;
     text-decoration: none;
   }
 
@@ -440,7 +440,7 @@ footer {
     background-attachment: scroll;
     background-position: center center;
     background-size: cover;
-    background-image: url(https://assets.ratemyservice.io/images/rms-landing-background-gradient.webp);
+    background-image: url(/images/tn-landing-background-gradient.webp);
     position: absolute;
     top: 0;
     left: 0;
@@ -492,7 +492,7 @@ footer {
       font-size: 28px;
     }
 
-    .rms-images-2, .rms-images-4, .rms-images-6, {
+    .tn-images-2, .tn-images-4, .tn-images-6, {
       margin: 0 0 45px;
     }
   }
@@ -602,11 +602,11 @@ footer {
       }
     }
   }
-  .my-rms-item > .container, .clients-voice .container {
+  .my-tn-item > .container, .clients-voice .container {
     padding-left: 45px !important;
     padding-right: 45px !important;
   }
-  .rms-images-4 img {
+  .tn-images-4 img {
     width: 100%;
   }
   footer .foot-but {
@@ -641,7 +641,7 @@ footer {
 
   .div-head-mini p {
     font-size: 13px;
-    color: $rms-pink;
+    color: $tn-pink;
     font-weight: 600;
   }
 
@@ -675,7 +675,7 @@ footer {
 }
 
 .my-but-1 {
-  background-color: $rms-pink;
+  background-color: $tn-pink;
   border: $button-border;
   border-radius: 3px;
   color: white;
@@ -699,7 +699,7 @@ footer {
 }
 
 .my-but-1 a:hover {
-  color: $rms-pink;
+  color: $tn-pink;
   text-decoration: none;
 }
 
@@ -710,10 +710,10 @@ footer {
 
 .my-but-1:hover {
   background-color: transparent;
-  color: $rms-pink;
+  color: $tn-pink;
 
   a {
-    color: $rms-pink;
+    color: $tn-pink;
   }
 }
 
@@ -870,7 +870,7 @@ img.steps-mockup {
   }
 
   .yellow-highlight {
-    background-image: url("https://assets.ratemyservice.io/images/rms-yellow-bg.svg");
+    background-image: url("/images/tn-yellow-bg.svg");
     background-repeat: no-repeat;
     background-size: cover;
   }
@@ -900,7 +900,7 @@ img.steps-mockup {
 .yellow-highlight-sub-heading {
   font-size: 24px;
   font-weight: bold;
-  background-image: url("https://assets.ratemyservice.io/images/rms-yellow-bg.svg");
+  background-image: url("/images/tn-yellow-bg.svg");
   background-repeat: no-repeat;
   background-size: cover;
   padding: 8px 18px;
@@ -980,7 +980,7 @@ img.steps-mockup {
 }
 
 .agency-pricing-card {
-  border-color: $rms-pink;
+  border-color: $tn-pink;
   border-width: 2px;
 
   &.agency-pricing-card--popular {
@@ -1000,7 +1000,7 @@ img.steps-mockup {
 .actual-price {
   font-size: 44px;
   font-weight: bold;
-  color: $rms-pink;
+  color: $tn-pink;
   line-height: 1;
   margin: 10px 0 15px;
 }
@@ -1020,9 +1020,9 @@ img.steps-mockup {
 }
 
 .staff-member-account {
-  border: 2px solid $rms-pink;
+  border: 2px solid $tn-pink;
   border-radius: 55px;
-  color: $rms-pink;
+  color: $tn-pink;
   font-weight: bold;
   font-size: 21px;
   padding: 3px 12px;
@@ -1033,7 +1033,7 @@ img.steps-mockup {
 }
 
 .inclusive {
-  border-color: $rms-pink;
+  border-color: $tn-pink;
   border-width: 2px;
   padding: 24px;
   padding-top: 14px;
@@ -1088,7 +1088,7 @@ img.steps-mockup {
   }
 }
 
-.rms-bottom-fold-wave {
+.tn-bottom-fold-wave {
   width: 100%;
 }
 
@@ -1137,10 +1137,10 @@ img.steps-mockup {
   .try-it-free-header-but {
     padding: 7px 16px !important;
   }
-  .rms-slider .control li.prev {
+  .tn-slider .control li.prev {
     left: 8px;
   }
-  .rms-slider .control li.next {
+  .tn-slider .control li.next {
     right: 8px;
   }
 }
@@ -1161,10 +1161,10 @@ img.steps-mockup {
   .foot-but {
     width: auto !important;
   }
-  .rms-slider .control li.prev {
+  .tn-slider .control li.prev {
     left: 3px;
   }
-  .rms-slider .control li.next {
+  .tn-slider .control li.next {
     right: 3px;
   }
   .my-but-1 {
@@ -1278,7 +1278,7 @@ img.steps-mockup {
   }
 }
 
-.rms-agency-cta-buttons-container {
+.tn-agency-cta-buttons-container {
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -1288,7 +1288,7 @@ img.steps-mockup {
   }
 }
 
-.rms-agency-cta-buttons {
+.tn-agency-cta-buttons {
   flex: 1;
 }
 
@@ -1343,7 +1343,7 @@ img.steps-mockup {
   }
 
   a:hover {
-    color: $rms-pink;
+    color: $tn-pink;
     text-decoration: none;
   }
 
@@ -1357,7 +1357,7 @@ img.steps-mockup {
   background-color: transparent;
 
   a {
-    color: $rms-pink;
+    color: $tn-pink;
   }
 }
 
@@ -1376,7 +1376,7 @@ header {
 .contact-us {
   .contact-us-but {
     font-family: $font-stack;
-    background-color: $rms-pink;
+    background-color: $tn-pink;
     border: $button-border;
     border-radius: 3px;
     color: white;
@@ -1486,7 +1486,7 @@ header ul.navbar-nav li.nav-item a:hover {
 }
 
 .free-trial-btn {
-  background-color: $rms-pink;
+  background-color: $tn-pink;
   border: $button-border;
   border-radius: 3px;
   color: white;
@@ -1509,7 +1509,7 @@ header ul.navbar-nav li.nav-item a:hover {
 }
 
 .free-trial-btn:hover {
-  color: $rms-pink;
+  color: $tn-pink;
   text-decoration: none;
   background-color: transparent;
 }
@@ -1520,7 +1520,7 @@ header ul.navbar-nav li.nav-item a:hover {
 }
 // Error page styling
 .error-page {
-  background-image: url(https://assets.ratemyservice.io/images/rms-landing-background-gradient.webp);
+  background-image: url(/images/tn-landing-background-gradient.webp);
   background-size: cover;
   background-repeat: no-repeat;
   width: 100%;
@@ -1581,7 +1581,7 @@ header ul.navbar-nav li.nav-item a:hover {
 .red-highlight-sub-heading {
   font-size: 24px;
   font-weight: bold;
-  background-image: url("/images/rms-red-bg.svg");
+  background-image: url("/images/tn-red-bg.svg");
   background-repeat: no-repeat;
   background-size: cover;
   padding: 8px 18px;
@@ -1645,7 +1645,7 @@ header ul.navbar-nav li.nav-item a:hover {
   }
 }
 
-.rms-who-is-this-for-graphic {
+.tn-who-is-this-for-graphic {
   width: 100%;
 
   @media(max-width: 1024px) {
@@ -1657,7 +1657,7 @@ header ul.navbar-nav li.nav-item a:hover {
   }
 }
 
-.rms-how-agencies-make-money-graphic {
+.tn-how-agencies-make-money-graphic {
   width: 85%;
 
   @media(max-width: 1024px) {
@@ -1669,7 +1669,7 @@ header ul.navbar-nav li.nav-item a:hover {
   }
 }
 
-.rms-bullet-list {
+.tn-bullet-list {
   font-size: 16px;
   list-style: disc;
 
@@ -1678,6 +1678,6 @@ header ul.navbar-nav li.nav-item a:hover {
   }
 
   li::marker {
-    color: $rms-pink;
+    color: $tn-pink;
   }
 }
