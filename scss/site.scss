@@ -863,8 +863,6 @@ img.steps-mockup {
 
   .yellow-highlight {
     background-image: url("/images/tn-yellow-bg.svg");
-    background-repeat: no-repeat;
-    background-size: cover;
   }
 }
 
@@ -893,8 +891,6 @@ img.steps-mockup {
   font-size: 24px;
   font-weight: bold;
   background-image: url("/images/tn-yellow-bg.svg");
-  background-repeat: no-repeat;
-  background-size: cover;
   padding: 8px 18px;
 
   @media (max-width: 1024px) {
@@ -1371,8 +1367,6 @@ header ul.navbar-nav li.nav-item a:hover {
   font-size: 24px;
   font-weight: bold;
   background-image: url("/images/tn-red-bg.svg");
-  background-repeat: no-repeat;
-  background-size: cover;
   padding: 8px 18px;
 
   @media (max-width: 1024px) {
@@ -1405,6 +1399,12 @@ header ul.navbar-nav li.nav-item a:hover {
   background-position: center;
   background-size: cover;
   position: relative;
+}
+
+// Shared utility for inline text highlight spans with a background-image
+.bg-highlight {
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .intro-pic,
@@ -1476,6 +1476,19 @@ header ul.navbar-nav li.nav-item a:hover {
   }
 }
 
+.highlight--agency {
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  br {
+    display: block !important;
+
+    @media (min-width: 1244px) {
+      display: none !important;
+    }
+  }
+}
+
 /* ─────────────────────────────────────────
    Recovered styles (were lost during cleanup)
    ───────────────────────────────────────── */
@@ -1528,9 +1541,7 @@ header ul.navbar-nav li.nav-item a:hover {
 
     .highlight {
       position: relative;
-      background-size: cover !important;
       background-position: center;
-      background-repeat: no-repeat;
       padding-left: 10px;
       padding-right: 10px;
       margin-bottom: 0.5rem;
@@ -1763,9 +1774,7 @@ header ul.navbar-nav li.nav-item a:hover {
     .highlight {
       font-size: 28px;
       position: relative;
-      background-size: cover;
       background-position: center;
-      background-repeat: no-repeat;
       padding-left: 10px;
       padding-right: 10px;
       margin-bottom: 0.5rem;
