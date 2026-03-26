@@ -35,6 +35,58 @@ body {
   --bs-btn-disabled-color: #fff;
   --bs-btn-disabled-bg: #FE0056;
   --bs-btn-disabled-border-color: #FE0056;
+  font-family: $font-stack;
+  font-weight: 600;
+  border-radius: 4px;
+  transition: all 0.3s ease-in-out;
+
+  &:hover, &:focus {
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+    transform: translateY(-2px);
+  }
+}
+
+// Header nav button — compact variant of btn-pink
+.btn-nav {
+  font-size: 16px;
+  padding: 7px 18px;
+  border-radius: 3px;
+}
+
+// Trustpilot widget layout
+.tp-reviews-container {
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, .07);
+  border-color: hsla(0, 0%, 90%, 1);
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 1rem !important;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.tp-logo {
+  width: 195px;
+}
+
+.tp-rating {
+  font-weight: 700;
+}
+
+.tp-stars {
+  width: 175px;
+}
+
+.tp-reviews-cta-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: nowrap;
 }
 
 .btn-outline-secondary {
@@ -75,14 +127,6 @@ body {
   font-family: $font-stack;
   font-weight: 500;
   font-size: 18px;
-}
-
-.free-trial {
-  margin-top: 50px;
-
-  .my-but-1 {
-    margin-bottom: 20px;
-  }
 }
 
 .tn-slider {
@@ -462,9 +506,6 @@ footer {
 }
 
 @media only screen and (max-width: 767px) {
-  .but-try-free {
-    width: 100% !important;
-  }
   body > header > nav {
     padding: 0 0 0 0;
   }
@@ -475,10 +516,6 @@ footer {
       font-size: 27px !important;
     }
 
-  }
-
-  .my-but-1 {
-    width: max-content;
   }
 
   .section-2 .item-2 > img {
@@ -674,53 +711,6 @@ footer {
 
 .svg-item-2 > svg {
   fill: #1b86f1;
-}
-
-.my-but-1 {
-  background-color: $tn-pink;
-  border: $button-border;
-  border-radius: 3px;
-  color: white;
-  height: 60px;
-  margin: 0 auto;
-
-  span {
-    font-size: 20px;
-  }
-
-  font-weight: 600;
-  transition: 0.3s;
-}
-
-.my-but-1-link {
-  padding: 13.5px 0;
-}
-
-.my-but-1 a {
-  color: white;
-}
-
-.my-but-1 a:hover {
-  color: $tn-pink;
-  text-decoration: none;
-}
-
-.my-but-1 a:focus {
-  color: white;
-  text-decoration: none;
-}
-
-.my-but-1:hover {
-  background-color: transparent;
-  color: $tn-pink;
-
-  a {
-    color: $tn-pink;
-  }
-}
-
-.my-but-1 > span {
-  margin: auto auto;
 }
 
 .div-head-mini {
@@ -927,36 +917,6 @@ img.steps-mockup {
   padding-top: 0;
 }
 
-.try-it-free-header-but {
-  font-family: $font-stack !important;
-  background-color: #FE0056;
-  border: 1px solid #FE0056;
-  border-radius: 3px;
-  color: white !important;
-  font-weight: 600;
-  font-size: 18px !important;
-  padding: 8px 20px;
-  display: inline-block;
-}
-
-.try-it-free-header-but:hover {
-  color: #FE0056 !important;
-  text-decoration: none;
-  border-color: #FE0056;
-  background-color: transparent;
-}
-
-.try-it-free-header-but:focus {
-  color: #FE0056 !important;
-  text-decoration: none;
-}
-
-@media only screen and (min-width: 768px) and (max-width: 991px) {
-  .my-but-1-link {
-    padding: 0;
-  }
-}
-
 @media only screen and (max-width: 991px) {
   .foot-but {
     width: 50% !important;
@@ -1135,10 +1095,6 @@ img.steps-mockup {
   .foot-but {
     width: 85% !important;
   }
-
-  .try-it-free-header-but {
-    padding: 7px 16px !important;
-  }
   .tn-slider .control li.prev {
     left: 8px;
   }
@@ -1147,19 +1103,7 @@ img.steps-mockup {
   }
 }
 
-@media only screen and (max-width: 399px) {
-  .try-it-free-header-but {
-    font-size: 14px !important;
-    font-weight: 700 !important;
-    padding-top: 8px !important;
-  }
-}
-
 @media only screen and (max-width: 374px) {
-  .try-it-free-header-but {
-    font-size: 12px !important;
-    padding-top: 10px !important;
-  }
   .foot-but {
     width: auto !important;
   }
@@ -1169,46 +1113,11 @@ img.steps-mockup {
   .tn-slider .control li.next {
     right: 3px;
   }
-  .my-but-1 {
-    span {
-      font-size: 19px;
-    }
-  }
 }
 
 @media only screen and (max-width: 365px) {
   nav button.navbar-toggler {
     margin-right: 0 !important;
-  }
-  .try-it-free-header-but {
-    font-size: 11px !important;
-    padding-top: 11px !important;
-  }
-
-  .my-but-1 {
-    span {
-      font-size: 17px;
-    }
-
-    .my-but-1-link {
-      padding: 15.5px 0;
-    }
-  }
-}
-
-@media only screen and (max-width: 334px) {
-}
-
-@media only screen and (max-width: 330px) {
-  .try-it-free-header-but {
-    font-size: 10px !important;
-  }
-}
-
-@media only screen and (max-width: 326px) {
-  .try-it-free-header-but {
-    font-size: 9px !important;
-    padding-top: 12px !important;
   }
 }
 
@@ -1292,75 +1201,6 @@ img.steps-mockup {
 
 .tn-agency-cta-buttons {
   flex: 1;
-}
-
-.agency-btn {
-  font-family: "Poppins", sans-serif !important;
-  width: 100%;
-  text-align: center;
-  border: none !important;
-  border-radius: 4px;
-  color: white !important;
-  font-weight: 600;
-  font-size: 18px !important;
-  padding: 12px 30px;
-  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.09);
-  transform: translateY(0);
-  transition: all 0.3s ease-in-out;
-}
-
-.agency-btn--marketing {
-  background-color: #f8e802 !important;
-  color: $primary-color !important;
-
-  &.agency-btn--marketing:hover {
-    background-color: #e9d000 !important;
-  }
-}
-
-.agency-btn:hover, .agency-btn :focus {
-  background-color: #E0AD00 !important;
-  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
-  transform: translateY(-3px);
-  transition: all 0.3s ease-in-out;
-}
-
-.but-try-free {
-  cursor: pointer;
-  text-transform: none;
-  font-size: 16px;
-  background-color: #FE0056;
-  border: 1px solid #FE0056;
-  border-radius: 3px;
-  width: 220px;
-  height: 50px;
-  font-weight: 600;
-  transition: 0.3s;
-  margin: 10px 0;
-  padding-top: 12px;
-  margin-bottom: 30px;
-
-  a {
-    color: white;
-  }
-
-  a:hover {
-    color: $tn-pink;
-    text-decoration: none;
-  }
-
-  a:focus {
-    color: white;
-    text-decoration: none;
-  }
-}
-
-.but-try-free:hover {
-  background-color: transparent;
-
-  a {
-    color: $tn-pink;
-  }
 }
 
 header {
@@ -1486,40 +1326,6 @@ header ul.navbar-nav li.nav-item a {
 header ul.navbar-nav li.nav-item a:hover {
   color: #1BCCDC;
 }
-
-.free-trial-btn {
-  background-color: $tn-pink;
-  border: $button-border;
-  border-radius: 3px;
-  color: white;
-  font-weight: 600;
-  transition: 0.3s;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  height: 55px;
-  min-width: 260px;
-  font-size: 18px;
-
-  @media (min-width: 800px) {
-    min-width: 320px;
-  }
-
-  @media (max-width: 767px) {
-    font-size: 16px;
-  }
-}
-
-.free-trial-btn:hover {
-  color: $tn-pink;
-  text-decoration: none;
-  background-color: transparent;
-}
-
-.free-trial-btn:focus {
-  color: white;
-  text-decoration: none;
-}
 // Error page styling
 .error-page {
   background-image: url(/images/tn-landing-background-gradient.webp);
@@ -1560,25 +1366,6 @@ header ul.navbar-nav li.nav-item a:hover {
    color: #FF006B;
    border-radius: 8px;
  }
-
-.back-home-btn {
-  font-family: $font-stack !important;
-  background-color: #FF006B;
-  border: none !important;
-  border-radius: 50px;
-  color: white !important;
-  font-weight: 600;
-  font-size: 18px !important;
-  padding: 12px 30px;
-  box-shadow: 0 3px 10px rgba(0, 0, 0, .09);
-  transform: translateY(0);
-  transition: all .3s ease-in-out;
-  position: relative;
-  margin: 0 auto;
-  display: block;
-  max-width: max-content;
-  justify-content: center;
-}
 
 .red-highlight-sub-heading {
   font-size: 24px;
@@ -1689,11 +1476,9 @@ header ul.navbar-nav li.nav-item a:hover {
   }
 }
 
-
 /* ─────────────────────────────────────────
    Recovered styles (were lost during cleanup)
    ───────────────────────────────────────── */
-
 
 .tn-agency-hero {
   background-position: bottom center; // override shared .bg-cover-hero center default
@@ -1865,7 +1650,6 @@ header ul.navbar-nav li.nav-item a:hover {
       }
     }
   }
-
 
   &__cta-buttons {
     display: grid;
@@ -2246,7 +2030,6 @@ header ul.navbar-nav li.nav-item a:hover {
   .tn-pricing-table-body {
     display: table-row-group;
   }
-
 
   .table-header {
     color: #FFF;
