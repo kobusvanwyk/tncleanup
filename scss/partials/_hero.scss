@@ -3,14 +3,11 @@
 .intro-pic,
 .intro-video {
   padding-top: 75px;
-  padding-bottom: 250px;
+  // Mobile base: same padding as tablet (both were 200px)
+  padding-bottom: 200px;
 
-  @media(max-width: 1024px) {
-    padding-bottom: 200px;
-  }
-
-  @media(max-width: 767px) {
-    padding-bottom: 200px;
+  @media (min-width: 1025px) {
+    padding-bottom: 250px;
   }
 }
 
@@ -21,14 +18,15 @@
 }
 
 .the-video {
-  padding: 165px 20px 220px 20px;
+  // Mobile base (smallest value)
+  padding: 50px 20px 150px 20px;
 
-  @media(max-width: 1024px) {
+  @media (min-width: 768px) {
     padding: 100px 20px 200px 20px;
   }
 
-  @media(max-width: 767px) {
-    padding: 50px 20px 150px 20px;
+  @media (min-width: 1025px) {
+    padding: 165px 20px 220px 20px;
   }
 }
 
@@ -66,37 +64,37 @@
 // ── App hero text (business page) ────────────────────────────────
 
 .tn-app-hero__text {
-  padding-right: 120px;
+  // Mobile base: no right padding
+  padding-right: 0;
 
-  @media (max-width: 1024px) {
-    padding-right: 0;
-  }
-
-  @media (max-width: 767px) {
-    padding-right: 0;
+  @media (min-width: 1025px) {
+    padding-right: 120px;
   }
 }
 
 p.apps-text {
-  font-size: 20px;
+  // Mobile base
+  font-size: 16px;
+  text-align: center;
 
-  @media (max-width: 1025px) {
-    text-align: center;
+  @media (min-width: 768px) {
+    font-size: 20px;
   }
 
-  @media (max-width: 767px) {
-    font-size: 16px;
+  @media (min-width: 1026px) {
+    text-align: left;
   }
 }
 
 img.tn-apps-image.business {
+  // Mobile base: full width
   width: 100%;
 
-  @media (max-width: 1024px) {
+  @media (min-width: 768px) {
     width: 75%;
   }
 
-  @media (max-width: 767px) {
+  @media (min-width: 1025px) {
     width: 100%;
   }
 }
@@ -104,15 +102,15 @@ img.tn-apps-image.business {
 // ── Agency hero ───────────────────────────────────────────────────
 
 .tn-agency-hero {
-  background-position: bottom center; // override shared .bg-cover-hero center default
-  padding-top: 50px;
+  background-position: bottom center;
+  // Mobile base: larger top padding (was max-width: 1024px value)
+  padding-top: 75px;
 
-  @media(max-width: 1024px) {
-    padding-top: 75px;
+  @media (min-width: 1025px) {
+    padding-top: 50px;
   }
 
   &--ltd {
-
     h3 br {
       display: block !important;
     }
@@ -131,22 +129,21 @@ img.tn-apps-image.business {
   }
 
   h1 {
-    @media(min-width: 1025px) {
+    @media (min-width: 1025px) {
       font-size: 52px;
     }
   }
 
   h2 {
+    // Mobile base: centered, smaller
     font-size: 24px;
     margin: 1.5rem 0;
+    text-align: center;
 
-    @media(max-width: 1024px) {
-      text-align: center;
-    }
-
-    @media(min-width: 1025px) {
+    @media (min-width: 1025px) {
       font-size: 40px;
       margin: 2.5rem 0;
+      text-align: left;
     }
 
     .highlight {
@@ -157,28 +154,24 @@ img.tn-apps-image.business {
       margin-bottom: 0.5rem;
       display: block;
 
-      @media(min-width: 680px) {
+      @media (min-width: 680px) {
         display: inline;
       }
 
-      @media(min-width: 1025px) {
+      @media (min-width: 1025px) {
         line-height: 1.7em;
       }
     }
   }
 
   h3 {
-    font-size: 20px;
+    // Mobile base: tablet size (1024px value was same as base)
+    font-size: 18px;
+    line-height: 1.5;
     margin-bottom: 2rem;
 
-    @media(max-width: 1024px) {
-      font-size: 18px;
-      line-height: 1.5;
-    }
-
-    @media(min-width: 1025px) {
+    @media (min-width: 1025px) {
       font-size: 31px;
-      line-height: 1.5;
     }
 
     br {
@@ -221,7 +214,7 @@ img.tn-apps-image.business {
     &--dp {
       display: none;
 
-      @media(min-width: 680px) {
+      @media (min-width: 680px) {
         display: block;
       }
     }
@@ -229,17 +222,19 @@ img.tn-apps-image.business {
     &--mb {
       display: block;
 
-      @media(min-width: 680px) {
+      @media (min-width: 680px) {
         display: none;
       }
     }
   }
 
   .tn-agency-ltd-image__container {
+    // Mobile base: centered
     position: relative;
+    text-align: center;
 
-    @media (max-width: 1024px) {
-      text-align: center;
+    @media (min-width: 1025px) {
+      text-align: left;
     }
   }
 
@@ -283,20 +278,15 @@ img.tn-apps-image.business {
 }
 
 .tn-agency-hero__content {
-  display: flex;
-  flex-direction: column;
+  // Mobile base: block layout
+  display: block;
   grid-template-rows: max-content;
   grid-gap: 3rem;
   position: relative;
-  padding: 10% 0 105% 0;
+  padding: 9% 0% 21% 0%;
   text-align: center;
 
-  @media(max-width: 767px) {
-    display: grid;
-    padding: 10% 0 50% 0;
-  }
-
-  @media(min-width: 680px) {
+  @media (min-width: 680px) {
     display: grid;
     grid-template-columns: 64% 40%;
     grid-template-rows: 1fr;
@@ -305,64 +295,68 @@ img.tn-apps-image.business {
     text-align: left;
   }
 
-  @media(min-width: 820px) {
+  @media (min-width: 768px) {
+    display: grid;
+    padding: 10% 0 50% 0;
+  }
+
+  @media (min-width: 820px) {
     grid-template-columns: 55% 40%;
   }
 
-  @media(max-width: 1024px) {
-    grid-template-rows: 1fr;
-    display: block;
-    padding: 9% 0% 21% 0%;
-  }
-
-  @media(min-width: 1025px) {
+  @media (min-width: 1025px) {
     grid-template-columns: 64% 36%;
+    padding: 10% 0 105% 0;
   }
 
   .tn-agency-hero__text {
-    font-size: 42px;
+    // Mobile base
+    font-size: 30px;
     padding-right: 0;
+    text-align: center;
 
-    @media(max-width: 767px) {
-      font-size: 30px !important;
-      padding-right: 0;
+    @media (min-width: 768px) {
+      font-size: 35px;
     }
 
-    @media(min-width: 991px) {
+    @media (min-width: 991px) {
       padding-right: 40px;
     }
 
-    @media(max-width: 1024px) {
-      font-size: 35px;
-      text-align: center;
+    @media (min-width: 1025px) {
+      font-size: 42px;
+      text-align: left;
     }
   }
 }
 
 .tn-agency-hero__text {
-  font-size: 42px;
+  // Mobile base
+  font-size: 30px;
   padding-right: 0;
+  text-align: center;
 
-  @media(max-width: 767px) {
-    font-size: 30px !important;
-    padding-right: 0;
+  @media (min-width: 768px) {
+    font-size: 35px;
   }
 
-  @media(min-width: 991px) {
+  @media (min-width: 991px) {
     padding-right: 40px;
   }
 
-  @media(max-width: 1024px) {
-    font-size: 35px;
-    text-align: center;
+  @media (min-width: 1025px) {
+    font-size: 42px;
+    text-align: left;
   }
 }
 
 .tn-agency-ltd-image__container {
+  // Mobile base: centered
   position: relative;
+  text-align: center;
 
-  @media (max-width: 1024px) {
-    text-align: center;
+  @media (min-width: 1025px) {
+    text-align: left;
   }
 }
 
@@ -400,7 +394,7 @@ img.tn-apps-image.business {
   top: 0;
   transform: translateY(0);
 
-  @media(min-width: 680px) {
+  @media (min-width: 680px) {
     width: 984px;
     position: absolute;
     top: 50%;
@@ -411,47 +405,51 @@ img.tn-apps-image.business {
 // ── AppSumo / review management hero ─────────────────────────────
 
 .tn-appsumo-hero {
-  padding-top: 100px;
+  // Mobile base (smaller padding)
+  padding-top: 75px;
 
-  @media(max-width: 767px) {
-    padding-top: 75px;
+  @media (min-width: 768px) {
+    padding-top: 100px;
   }
 
   h1 {
-    font-size: 42px;
+    // Mobile base
+    font-size: 30px;
 
-    @media(max-width: 1024px) {
+    @media (min-width: 768px) {
       font-size: 32px;
     }
 
-    @media(max-width: 767px) {
-      font-size: 30px;
+    @media (min-width: 1025px) {
+      font-size: 42px;
     }
   }
 
   h2 {
-    font-size: 35px;
-    margin: 1.5rem 0;
+    // Mobile base
+    font-size: 26px;
+    margin: 2.5rem 0;
 
-    @media(max-width: 1024px) {
+    @media (min-width: 768px) {
       font-size: 28px;
-      margin: 2.5rem 0;
     }
 
-    @media(max-width: 767px) {
-      font-size: 26px;
-      margin: 2.5rem 0;
+    @media (min-width: 1025px) {
+      font-size: 35px;
+      margin: 1.5rem 0;
     }
 
-  h3 {
-    font-size: 20px;
+    h3 {
+      // Mobile base
+      font-size: 18px;
 
-    @media(max-width: 1024px) {
-      font-size: 18px !important;
+      @media (min-width: 1025px) {
+        font-size: 20px;
+      }
     }
-  }
 
     .highlight {
+      // Mobile base
       font-size: 28px;
       position: relative;
       background-position: center;
@@ -460,11 +458,11 @@ img.tn-apps-image.business {
       margin-bottom: 0.5rem;
       display: block;
 
-      @media(min-width: 680px) {
+      @media (min-width: 680px) {
         display: inline;
       }
 
-      @media(min-width: 1025px) {
+      @media (min-width: 1025px) {
         font-size: 42px;
       }
     }
@@ -474,7 +472,7 @@ img.tn-apps-image.business {
     font-size: 20px;
     margin-bottom: 2rem;
 
-    @media(min-width: 1025px) {
+    @media (min-width: 1025px) {
       font-size: 24px;
     }
 
@@ -492,17 +490,12 @@ img.tn-apps-image.business {
   }
 
   .tn-appsumo-mockup__image--phone {
+    // Mobile base
     width: 100%;
     position: absolute;
-    top: 0;
+    top: 50%;
+    left: 50px;
     transform: translateY(0);
-    left: 0;
-
-    @media (max-width: 767px) {
-      width: 100%;
-      top: 50%;
-      left: 50px;
-    }
 
     @media (min-width: 680px) {
       width: 640px;
@@ -524,7 +517,7 @@ img.tn-apps-image.business {
     &--dp {
       display: none;
 
-      @media(min-width: 680px) {
+      @media (min-width: 680px) {
         display: block;
       }
     }
@@ -532,7 +525,7 @@ img.tn-apps-image.business {
     &--mb {
       display: block;
 
-      @media(min-width: 680px) {
+      @media (min-width: 680px) {
         display: none;
       }
     }
@@ -540,19 +533,16 @@ img.tn-apps-image.business {
 }
 
 .tn-appsumo-hero__content {
-  display: grid;
+  // Mobile base: block
+  display: block;
   grid-template-rows: max-content;
   grid-gap: 3rem;
   position: relative;
   padding: 10% 0 105% 0;
   text-align: center;
 
-  @media(max-width: 767px) {
-    display: block;
-    grid-template-rows: 1fr;
-  }
-
-  @media(min-width: 680px) {
+  @media (min-width: 680px) {
+    display: grid;
     grid-template-columns: 60% 40%;
     grid-template-rows: 1fr;
     grid-gap: 0;
@@ -560,11 +550,11 @@ img.tn-apps-image.business {
     text-align: left;
   }
 
-  @media(min-width: 820px) {
+  @media (min-width: 820px) {
     grid-template-columns: 50% 50%;
   }
 
-  @media(min-width: 1025px) {
+  @media (min-width: 1025px) {
     grid-template-columns: 60% 40%;
   }
 }
@@ -574,17 +564,12 @@ img.tn-apps-image.business {
 }
 
 .tn-appsumo-mockup__image--phone {
+  // Mobile base
   width: 100%;
   position: absolute;
-  top: 0;
+  top: 50%;
+  left: 50px;
   transform: translateY(0);
-  left: 0;
-
-  @media (max-width: 767px) {
-    width: 100%;
-    top: 50%;
-    left: 50px;
-  }
 
   @media (min-width: 680px) {
     width: 640px;
@@ -606,7 +591,7 @@ img.tn-apps-image.business {
   &--dp {
     display: none;
 
-    @media(min-width: 680px) {
+    @media (min-width: 680px) {
       display: block;
     }
   }
@@ -614,7 +599,7 @@ img.tn-apps-image.business {
   &--mb {
     display: block;
 
-    @media(min-width: 680px) {
+    @media (min-width: 680px) {
       display: none;
     }
   }

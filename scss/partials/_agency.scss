@@ -329,10 +329,8 @@
 }
 
 .tn-idea-for-box {
-  display: grid;
-  grid-template-columns: 60px 1fr;
-  grid-gap: 45px;
-  align-items: center;
+  // Mobile base: stacked
+  display: block;
   background: #FFFFFF;
   border-radius: 8px;
   padding: 22px;
@@ -340,16 +338,17 @@
   font-weight: 400;
   width: 100%;
 
-  @media(max-width: 767px) {
-    display: block;
+  @media (min-width: 768px) {
+    display: grid;
+    grid-template-columns: 60px 1fr;
+    grid-gap: 45px;
+    align-items: center;
   }
 }
 
 .tn-idea-for-box-grey {
-  display: grid;
-  grid-template-columns: 60px 1fr;
-  grid-gap: 45px;
-  align-items: center;
+  // Mobile base: stacked
+  display: block;
   background: $tn-appsumo-section-gray;
   border-radius: 8px;
   padding: 20px;
@@ -357,7 +356,10 @@
   font-weight: 400;
   width: 100%;
 
-  @media(max-width: 767px) {
-    display: block;
+  @media (min-width: 768px) {
+    display: grid;
+    grid-template-columns: 60px 1fr;
+    grid-gap: 45px;
+    align-items: center;
   }
 }
