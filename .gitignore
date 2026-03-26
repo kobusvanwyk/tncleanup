@@ -1,0 +1,18 @@
+# Environment variables — never commit
+.env
+
+# Composer dependencies
+/vendor/
+
+# Compiled CSS — generated automatically by Tina4
+public/css/default.css
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE files
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace
