@@ -1,0 +1,27 @@
+body {
+  //background-color: $def-back-col;
+  font-family: $font-stack !important;
+  color: $primary-color !important;
+
+  a {
+    text-decoration: none;
+  }
+}
+
+::placeholder {
+  color: #ABB0BB !important;
+  opacity: 1;
+}
+
+::-ms-input-placeholder {
+  color: #ABB0BB !important;
+}
+
+ul {
+  list-style-type: none;
+}
+
+svg {
+  margin-bottom: -10px;
+  fill: #FFFFFF;
+}

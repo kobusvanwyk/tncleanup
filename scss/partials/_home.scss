@@ -1,0 +1,439 @@
+// ── Welcome / hero text ──────────────────────────────────────────
+
+.welcome-message {
+  padding: calc(9% + 77px) 30px 9% 30px;
+  text-align: center;
+  margin-bottom: 10px;
+  max-width: 100%;
+
+  @media(min-width: 768px) {
+    padding: calc(7% + 77px) 95px 0 95px;
+  }
+
+  .p-ratings {
+    margin: 50px 0 50px 0;
+    width: 100%;
+  }
+
+  p {
+    text-transform: none;
+    font-weight: 300;
+  }
+
+  span.message {
+    text-transform: none;
+    font-weight: 700;
+  }
+
+  p.small {
+    font-size: 32px !important;
+    width: 100%;
+    margin: 0 auto;
+    font-weight: inherit;
+    margin-top: 10px;
+
+    span {
+      display: block;
+    }
+  }
+
+  font-size: 69px;
+
+  span {
+    display: block;
+
+    @media (min-width: 768px) {
+      display: inline;
+    }
+
+    @media (max-width: 767px) {
+      display: inline;
+    }
+  }
+
+  @media (max-width: 768px) {
+    font-size: 50px;
+  }
+
+  @media (max-width: 767px) {
+    font-size: 30px;
+  }
+
+  .yellow-highlight {
+    background-image: url("/images/tn-yellow-bg.svg");
+  }
+}
+
+.welcome-message-sub {
+  font-size: 32px;
+
+  @media (max-width: 768px) {
+    font-size: 25px;
+  }
+
+  @media (max-width: 767px) {
+    font-size: 20px;
+  }
+}
+
+.yellow-highlight-sub-heading {
+  font-size: 24px;
+  font-weight: bold;
+  background-image: url("/images/tn-yellow-bg.svg");
+  padding: 8px 18px;
+
+  @media (max-width: 1024px) {
+    font-size: 20px;
+    padding: 5px 15px;
+  }
+
+  @media (max-width: 767px) {
+    font-size: 18px;
+    padding: 5px 15px;
+  }
+}
+
+// ── Section 2 (logo strip) ────────────────────────────────────────
+
+.section-2 {
+  text-align: center;
+
+  .item-1 div:nth-child(2) > span {
+    font-size: 12px;
+  }
+
+  .row .item-2 {
+    margin: 50px 0 39px 0;
+  }
+}
+
+.section-2 {
+  padding: 4% 20px;
+  padding-top: 0;
+}
+
+.ratings, .clients-voice {
+  padding: 4% 20px;
+}
+
+// ── Ratings / testimonials ────────────────────────────────────────
+
+.img-ratings {
+  border-radius: 50%;
+}
+
+.checked {
+  color: gold;
+}
+
+.ratings-img, .ratings-client {
+  display: inline-block;
+}
+
+.ratings-img {
+  margin-right: 15px;
+}
+
+.ratings {
+  font-weight: 400;
+  font-size: 20px;
+  color: rgb(72, 67, 67);
+
+  .img-ratings {
+    height: 100px;
+    width: 100px;
+  }
+
+  .rating-wrapper {
+
+    .inner-wrap .ratings-item:nth-child(1) span {
+      fill: rgba(245, 166, 35, 1);
+    }
+  }
+
+  .rating-wrapper:last-child {
+
+  }
+
+  .inner-wrap {
+    padding: 25px;
+    border-radius: 12px;
+    background-color: #FFFFFF;
+    box-shadow: 0 20px 20px 0 rgba(0, 0, 0, 0.1);
+    height: 100%;
+  }
+
+  .ratings-container .row {
+    padding: 10px 35px;
+    background: #FFFFFF;
+  }
+
+  .ratings-item {
+    margin-bottom: 20px;
+  }
+}
+
+.ratings-img-svg {
+  width: 30%;
+  top: 8%;
+  right: 6%;
+  position: absolute;
+}
+
+.ratings-img-svg-mobile {
+  width: 90%;
+  top: 7%;
+  right: 5%;
+  position: absolute;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .ratings {
+    .rating-wrapper:nth-child(1) {
+      .rating-body:last-child {
+        .ratings-item:last-child {
+          margin-bottom: 134px !important;
+        }
+      }
+    }
+
+    .rating-wrapper:last-child {
+      .rating-body:last-child {
+        .ratings-item:last-child {
+          margin-bottom: 220px !important;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .ratings {
+    .container {
+      padding: 4% 20px;
+    }
+
+    .rating-wrapper:nth-child(1) {
+      .rating-body:last-child {
+        .ratings-item:last-child {
+          margin-bottom: 77px !important;
+        }
+      }
+    }
+
+    .rating-wrapper:last-child {
+      .rating-body:last-child {
+        .ratings-item:last-child {
+          margin-bottom: 106px !important;
+        }
+      }
+    }
+  }
+}
+
+// ── Clients voice ─────────────────────────────────────────────────
+
+.svg-item-2 {
+  width: 86px;
+  height: 86px;
+  margin: 0 auto;
+  border-radius: 50%;
+  background: white;
+  padding: 20px 20px;
+}
+
+.clients-voice {
+  text-align: center;
+  background: $def-back-col;
+  position: relative;
+
+  .svg-item {
+    fill: #ffffff;
+    margin-top: 90px;
+  }
+
+  .div-head h3 {
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 40px;
+  }
+
+  .div-head-mini p {
+    font-size: 13px;
+    color: $tn-pink;
+    font-weight: 600;
+  }
+
+  .heading-item p {
+    font-size: 30px;
+    font-weight: 600;
+  }
+
+  .parag-item {
+    font-size: 20px;
+    padding: 0 13px;
+    line-height: 1.7em;
+
+    p:nth-child(1) {
+      color: rgba(72, 67, 67, 1);
+      font-weight: 400;
+    }
+
+    p:nth-child(2) {
+      font-style: italic;
+    }
+  }
+
+  .container > .row:nth-child(1) {
+    margin-bottom: 45px;
+  }
+}
+
+.svg-item-2 > svg {
+  fill: #1b86f1;
+}
+
+.div-head-mini {
+  margin-top: 50px;
+}
+
+// ── Using TrustNinja section ──────────────────────────────────────
+
+.svg-item {
+  height: 100px;
+  top: 0;
+  line-height: 0;
+  pointer-events: none;
+  position: relative;
+  box-sizing: border-box;
+  z-index: 1;
+}
+
+.using-tn {
+  padding-bottom: 0 !important;
+  background-color: $def-back-col;
+
+  .my-tn-item {
+    padding: 21% 0;
+
+    @media (min-width: 600px) {
+      padding: 7% 0;
+    }
+  }
+
+  .my-tn-item > .container:nth-child(1) {
+    margin-top: 0;
+  }
+
+  .my-tn-item:nth-child(3), .my-tn-item:nth-child(5), .my-tn-item:nth-child(7), .my-tn-item:nth-child(9) {
+    background: #FFFFFF;
+  }
+
+  ul {
+    padding-left: unset;
+  }
+
+  .row:nth-child(1) h1 {
+    font-size: 56px;
+    text-align: center;
+    font-weight: 700;
+    margin-bottom: 60px;
+  }
+
+  div div h3 {
+    font-size: 36px;
+    letter-spacing: -0.83px;
+    font-weight: 700;
+  }
+
+  div div p, li, button {
+    font-size: 16px;
+    color: rgba(72, 67, 67, 1);
+  }
+
+  li {
+    font-weight: 600;
+  }
+
+  div div button {
+    background-color: $tn-pink;
+    border: 1px solid $tn-pink;
+    border-radius: 3px;
+    color: white;
+    width: 170px;
+    height: 50px;
+    font-weight: 600;
+    transition: 0.3s;
+  }
+
+  button:hover {
+    background-color: transparent;
+    color: $tn-pink;
+  }
+
+  div div p, ul, button {
+    margin: 20px 0;
+  }
+
+  .row h3, ul, p, button {
+    margin: 10px 0;
+  }
+
+  img {
+    box-shadow: 0 5px 50px rgba(0, 0, 0, .12), 0 5px 20px rgba(0, 0, 0, .1);
+  }
+}
+
+.tn-images {
+  position: relative;
+  box-sizing: border-box;
+  display: flex;
+  -webkit-box-align: start;
+  align-items: flex-start;
+}
+
+.tn-images-4 {
+  display: flex;
+  justify-content: center;
+
+  img {
+    width: 100%;
+  }
+}
+
+.tn-images-1, .tn-images-2, .tn-images-3, .tn-images-5, .tn-images-6 {
+  img {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.using-tn .my-tn-item:nth-child(2) > .svg-item > svg > polygon, .my-tn-item:nth-child(4) > .svg-item > svg > polygon, .my-tn-item:nth-child(6) > .svg-item > svg > polygon, .my-tn-item:nth-child(8) > .svg-item > svg > polygon, .my-tn-item:nth-child(10) > .svg-item > svg > polygon {
+  fill: #ffffff;
+}
+
+.using-tn .my-tn-item:nth-child(3) > .svg-item > svg > polygon, .my-tn-item:nth-child(5) > .svg-item > svg > polygon, .my-tn-item:nth-child(7) > .svg-item > svg > polygon, .my-tn-item:nth-child(9) > .svg-item > svg > polygon {
+  fill: $def-back-col;
+}
+
+// ── Steps / how it works ──────────────────────────────────────────
+
+div#\33 -steps {
+  font-size: 16px;
+  font-weight: 700;
+  max-width: 1430px;
+}
+
+img.steps-mockup {
+  width: 100%;
+}
+
+.steps-container {
+  display: grid;
+  grid-template-columns: 1fr;
+
+  @media only screen and (min-width: 768px) {
+    grid-template-columns: 4fr 2fr 4fr;
+    grid-auto-rows: 1fr;
+  }
+}

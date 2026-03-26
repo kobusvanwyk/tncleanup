@@ -1,0 +1,34 @@
+.tp-reviews-container {
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, .07);
+  border-color: hsla(0, 0%, 90%, 1);
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 1rem !important;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.tp-logo {
+  width: 195px;
+}
+
+.tp-rating {
+  font-weight: 700;
+}
+
+.tp-stars {
+  width: 175px;
+}
+
+.tp-reviews-cta-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: nowrap;
+}

@@ -1,0 +1,44 @@
+.tn-benefits {
+  @media (max-width: 1000px) {
+    img {
+      width: 100%;
+    }
+  }
+}
+
+.tn-who-is-this-for-graphic {
+  width: 100%;
+
+  @media(max-width: 1024px) {
+    width: 75%;
+  }
+
+  @media(max-width: 767px) {
+    width: 100%;
+  }
+}
+
+.tn-how-agencies-make-money-graphic {
+  width: 85%;
+
+  @media(max-width: 1024px) {
+    width: 75%;
+  }
+
+  @media(max-width: 767px) {
+    width: 100%;
+  }
+}
+
+.tn-bullet-list {
+  font-size: 16px;
+  list-style: disc;
+
+  @media(min-width: 680px) {
+    font-size: 16px;
+  }
+
+  li::marker {
+    color: $tn-pink;
+  }
+}

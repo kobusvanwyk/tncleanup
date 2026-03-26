@@ -1,0 +1,102 @@
+.hoverable {
+  z-index: 1;
+  position: relative;
+}
+
+// Shared utility for sections with a background-image set inline
+.bg-cover-hero {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+}
+
+// Shared utility for inline text highlight spans with a background-image
+.bg-highlight {
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.section-heading {
+  font-size: 35px;
+  font-weight: 700;
+
+  @media(max-width: 1024px) {
+    font-size: 30px;
+  }
+
+  @media(max-width: 767px) {
+    font-size: 26px;
+  }
+}
+
+.highlight--agency {
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  br {
+    display: block !important;
+
+    @media (min-width: 1244px) {
+      display: none !important;
+    }
+  }
+}
+
+.ts-n-cs {
+  font-size: 18px;
+
+  span {
+    font-size: 16px;
+  }
+}
+
+.cancel-message {
+  display: block;
+  font-size: 12px;
+
+  @media (min-width: 768px) {
+    font-size: 14px;
+  }
+}
+
+.centered {
+  font-size: 32px;
+  font-weight: 700;
+  color: white;
+  line-height: 48px;
+  padding-top: 5%;
+}
+
+.copy-\&-paste {
+  font-size: 24px;
+  font-weight: 300;
+  color: white;
+  line-height: 35px;
+}
+
+.tooltip-info {
+  width: 17px;
+  margin-top: -2px;
+}
+
+.split-svg {
+  top: -1px;
+}
+
+.red-highlight-sub-heading {
+  font-size: 24px;
+  font-weight: bold;
+  background-image: url("/images/tn-red-bg.svg");
+  padding: 8px 18px;
+
+  @media (max-width: 1024px) {
+    font-size: 20px;
+    padding: 5px 15px;
+  }
+
+  @media (max-width: 767px) {
+    font-size: 18px;
+    padding: 5px 15px;
+  }
+}

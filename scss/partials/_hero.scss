@@ -1,0 +1,621 @@
+// ── Hero section backgrounds ──────────────────────────────────────
+
+.intro-pic,
+.intro-video {
+  padding-top: 75px;
+  padding-bottom: 250px;
+
+  @media(max-width: 1024px) {
+    padding-bottom: 200px;
+  }
+
+  @media(max-width: 767px) {
+    padding-bottom: 200px;
+  }
+}
+
+.the-pic {
+  position: relative;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.the-video {
+  padding: 165px 20px 220px 20px;
+
+  @media(max-width: 1024px) {
+    padding: 100px 20px 200px 20px;
+  }
+
+  @media(max-width: 767px) {
+    padding: 50px 20px 150px 20px;
+  }
+}
+
+.tn-bottom-fold-wave {
+  width: 100%;
+}
+
+.rmb-above-the-fold {
+  width: 100%;
+  top: -2px;
+  position: relative;
+  background-repeat: no-repeat;
+}
+
+.tn-section-split {
+  display: block;
+  margin: 0 auto;
+  background: #FFF;
+  text-align: center;
+  z-index: 1;
+
+  svg {
+    width: 100px;
+  }
+}
+
+.tn-section-split--absolute {
+  background: transparent;
+  position: absolute;
+  top: -1px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+// ── App hero text (business page) ────────────────────────────────
+
+.tn-app-hero__text {
+  padding-right: 120px;
+
+  @media (max-width: 1024px) {
+    padding-right: 0;
+  }
+
+  @media (max-width: 767px) {
+    padding-right: 0;
+  }
+}
+
+p.apps-text {
+  font-size: 20px;
+
+  @media (max-width: 1025px) {
+    text-align: center;
+  }
+
+  @media (max-width: 767px) {
+    font-size: 16px;
+  }
+}
+
+img.tn-apps-image.business {
+  width: 100%;
+
+  @media (max-width: 1024px) {
+    width: 75%;
+  }
+
+  @media (max-width: 767px) {
+    width: 100%;
+  }
+}
+
+// ── Agency hero ───────────────────────────────────────────────────
+
+.tn-agency-hero {
+  background-position: bottom center; // override shared .bg-cover-hero center default
+  padding-top: 50px;
+
+  @media(max-width: 1024px) {
+    padding-top: 75px;
+  }
+
+  &--ltd {
+
+    h3 br {
+      display: block !important;
+    }
+
+    .container {
+      @media (min-width: 680px) {
+        padding-left: 0;
+        padding-right: 0;
+      }
+
+      @media (min-width: 1024px) {
+        padding-left: 4rem;
+        padding-right: 4rem;
+      }
+    }
+  }
+
+  h1 {
+    @media(min-width: 1025px) {
+      font-size: 52px;
+    }
+  }
+
+  h2 {
+    font-size: 24px;
+    margin: 1.5rem 0;
+
+    @media(max-width: 1024px) {
+      text-align: center;
+    }
+
+    @media(min-width: 1025px) {
+      font-size: 40px;
+      margin: 2.5rem 0;
+    }
+
+    .highlight {
+      position: relative;
+      background-position: center;
+      padding-left: 10px;
+      padding-right: 10px;
+      margin-bottom: 0.5rem;
+      display: block;
+
+      @media(min-width: 680px) {
+        display: inline;
+      }
+
+      @media(min-width: 1025px) {
+        line-height: 1.7em;
+      }
+    }
+  }
+
+  h3 {
+    font-size: 20px;
+    margin-bottom: 2rem;
+
+    @media(max-width: 1024px) {
+      font-size: 18px;
+      line-height: 1.5;
+    }
+
+    @media(min-width: 1025px) {
+      font-size: 31px;
+      line-height: 1.5;
+    }
+
+    br {
+      display: none;
+
+      @media (min-width: 1400px) {
+        display: unset;
+      }
+    }
+  }
+
+  .tn-agency-mockup--phone {
+    position: relative;
+  }
+
+  .tn-agency-mockup__image--phone {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    transform: translateY(0);
+    left: 0;
+
+    @media (min-width: 680px) {
+      width: 640px;
+      top: 50%;
+      transform: translateY(-50%);
+      left: -50px;
+    }
+
+    @media (min-width: 820px) {
+      left: -21px;
+    }
+
+    @media (min-width: 1025px) {
+      width: 880px;
+      top: 66%;
+      left: unset;
+    }
+
+    &--dp {
+      display: none;
+
+      @media(min-width: 680px) {
+        display: block;
+      }
+    }
+
+    &--mb {
+      display: block;
+
+      @media(min-width: 680px) {
+        display: none;
+      }
+    }
+  }
+
+  .tn-agency-ltd-image__container {
+    position: relative;
+
+    @media (max-width: 1024px) {
+      text-align: center;
+    }
+  }
+
+  .tn-agency-ltd-image {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    transform: translateY(0);
+    left: 0;
+
+    @media (min-width: 680px) {
+      width: 148%;
+      top: 54%;
+      transform: translateY(-50%);
+      left: -90px;
+    }
+
+    @media (min-width: 820px) {
+      width: 120%;
+      left: 0;
+    }
+
+    &.business {
+      @media (min-width: 1025px) {
+        width: 154%;
+        top: 64%;
+        left: -20px;
+      }
+    }
+  }
+
+  &__cta-buttons {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 1rem;
+
+    @media (min-width: 991px) {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+}
+
+.tn-agency-hero__content {
+  display: flex;
+  flex-direction: column;
+  grid-template-rows: max-content;
+  grid-gap: 3rem;
+  position: relative;
+  padding: 10% 0 105% 0;
+  text-align: center;
+
+  @media(max-width: 767px) {
+    display: grid;
+    padding: 10% 0 50% 0;
+  }
+
+  @media(min-width: 680px) {
+    display: grid;
+    grid-template-columns: 64% 40%;
+    grid-template-rows: 1fr;
+    grid-gap: 0;
+    padding: 9% 8% 21% 3%;
+    text-align: left;
+  }
+
+  @media(min-width: 820px) {
+    grid-template-columns: 55% 40%;
+  }
+
+  @media(max-width: 1024px) {
+    grid-template-rows: 1fr;
+    display: block;
+    padding: 9% 0% 21% 0%;
+  }
+
+  @media(min-width: 1025px) {
+    grid-template-columns: 64% 36%;
+  }
+
+  .tn-agency-hero__text {
+    font-size: 42px;
+    padding-right: 0;
+
+    @media(max-width: 767px) {
+      font-size: 30px !important;
+      padding-right: 0;
+    }
+
+    @media(min-width: 991px) {
+      padding-right: 40px;
+    }
+
+    @media(max-width: 1024px) {
+      font-size: 35px;
+      text-align: center;
+    }
+  }
+}
+
+.tn-agency-hero__text {
+  font-size: 42px;
+  padding-right: 0;
+
+  @media(max-width: 767px) {
+    font-size: 30px !important;
+    padding-right: 0;
+  }
+
+  @media(min-width: 991px) {
+    padding-right: 40px;
+  }
+
+  @media(max-width: 1024px) {
+    font-size: 35px;
+    text-align: center;
+  }
+}
+
+.tn-agency-ltd-image__container {
+  position: relative;
+
+  @media (max-width: 1024px) {
+    text-align: center;
+  }
+}
+
+.tn-agency-ltd-image {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  transform: translateY(0);
+  left: 0;
+
+  @media (min-width: 680px) {
+    width: 148%;
+    top: 54%;
+    transform: translateY(-50%);
+    left: -90px;
+  }
+
+  @media (min-width: 820px) {
+    width: 120%;
+    left: 0;
+  }
+
+  &.business {
+    @media (min-width: 1025px) {
+      width: 154%;
+      top: 64%;
+      left: -20px;
+    }
+  }
+}
+
+.tn-agency-mockup__image--laptop {
+  width: 100%;
+  position: relative;
+  top: 0;
+  transform: translateY(0);
+
+  @media(min-width: 680px) {
+    width: 984px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+
+// ── AppSumo / review management hero ─────────────────────────────
+
+.tn-appsumo-hero {
+  padding-top: 100px;
+
+  @media(max-width: 767px) {
+    padding-top: 75px;
+  }
+
+  h1 {
+    font-size: 42px;
+
+    @media(max-width: 1024px) {
+      font-size: 32px;
+    }
+
+    @media(max-width: 767px) {
+      font-size: 30px;
+    }
+  }
+
+  h2 {
+    font-size: 35px;
+    margin: 1.5rem 0;
+
+    @media(max-width: 1024px) {
+      font-size: 28px;
+      margin: 2.5rem 0;
+    }
+
+    @media(max-width: 767px) {
+      font-size: 26px;
+      margin: 2.5rem 0;
+    }
+
+  h3 {
+    font-size: 20px;
+
+    @media(max-width: 1024px) {
+      font-size: 18px !important;
+    }
+  }
+
+    .highlight {
+      font-size: 28px;
+      position: relative;
+      background-position: center;
+      padding-left: 10px;
+      padding-right: 10px;
+      margin-bottom: 0.5rem;
+      display: block;
+
+      @media(min-width: 680px) {
+        display: inline;
+      }
+
+      @media(min-width: 1025px) {
+        font-size: 42px;
+      }
+    }
+  }
+
+  h3 {
+    font-size: 20px;
+    margin-bottom: 2rem;
+
+    @media(min-width: 1025px) {
+      font-size: 24px;
+    }
+
+    br {
+      display: none;
+
+      @media (min-width: 1400px) {
+        display: unset;
+      }
+    }
+  }
+
+  .tn-appsumo-mockup--phone {
+    position: relative;
+  }
+
+  .tn-appsumo-mockup__image--phone {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    transform: translateY(0);
+    left: 0;
+
+    @media (max-width: 767px) {
+      width: 100%;
+      top: 50%;
+      left: 50px;
+    }
+
+    @media (min-width: 680px) {
+      width: 640px;
+      top: 50%;
+      transform: translateY(-50%);
+      left: -50px;
+    }
+
+    @media (min-width: 820px) {
+      left: -21px;
+    }
+
+    @media (min-width: 1025px) {
+      width: 880px;
+      top: 66%;
+      left: unset;
+    }
+
+    &--dp {
+      display: none;
+
+      @media(min-width: 680px) {
+        display: block;
+      }
+    }
+
+    &--mb {
+      display: block;
+
+      @media(min-width: 680px) {
+        display: none;
+      }
+    }
+  }
+}
+
+.tn-appsumo-hero__content {
+  display: grid;
+  grid-template-rows: max-content;
+  grid-gap: 3rem;
+  position: relative;
+  padding: 10% 0 105% 0;
+  text-align: center;
+
+  @media(max-width: 767px) {
+    display: block;
+    grid-template-rows: 1fr;
+  }
+
+  @media(min-width: 680px) {
+    grid-template-columns: 60% 40%;
+    grid-template-rows: 1fr;
+    grid-gap: 0;
+    padding: 10% 0 25% 0;
+    text-align: left;
+  }
+
+  @media(min-width: 820px) {
+    grid-template-columns: 50% 50%;
+  }
+
+  @media(min-width: 1025px) {
+    grid-template-columns: 60% 40%;
+  }
+}
+
+.tn-appsumo-mockup--phone {
+  position: relative;
+}
+
+.tn-appsumo-mockup__image--phone {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  transform: translateY(0);
+  left: 0;
+
+  @media (max-width: 767px) {
+    width: 100%;
+    top: 50%;
+    left: 50px;
+  }
+
+  @media (min-width: 680px) {
+    width: 640px;
+    top: 50%;
+    transform: translateY(-50%);
+    left: -50px;
+  }
+
+  @media (min-width: 820px) {
+    left: -21px;
+  }
+
+  @media (min-width: 1025px) {
+    width: 880px;
+    top: 66%;
+    left: unset;
+  }
+
+  &--dp {
+    display: none;
+
+    @media(min-width: 680px) {
+      display: block;
+    }
+  }
+
+  &--mb {
+    display: block;
+
+    @media(min-width: 680px) {
+      display: none;
+    }
+  }
+}

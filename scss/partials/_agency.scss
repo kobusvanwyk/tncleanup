@@ -1,0 +1,349 @@
+// ── CTA buttons ───────────────────────────────────────────────────
+
+.tn-agency-cta-buttons-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  @media (min-width: 580px) {
+    flex-direction: row;
+  }
+}
+
+.tn-agency-cta-buttons {
+  flex: 1;
+}
+
+// ── Pricing cards ─────────────────────────────────────────────────
+
+.num-staff {
+  margin-top: 1.7rem;
+}
+
+.agency-pricing-card {
+  border-color: $tn-pink;
+  border-width: 2px;
+
+  &.agency-pricing-card--popular {
+    box-shadow: 0 5px 20px rgba(0, 0, 0, .15);
+  }
+}
+
+.agency-pricing-card .list-group-item {
+  padding: 24px 20px 24px 20px;
+}
+
+.agency-pricing-card.card > .list-group {
+  border-top: none;
+  border-bottom: none;
+}
+
+.actual-price {
+  font-size: 44px;
+  font-weight: bold;
+  color: $tn-pink;
+  line-height: 1;
+  margin: 10px 0 15px;
+}
+
+.small-text {
+  font-size: 16px;
+  font-weight: 100;
+}
+
+.agency-bundle-name, .agency-bundle-details-heading {
+  font-size: 21px;
+  margin-bottom: 0;
+}
+
+.agency-fine-print {
+  cursor: pointer;
+}
+
+.staff-member-account {
+  border: 2px solid $tn-pink;
+  border-radius: 55px;
+  color: $tn-pink;
+  font-weight: bold;
+  font-size: 21px;
+  padding: 3px 12px;
+  line-height: 1;
+  margin-bottom: 0;
+  width: max-content;
+  display: inline-block;
+}
+
+.inclusive {
+  border-color: $tn-pink;
+  border-width: 2px;
+  padding: 24px;
+  padding-top: 14px;
+  gap: 10px;
+}
+
+.starter-bundles {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2px;
+
+  li {
+    @media (min-width: 1288px) {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.striked-feature {
+  text-decoration: line-through;
+  opacity: .45;
+}
+
+.feature-check-icon {
+  margin-left: -34px;
+}
+
+.price-plan-item {
+  position: relative;
+}
+
+// ── Pricing table ─────────────────────────────────────────────────
+
+.tn-pricing-table {
+  display: none;
+
+  @media(min-width: 620px) {
+    display: table;
+    width: 100%;
+    background: #FFF;
+    border-radius: 9px;
+    border: 2px solid $tn-pink;
+  }
+
+  .tn-pricing-table-row {
+    display: table-row;
+    border-bottom: 1px solid #EBEBEB;
+  }
+
+  .tn-pricing-table-heading {
+    background-color: #EEE;
+    display: table-header-group;
+  }
+
+  .tn-pricing-table-cell,
+  .tn-pricing-table-head {
+    display: table-cell;
+    padding: 6px 12px;
+    font-size: 18px;
+    border-bottom: 1px solid #EBEBEB;
+
+    @media(min-width: 1025px) {
+      font-size: 20px;
+    }
+  }
+
+  .tn-pricing-table-heading {
+    background-color: #EEE;
+    display: table-header-group;
+    font-weight: bold;
+  }
+
+  .tn-pricing-table-foot {
+    background-color: #EEE;
+    display: table-footer-group;
+    font-weight: bold;
+  }
+
+  .tn-pricing-table-body {
+    display: table-row-group;
+  }
+
+  .table-header {
+    color: #FFF;
+    background: $tn-pink;
+  }
+
+  .table-price {
+    color: $tn-pink;
+    font-weight: 700;
+    background: #FAFAFA;
+    text-align: center;
+  }
+
+  .tn-pricing-table-cell--top-left {
+    border-top-left-radius: 8px;
+  }
+
+  .tn-pricing-table-cell--top-right {
+    border-top-right-radius: 8px;
+  }
+
+  .tn-pricing-table-cell--bottom-left {
+    border-bottom-left-radius: 8px;
+  }
+
+  .tn-pricing-table-cell--bottom-right {
+    border-bottom-right-radius: 8px;
+  }
+}
+
+// ── Mobile pricing accordion ──────────────────────────────────────
+
+.tn-mobile-pricing-accordion {
+  display: block;
+
+  @media(min-width: 620px) {
+    display: none;
+  }
+
+  .accordion-button {
+    background: $tn-pink;
+    color: #fff;
+    justify-content: space-between;
+    padding: 10px 18px 10px 40px;
+
+    &:after {
+      position: absolute;
+      left: 14px;
+      background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMS41OCA3LjIiPjxwYXRoIGQ9Ik0xMC41OCAxIDUuNzkgNS43OSAxIDEiIHN0eWxlPSJmaWxsOm5vbmU7c3Ryb2tlOiNmZmY7c3Ryb2tlLWxpbmVjYXA6cm91bmQ7c3Ryb2tlLXdpZHRoOjJweCIvPjwvc3ZnPg==');
+      height: 12px;
+      width: 15px;
+      background-size: contain;
+    }
+
+    &:not(.collapsed)::after {
+      top: 18px;
+    }
+
+    span {
+      display: block;
+    }
+
+    &:focus {
+      box-shadow: none;
+    }
+  }
+
+  .tn-bundle-info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: start;
+    grid-gap: 1rem;
+
+    &:last-child {
+      margin-top: 10px;
+    }
+  }
+
+  .tn-bundle-price-bigger {
+    font-size: 20px;
+  }
+
+  .tn-enterprise-cost {
+    font-weight: 900;
+    color: $tn-pink;
+    font-size: 20px;
+  }
+}
+
+// ── Bundle items ──────────────────────────────────────────────────
+
+.tn-bundle-info {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: start;
+  grid-gap: 1rem;
+
+  &:last-child {
+    margin-top: 10px;
+  }
+}
+
+.tn-bundle-price-bigger {
+  font-size: 20px;
+}
+
+// ── Profits / white label ─────────────────────────────────────────
+
+.tn-profits-addition {
+  display: grid;
+  grid-template-columns: 60px 1fr;
+  grid-gap: 22px;
+  align-items: center;
+  background: $tn-agency-section-gray;
+  border-radius: 8px;
+  padding: 22px;
+  max-width: 565px;
+
+  p {
+    font-size: 20px;
+    font-weight: 600;
+  }
+}
+
+.tn-landing-header {
+  position: sticky;
+  top: 0;
+}
+
+.tn-white-label__content {
+  display: grid;
+  grid-template-rows: max-content;
+  grid-template-columns: 1fr;
+  grid-gap: 3rem;
+  position: relative;
+
+  @media(min-width: 680px) {
+    grid-template-rows: 1fr;
+    grid-template-columns: 5fr 4fr;
+    grid-gap: 0;
+  }
+
+  .tn-agency-mockup__image--laptop {
+    width: 100%;
+    position: relative;
+    top: 0;
+    transform: translateY(0);
+
+    @media(min-width: 680px) {
+      width: 984px;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+}
+
+.tn-idea-for-box {
+  display: grid;
+  grid-template-columns: 60px 1fr;
+  grid-gap: 45px;
+  align-items: center;
+  background: #FFFFFF;
+  border-radius: 8px;
+  padding: 22px;
+  font-size: 16px;
+  font-weight: 400;
+  width: 100%;
+
+  @media(max-width: 767px) {
+    display: block;
+  }
+}
+
+.tn-idea-for-box-grey {
+  display: grid;
+  grid-template-columns: 60px 1fr;
+  grid-gap: 45px;
+  align-items: center;
+  background: $tn-appsumo-section-gray;
+  border-radius: 8px;
+  padding: 20px;
+  font-size: 16px;
+  font-weight: 400;
+  width: 100%;
+
+  @media(max-width: 767px) {
+    display: block;
+  }
+}

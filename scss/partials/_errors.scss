@@ -1,0 +1,40 @@
+.error-page {
+  background-image: url(/images/tn-landing-background-gradient.webp);
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.error-page .error-box {
+  background-color: #FFFFFF;
+  height: auto;
+  width: 800px;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  margin-top: 4rem;
+  border-radius: 20px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, .09);
+}
+
+.error-page .error-code {
+  color: #FF006B;
+  font-size: 120px;
+  font-weight: 700;
+}
+
+.error-page .error-text {
+  color: #666666;
+  font-size: 18px;
+}
+
+.error-page .error-reason {
+  background-color: #F8F9FA;
+  padding: 0.5rem;
+  color: #FF006B;
+  border-radius: 8px;
+}
